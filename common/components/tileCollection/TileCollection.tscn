@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bwabk5k25iac"]
+
+[ext_resource type="Script" uid="uid://ckx52f7ovwa2y" path="res://common/components/tileCollection/tile_collection.gd" id="1_bvvkp"]
+
+[node name="TileMap" type="Node2D" unique_id=356436869]
+script = ExtResource("1_bvvkp")

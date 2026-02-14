@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://coos8sjb0fwpu"]
+
+[ext_resource type="Script" uid="uid://u5bweqtechko" path="res://common/components/FlipComponents/flipOnMouse/flip_on_mouse_component.gd" id="1_gppfm"]
+
+[node name="FlipOnMouseComponent" type="Node2D"]
+script = ExtResource("1_gppfm")
