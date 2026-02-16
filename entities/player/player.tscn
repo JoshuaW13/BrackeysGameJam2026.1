@@ -15,6 +15,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7thud"]
 size = Vector2(12, 16)
 
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_7thud"]
+length = 9.424508
+
 [node name="Player" type="CharacterBody2D" unique_id=1865279112]
 position = Vector2(0, -1)
 collision_layer = 2
@@ -73,3 +76,7 @@ patient = NodePath("../Pivot")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=102354422]
 position = Vector2(0, -63)
 zoom = Vector2(4, 4)
+
+[node name="CollisionFixer" type="CollisionShape2D" parent="." unique_id=2009747182]
+position = Vector2(0, -8)
+shape = SubResource("SeparationRayShape2D_7thud")
