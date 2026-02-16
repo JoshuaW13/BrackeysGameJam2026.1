@@ -26,7 +26,7 @@ func determine_direction() -> Vector2:
 	return direction
 
 func physics_update(delta: float) -> void:
-	var direction = determine_direction()
+	var direction: Vector2 = determine_direction()
 
 	if direction == Vector2.ZERO:
 		transition.emit(self, "Idle")
