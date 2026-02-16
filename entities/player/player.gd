@@ -6,7 +6,7 @@ class_name Player
 @onready var gravity_component: GravityComponent = %GravityComponent
 @onready var inventory: Inventory = %Inventory
 
-var push_strength: float = 5000
+var push_strength: float = 10
 
 func _ready() -> void:
 	state_machine.start()
@@ -18,11 +18,14 @@ func _physics_process(delta):
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-		
+
 		if collider is RigidBody2D:
-			var push_dir = collision.get_normal()
-			var horizontal_dir = Vector2(-push_dir.x, 0).normalized()
-			collider.apply_central_force(horizontal_dir * push_strength)
+			var normal = collision.get_normal()
+			
+			if abs(normal.y) < 0.7:
+				var push_dir = Vector2(-normal.x, 0).normalized()
+				collider.apply_central_impulse(push_dir * push_strength)
+
 
 func _input(_event: InputEvent)-> void:
 	if _event.is_action_pressed("place"):

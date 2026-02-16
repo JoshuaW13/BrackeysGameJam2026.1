@@ -3,14 +3,19 @@
 [ext_resource type="Script" uid="uid://34bl4kawq5oj" path="res://entities/box/box.gd" id="1_dvghe"]
 [ext_resource type="Texture2D" uid="uid://ksadikmlvtvc" path="res://entities/player/assets/Dude2.png" id="2_dvghe"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dvghe"]
-radius = 8.0
-height = 16.0
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dvghe"]
+friction = 0.3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvghe"]
+size = Vector2(16, 16)
 
 [node name="Box" type="RigidBody2D" unique_id=2021290329]
 collision_layer = 2
 collision_mask = 3
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_dvghe")
 lock_rotation = true
+linear_damp = 4.0
 script = ExtResource("1_dvghe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=140556841]
@@ -20,4 +25,6 @@ texture = ExtResource("2_dvghe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=776195455]
 position = Vector2(0, -8)
-shape = SubResource("CapsuleShape2D_dvghe")
+shape = SubResource("RectangleShape2D_dvghe")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

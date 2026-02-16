@@ -12,9 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://oqmrkm88j538" path="res://common/components/Inventory/Inventory.tscn" id="9_bectd"]
 [ext_resource type="PackedScene" uid="uid://bpku656ioj6cj" path="res://common/components/FlipComponents/flipOnVelocity/FlipOnVelocity.tscn" id="10_wvtmh"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bectd"]
-radius = 8.0
-height = 16.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7thud"]
+size = Vector2(12, 16)
 
 [node name="Player" type="CharacterBody2D" unique_id=1865279112]
 position = Vector2(0, -1)
@@ -28,7 +27,6 @@ script = ExtResource("1_8fjmc")
 position = Vector2(16, -7)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=1564657274]
-self_modulate = Color(1, 0.4117647, 0.7058824, 1)
 position = Vector2(0, -7)
 texture = ExtResource("2_bectd")
 
@@ -54,11 +52,11 @@ player = NodePath("../..")
 
 [node name="VelocityComponent" parent="." unique_id=1962091022 instance=ExtResource("7_qiwj3")]
 unique_name_in_owner = true
-speed = 100.0
+speed = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=966375272]
 position = Vector2(0, -7)
-shape = SubResource("CapsuleShape2D_bectd")
+shape = SubResource("RectangleShape2D_7thud")
 
 [node name="GravityComponent" parent="." unique_id=424921218 node_paths=PackedStringArray("velocity_component") instance=ExtResource("8_26q78")]
 unique_name_in_owner = true
@@ -71,3 +69,7 @@ inventory_spawn = NodePath("../Pivot/InventorySpawn")
 [node name="FlipOnVelocity" parent="." unique_id=759213249 node_paths=PackedStringArray("velocity_component", "patient") instance=ExtResource("10_wvtmh")]
 velocity_component = NodePath("../VelocityComponent")
 patient = NodePath("../Pivot")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=102354422]
+position = Vector2(0, -63)
+zoom = Vector2(4, 4)

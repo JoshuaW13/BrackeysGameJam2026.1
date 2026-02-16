@@ -3,7 +3,7 @@ class_name Jump
 
 @export var player: Player
 
-var jump_vertical_speed: float = 1300
+var jump_vertical_speed: float = 500
 var jump_horizontal_speed: float = 1
 
 func enter()->void:

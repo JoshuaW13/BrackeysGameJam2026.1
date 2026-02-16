@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://drc3ntysi0txb" path="res://entities/floor/floor.tscn" id="1_h3n77"]
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="2_n2aek"]
-[ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="3_3xe13"]
 
 [node name="Level1" type="Node2D" unique_id=1543521338]
 
@@ -35,13 +34,3 @@ position = Vector2(960, 584)
 
 [node name="Player" parent="." unique_id=914755556 instance=ExtResource("2_n2aek")]
 position = Vector2(300, 232)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=435353527]
-offset = Vector2(0, -100)
-position_smoothing_enabled = true
-
-[node name="Box" parent="." unique_id=2021290329 instance=ExtResource("3_3xe13")]
-position = Vector2(677, 418)
-
-[node name="Box2" parent="." unique_id=1625602641 instance=ExtResource("3_3xe13")]
-position = Vector2(681, 193)

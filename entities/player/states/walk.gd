@@ -5,7 +5,7 @@ class_name Walk
 var last_direction := Vector2.ZERO
 
 func enter()->void:
-	player.velocity_component.speed = 500.0
+	player.velocity_component.speed = 100.0
 
 func determine_direction() -> Vector2:
 	var left  = Input.is_action_pressed("left")

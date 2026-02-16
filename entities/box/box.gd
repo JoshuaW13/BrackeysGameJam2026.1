@@ -2,3 +2,7 @@ extends RigidBody2D
 class_name Box
 
 var box_item : Resource = preload("res://entities/box/box.tres")
+	
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action("take"):
+		print("Clicked box!")
