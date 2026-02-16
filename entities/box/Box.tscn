@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://sbehcn24hh4v"]
+
+[ext_resource type="Texture2D" uid="uid://d2pb110uafkjs" path="res://icon.svg" id="1_kuuys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kuuys"]
+size = Vector2(127, 126)
+
+[node name="Box" type="RigidBody2D" unique_id=2021290329]
+collision_layer = 2
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=140556841]
+self_modulate = Color(0.85490197, 0.627451, 0.42745098, 1)
+position = Vector2(0, -64)
+texture = ExtResource("1_kuuys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=776195455]
+position = Vector2(-0.5, -64)
+shape = SubResource("RectangleShape2D_kuuys")
