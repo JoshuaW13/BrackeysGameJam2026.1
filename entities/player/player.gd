@@ -27,8 +27,8 @@ func _physics_process(delta):
 				var push_dir = Vector2(-normal.x, 0).normalized()
 				collider.apply_central_impulse(push_dir * push_strength)
 
-func item_picked_up(item: Box)->void:
-	inventory.add_item(item.box_item)
+func item_picked_up(item: PlaceableItem)->void:
+	inventory.add_item(item.inventory_item)
 	item.call_deferred("queue_free")
 
 func _input(_event: InputEvent)-> void:
