@@ -29,7 +29,7 @@ func _physics_process(delta):
 
 func item_picked_up(item: Box)->void:
 	inventory.add_item(item.box_item)
-	item.queue_free()
+	item.call_deferred("queue_free")
 
 func _input(_event: InputEvent)-> void:
 	if _event.is_action_pressed("place"):
