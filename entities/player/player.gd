@@ -4,6 +4,7 @@ class_name Player
 @onready var state_machine : StateMachine = %StateMachine
 @onready var velocity_component : VelocityComponent = %VelocityComponent
 @onready var gravity_component: GravityComponent = %GravityComponent
+@onready var inventory: Inventory = %Inventory
 
 var push_strength: float = 5000
 
@@ -22,3 +23,7 @@ func _physics_process(delta):
 			var push_dir = collision.get_normal()
 			var horizontal_dir = Vector2(-push_dir.x, 0).normalized()
 			collider.apply_central_force(horizontal_dir * push_strength)
+
+func _input(_event: InputEvent)-> void:
+	if _event.is_action_pressed("place"):
+		inventory.use_item()
