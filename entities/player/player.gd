@@ -21,4 +21,4 @@ func _physics_process(delta):
 		if collider is RigidBody2D:
 			var push_dir = collision.get_normal()
 			var horizontal_dir = Vector2(-push_dir.x, 0).normalized()
-			collider.apply_central_impulse(horizontal_dir * push_strength * delta)
+			collider.apply_central_force(horizontal_dir * push_strength)
