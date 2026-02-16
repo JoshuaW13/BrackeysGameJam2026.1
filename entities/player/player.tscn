@@ -68,6 +68,7 @@ velocity_component = NodePath("../VelocityComponent")
 [node name="Inventory" parent="." unique_id=1642502279 node_paths=PackedStringArray("inventory_spawn") instance=ExtResource("9_bectd")]
 unique_name_in_owner = true
 inventory_spawn = NodePath("../Pivot/InventorySpawn")
+inventory_spawn_scale = Vector2(0.7, 0.7)
 
 [node name="FlipOnVelocity" parent="." unique_id=759213249 node_paths=PackedStringArray("velocity_component", "patient") instance=ExtResource("10_wvtmh")]
 velocity_component = NodePath("../VelocityComponent")

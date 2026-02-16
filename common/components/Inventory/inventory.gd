@@ -2,6 +2,7 @@ extends Node
 class_name Inventory
 
 @export var inventory_spawn: Marker2D
+@export var inventory_spawn_scale: Vector2 = Vector2(1, 1)
 var inventory: Array[Item] = []
 var current_item: InventoryItem
 
@@ -39,4 +40,5 @@ func spawn_front()->void:
 	var selected_item_scene: PackedScene = preload("res://common/components/Inventory/InventoryItem.tscn")
 	current_item = selected_item_scene.instantiate()
 	current_item.item_resource = inventory.front()
+	current_item.scale = inventory_spawn_scale
 	inventory_spawn.add_child(current_item)
