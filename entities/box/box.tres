@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://cc70qh2xd5aa4"]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cc70qh2xd5aa4"]
 
 [ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="1_ka03m"]
-[ext_resource type="Script" uid="uid://budj2x6ha6l6k" path="res://common/components/Inventory/item.gd" id="1_vfdqo"]
-[ext_resource type="Texture2D" uid="uid://d2pb110uafkjs" path="res://icon.svg" id="3_vjm71"]
+[ext_resource type="Script" uid="uid://budj2x6ha6l6k" path="res://common/components/Inventory/item.gd" id="2_vjm71"]
+[ext_resource type="Texture2D" uid="uid://ksadikmlvtvc" path="res://entities/player/assets/Dude2.png" id="3_18saa"]
 
 [resource]
-script = ExtResource("1_vfdqo")
+script = ExtResource("2_vjm71")
 scene = ExtResource("1_ka03m")
-texture = ExtResource("3_vjm71")
+texture = ExtResource("3_18saa")
 metadata/_custom_type_script = "uid://budj2x6ha6l6k"

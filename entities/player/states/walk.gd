@@ -27,8 +27,10 @@ func determine_direction() -> Vector2:
 
 func physics_update(delta: float) -> void:
 	var direction: Vector2 = determine_direction()
-
-	if direction == Vector2.ZERO:
+	
+	if !player.is_on_floor():
+		transition.emit(self, "FreeFall")
+	elif direction == Vector2.ZERO:
 		transition.emit(self, "Idle")
 		player.velocity_component.set_horizontal(0)
 		return

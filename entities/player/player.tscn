@@ -1,17 +1,20 @@
 [gd_scene format=3 uid="uid://u6dbdktu23jv"]
 
 [ext_resource type="Script" uid="uid://bo8x3qwulay6u" path="res://entities/player/player.gd" id="1_8fjmc"]
-[ext_resource type="Texture2D" uid="uid://d2pb110uafkjs" path="res://icon.svg" id="1_symyc"]
+[ext_resource type="Texture2D" uid="uid://ksadikmlvtvc" path="res://entities/player/assets/Dude2.png" id="2_bectd"]
 [ext_resource type="PackedScene" uid="uid://4j5ax7d2m7u3" path="res://common/stateMachine/stateMachine.tscn" id="2_fkugw"]
 [ext_resource type="Script" uid="uid://dnnwehlls81d0" path="res://entities/player/states/idle.gd" id="3_8fjmc"]
 [ext_resource type="Script" uid="uid://dd634dxqfm2e6" path="res://entities/player/states/walk.gd" id="4_qiwj3"]
 [ext_resource type="Script" uid="uid://epbpglj7i4sx" path="res://entities/player/states/jump.gd" id="5_26q78"]
+[ext_resource type="Script" uid="uid://dqeoxoyl2sx4b" path="res://entities/player/states/free_fall.gd" id="7_7thud"]
 [ext_resource type="PackedScene" uid="uid://1pp8jw5odpso" path="res://common/components/velocity/velocityComponent.tscn" id="7_qiwj3"]
 [ext_resource type="PackedScene" uid="uid://b64tre6swvbpv" path="res://common/components/gravity/GravityComponent.tscn" id="8_26q78"]
 [ext_resource type="PackedScene" uid="uid://oqmrkm88j538" path="res://common/components/Inventory/Inventory.tscn" id="9_bectd"]
+[ext_resource type="PackedScene" uid="uid://bpku656ioj6cj" path="res://common/components/FlipComponents/flipOnVelocity/FlipOnVelocity.tscn" id="10_wvtmh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_26q78"]
-size = Vector2(128, 128)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bectd"]
+radius = 8.0
+height = 16.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1865279112]
 position = Vector2(0, -1)
@@ -19,10 +22,15 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_8fjmc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564657274]
+[node name="Pivot" type="Node2D" parent="." unique_id=318106126]
+
+[node name="InventorySpawn" type="Marker2D" parent="Pivot" unique_id=782173611]
+position = Vector2(16, -7)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=1564657274]
 self_modulate = Color(1, 0.4117647, 0.7058824, 1)
-position = Vector2(0, -64)
-texture = ExtResource("1_symyc")
+position = Vector2(0, -7)
+texture = ExtResource("2_bectd")
 
 [node name="StateMachine" parent="." unique_id=426004173 node_paths=PackedStringArray("initial_state") instance=ExtResource("2_fkugw")]
 unique_name_in_owner = true
@@ -40,13 +48,17 @@ player = NodePath("../..")
 script = ExtResource("5_26q78")
 player = NodePath("../..")
 
+[node name="FreeFall" type="Node" parent="StateMachine" unique_id=891422636 node_paths=PackedStringArray("player")]
+script = ExtResource("7_7thud")
+player = NodePath("../..")
+
 [node name="VelocityComponent" parent="." unique_id=1962091022 instance=ExtResource("7_qiwj3")]
 unique_name_in_owner = true
 speed = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=966375272]
-position = Vector2(0, -65)
-shape = SubResource("RectangleShape2D_26q78")
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_bectd")
 
 [node name="GravityComponent" parent="." unique_id=424921218 node_paths=PackedStringArray("velocity_component") instance=ExtResource("8_26q78")]
 unique_name_in_owner = true
@@ -54,7 +66,8 @@ velocity_component = NodePath("../VelocityComponent")
 
 [node name="Inventory" parent="." unique_id=1642502279 node_paths=PackedStringArray("inventory_spawn") instance=ExtResource("9_bectd")]
 unique_name_in_owner = true
-inventory_spawn = NodePath("../InventorySpawn")
+inventory_spawn = NodePath("../Pivot/InventorySpawn")
 
-[node name="InventorySpawn" type="Marker2D" parent="." unique_id=782173611]
-position = Vector2(64, -63)
+[node name="FlipOnVelocity" parent="." unique_id=759213249 node_paths=PackedStringArray("velocity_component", "patient") instance=ExtResource("10_wvtmh")]
+velocity_component = NodePath("../VelocityComponent")
+patient = NodePath("../Pivot")
