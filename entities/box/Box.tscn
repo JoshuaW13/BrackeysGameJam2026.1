@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://sbehcn24hh4v"]
 
 [ext_resource type="Script" uid="uid://34bl4kawq5oj" path="res://entities/box/box.gd" id="1_dvghe"]
-[ext_resource type="Texture2D" uid="uid://ksadikmlvtvc" path="res://entities/player/assets/Dude2.png" id="2_dvghe"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dvghe"]
 friction = 0.3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dvghe"]
 size = Vector2(16, 16)
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_dvghe"]
+length = 8.40625
 
 [node name="Box" type="RigidBody2D" unique_id=2021290329]
 collision_layer = 2
@@ -16,16 +18,20 @@ input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_dvghe")
 can_sleep = false
 lock_rotation = true
-linear_damp = 4.0
+linear_damp = 6.0
 script = ExtResource("1_dvghe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=140556841]
+unique_name_in_owner = true
 self_modulate = Color(0.85490197, 0.627451, 0.42745098, 1)
 position = Vector2(0, -8)
-texture = ExtResource("2_dvghe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=776195455]
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_dvghe")
+
+[node name="CollisionFixer" type="CollisionShape2D" parent="." unique_id=1236624215]
+position = Vector2(0, -8)
+shape = SubResource("SeparationRayShape2D_dvghe")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
