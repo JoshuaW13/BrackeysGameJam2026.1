@@ -5,13 +5,11 @@ class_name Walk
 var last_direction := Vector2.ZERO
 
 func enter()->void:
-	print("Entering walk")
+	player.velocity_component.speed = 500.0
 
 func determine_direction() -> Vector2:
 	var left  = Input.is_action_pressed("left")
 	var right = Input.is_action_pressed("right")
-	var up    = Input.is_action_pressed("up")
-	var down  = Input.is_action_pressed("down")
 	
 	var direction = Vector2.ZERO
 	if left and not right:
@@ -36,3 +34,7 @@ func physics_update(delta: float) -> void:
 		return
 
 	player.velocity_component.set_horizontal(direction.x)
+
+func process_input(_event: InputEvent)-> void:
+	if _event.is_action_pressed("up"):
+		transition.emit(self, "Jump")

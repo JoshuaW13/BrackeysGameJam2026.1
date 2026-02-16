@@ -26,9 +26,8 @@ texture = ExtResource("1_symyc")
 unique_name_in_owner = true
 initial_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=1188954702 node_paths=PackedStringArray("player")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1188954702]
 script = ExtResource("3_8fjmc")
-player = NodePath("../..")
 
 [node name="Walk" type="Node" parent="StateMachine" unique_id=1314546164 node_paths=PackedStringArray("player")]
 script = ExtResource("4_qiwj3")

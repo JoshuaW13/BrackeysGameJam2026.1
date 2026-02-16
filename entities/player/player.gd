@@ -7,7 +7,6 @@ class_name Player
 
 func _ready() -> void:
 	state_machine.start()
-	velocity_component.speed = 500.0
 
 func _physics_process(delta):
 	if not is_on_floor():

@@ -10,6 +10,9 @@ func set_horizontal(direction: float) -> void:
 func add_vertical(amount: float) -> void:
 	velocity.y += amount
 
+func set_vertical(amount: float) -> void:
+	velocity.y = amount
+
 func apply(body: CharacterBody2D) -> void:
 	body.velocity = velocity
 	body.move_and_slide()
