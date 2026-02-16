@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dnnwehlls81d0" path="res://entities/player/states/idle.gd" id="3_8fjmc"]
 [ext_resource type="Script" uid="uid://dd634dxqfm2e6" path="res://entities/player/states/walk.gd" id="4_qiwj3"]
 [ext_resource type="Script" uid="uid://epbpglj7i4sx" path="res://entities/player/states/jump.gd" id="5_26q78"]
+[ext_resource type="Script" uid="uid://dqeoxoyl2sx4b" path="res://entities/player/states/free_fall.gd" id="7_7thud"]
 [ext_resource type="PackedScene" uid="uid://1pp8jw5odpso" path="res://common/components/velocity/velocityComponent.tscn" id="7_qiwj3"]
 [ext_resource type="PackedScene" uid="uid://b64tre6swvbpv" path="res://common/components/gravity/GravityComponent.tscn" id="8_26q78"]
 [ext_resource type="PackedScene" uid="uid://oqmrkm88j538" path="res://common/components/Inventory/Inventory.tscn" id="9_bectd"]
@@ -45,6 +46,10 @@ player = NodePath("../..")
 
 [node name="Jump" type="Node" parent="StateMachine" unique_id=1864660514 node_paths=PackedStringArray("player")]
 script = ExtResource("5_26q78")
+player = NodePath("../..")
+
+[node name="FreeFall" type="Node" parent="StateMachine" unique_id=891422636 node_paths=PackedStringArray("player")]
+script = ExtResource("7_7thud")
 player = NodePath("../..")
 
 [node name="VelocityComponent" parent="." unique_id=1962091022 instance=ExtResource("7_qiwj3")]
