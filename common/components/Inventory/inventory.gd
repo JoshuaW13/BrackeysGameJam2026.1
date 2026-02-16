@@ -13,13 +13,11 @@ func _ready() -> void:
 
 func add_item(item: Item)->void:
 	inventory.push_back(item)
-	spawn_front()
+	if inventory.size() == 1:
+		spawn_front()
 
 func remove_item()->void:
 	inventory.pop_front()
-	if current_item:
-		current_item.queue_free()
-		current_item = null
 	spawn_front()
 
 func use_item()->void:
@@ -31,9 +29,14 @@ func use_item()->void:
 	remove_item()
 
 func spawn_front()->void:
-	var spawn_front: bool = !inventory.is_empty()
-	if spawn_front:
-		var selected_item_scene: PackedScene = preload("res://common/components/Inventory/InventoryItem.tscn")
-		current_item = selected_item_scene.instantiate()
-		inventory_spawn.add_child(current_item)
-		current_item.item_resource = inventory.front()	
+	if current_item:
+		current_item.queue_free()
+		current_item = null
+
+	if inventory.is_empty():
+		return
+
+	var selected_item_scene: PackedScene = preload("res://common/components/Inventory/InventoryItem.tscn")
+	current_item = selected_item_scene.instantiate()
+	current_item.item_resource = inventory.front()
+	inventory_spawn.add_child(current_item)
