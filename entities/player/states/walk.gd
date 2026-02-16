@@ -3,9 +3,10 @@ class_name Walk
 
 @export var player: Player
 var last_direction := Vector2.ZERO
+const WALK_SPEED = 100.0
 
 func enter()->void:
-	player.velocity_component.speed = 100.0
+	player.velocity_component.speed = WALK_SPEED
 
 func determine_direction() -> Vector2:
 	var left  = Input.is_action_pressed("left")

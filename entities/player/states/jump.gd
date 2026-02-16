@@ -5,16 +5,33 @@ class_name Jump
 
 var jump_vertical_speed: float = 500
 var jump_horizontal_speed: float = 1
+var last_direction := Vector2.ZERO
+const JUMP_HORIZONTAL_SPEED = 30
 
 func enter()->void:
-	var x_dir = 0
-	if Input.is_action_pressed("left"):
-		x_dir = -1
-	elif Input.is_action_pressed("right"):
-		x_dir = 1
 	player.velocity_component.set_vertical(-jump_vertical_speed)
-	player.velocity_component.set_horizontal(x_dir)
+	player.velocity_component.speed = JUMP_HORIZONTAL_SPEED
 
 func physics_update(_delta: float)-> void:
+	var direction: Vector2 = determine_direction()
 	if player.is_on_floor():
 		transition.emit(self,"Idle")
+	player.velocity_component.set_horizontal(direction.x)
+
+func determine_direction() -> Vector2:
+	var left  = Input.is_action_pressed("left")
+	var right = Input.is_action_pressed("right")
+	
+	var direction = Vector2.ZERO
+	if left and not right:
+		direction.x = -1
+		last_direction.x = -1
+	elif right and not left:
+		direction.x = 1
+		last_direction.x = 1
+	elif left and right:
+		direction.x = last_direction.x
+	else:
+		last_direction.x = 0
+
+	return direction
