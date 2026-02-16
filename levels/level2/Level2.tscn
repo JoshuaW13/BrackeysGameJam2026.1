@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://kgxuexek0l4l"]
+
+[ext_resource type="PackedScene" uid="uid://drc3ntysi0txb" path="res://entities/floor/floor.tscn" id="1_x7s5r"]
+[ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="2_5soyf"]
+[ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="3_g7e41"]
+
+[node name="Level1" type="Node2D" unique_id=1543521338]
+
+[node name="Floor3" parent="." unique_id=498620327 instance=ExtResource("1_x7s5r")]
+position = Vector2(320, 584)
+
+[node name="Floor" parent="." unique_id=1513933576 instance=ExtResource("1_x7s5r")]
+position = Vector2(64, 584)
+
+[node name="Floor2" parent="." unique_id=1422179340 instance=ExtResource("1_x7s5r")]
+position = Vector2(192, 584)
+
+[node name="Floor4" parent="." unique_id=392945594 instance=ExtResource("1_x7s5r")]
+position = Vector2(704, 584)
+
+[node name="Floor5" parent="." unique_id=2030010766 instance=ExtResource("1_x7s5r")]
+position = Vector2(448, 584)
+
+[node name="Floor6" parent="." unique_id=703229045 instance=ExtResource("1_x7s5r")]
+position = Vector2(576, 584)
+
+[node name="Floor7" parent="." unique_id=310853209 instance=ExtResource("1_x7s5r")]
+position = Vector2(1088, 584)
+
+[node name="Floor8" parent="." unique_id=1492950390 instance=ExtResource("1_x7s5r")]
+position = Vector2(832, 584)
+
+[node name="Floor9" parent="." unique_id=651510748 instance=ExtResource("1_x7s5r")]
+position = Vector2(960, 584)
+
+[node name="Player" parent="." unique_id=914755556 instance=ExtResource("2_5soyf")]
+position = Vector2(300, 232)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=435353527]
+offset = Vector2(0, -100)
+zoom = Vector2(0.9, 0.9)
+position_smoothing_enabled = true
+
+[node name="Box" parent="." unique_id=2021290329 instance=ExtResource("3_g7e41")]
+position = Vector2(677, 418)
+
+[node name="Box2" parent="." unique_id=1625602641 instance=ExtResource("3_g7e41")]
+position = Vector2(681, 193)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=700171640]
