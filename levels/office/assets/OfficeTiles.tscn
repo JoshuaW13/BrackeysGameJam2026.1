@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkmm2sooouoay"]
 
-[ext_resource type="TileSet" uid="uid://davi1h1ns35d6" path="res://levels/office/assets/OfficeTileSet.tres" id="1_1u64o"]
+[ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="1_1u64o"]
 
 [node name="OfficeTiles" type="TileMapLayer" unique_id=1972355243]
 tile_set = ExtResource("1_1u64o")
