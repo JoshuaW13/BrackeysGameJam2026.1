@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ksadikmlvtvc"
-path="res://.godot/imported/Dude2.png-34cd19e40653db3fd5ef4d036a24cc46.ctex"
+uid="uid://ce67knfl16tss"
+path="res://.godot/imported/freefall.png-ff05de9a6dac0219fcb663215d6ad518.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/player/assets/Dude2.png"
-dest_files=["res://.godot/imported/Dude2.png-34cd19e40653db3fd5ef4d036a24cc46.ctex"]
+source_file="res://entities/player/assets/freefall.png"
+dest_files=["res://.godot/imported/freefall.png-ff05de9a6dac0219fcb663215d6ad518.ctex"]
 
 [params]
 
