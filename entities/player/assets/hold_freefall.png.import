@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b308pkfg3h2kv"
-path="res://.godot/imported/hold_jump.png-7460ffa35a5b5a9bba2bb7f659ca150d.ctex"
+uid="uid://b2xncau5qtsxi"
+path="res://.godot/imported/hold_freefall.png-804281380f0506b59fabdb44b423c66c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/player/assets/hold_jump.png"
-dest_files=["res://.godot/imported/hold_jump.png-7460ffa35a5b5a9bba2bb7f659ca150d.ctex"]
+source_file="res://entities/player/assets/hold_freefall.png"
+dest_files=["res://.godot/imported/hold_freefall.png-804281380f0506b59fabdb44b423c66c.ctex"]
 
 [params]
 

@@ -2,16 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b308pkfg3h2kv"
-path="res://.godot/imported/hold_jump.png-7460ffa35a5b5a9bba2bb7f659ca150d.ctex"
+<<<<<<< HEAD
+uid="uid://bedea6msdft0v"
+=======
+uid="uid://cdyx1bxax7tf6"
+>>>>>>> 00fb0efde6436f754d6fc503c8c1d68794e4e183
+path="res://.godot/imported/Coffee.png-889c22b5c7bfa73c75388f62e219063b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/player/assets/hold_jump.png"
-dest_files=["res://.godot/imported/hold_jump.png-7460ffa35a5b5a9bba2bb7f659ca150d.ctex"]
+source_file="res://entities/coffee/Coffee.png"
+dest_files=["res://.godot/imported/Coffee.png-889c22b5c7bfa73c75388f62e219063b.ctex"]
 
 [params]
 
