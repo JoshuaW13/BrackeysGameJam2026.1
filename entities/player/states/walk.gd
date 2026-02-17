@@ -1,11 +1,14 @@
 extends State
 class_name Walk
 
+@onready var animation_player : AnimationPlayer = %AnimationPlayer
+
 @export var player: Player
 var last_direction := Vector2.ZERO
 const WALK_SPEED = 100.0
 
 func enter()->void:
+	animation_player.play("walk")
 	player.velocity_component.speed = WALK_SPEED
 
 func determine_direction() -> Vector2:
@@ -26,7 +29,7 @@ func determine_direction() -> Vector2:
 
 	return direction
 
-func physics_update(delta: float) -> void:
+func physics_update(_delta: float) -> void:
 	var direction: Vector2 = determine_direction()
 	
 	if !player.is_on_floor():
