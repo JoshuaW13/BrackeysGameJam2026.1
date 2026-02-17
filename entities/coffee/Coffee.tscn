@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5bdamcr1kdgx"]
 
 [ext_resource type="Script" uid="uid://c2xy3tu4tjwh2" path="res://entities/coffee/coffee.gd" id="1_q6x18"]
-[ext_resource type="Texture2D" uid="uid://ksadikmlvtvc" path="res://entities/player/assets/Dude2.png" id="1_vbgfg"]
+[ext_resource type="Texture2D" uid="uid://cdyx1bxax7tf6" path="res://entities/coffee/Coffee.png" id="2_q6x18"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vbgfg"]
 size = Vector2(16, 16)
@@ -14,7 +14,7 @@ script = ExtResource("1_q6x18")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=78928876]
 unique_name_in_owner = true
 position = Vector2(0, -8)
-texture = ExtResource("1_vbgfg")
+texture = ExtResource("2_q6x18")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=602127240]
 position = Vector2(0, -8)
