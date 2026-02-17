@@ -1,6 +1,7 @@
 extends State
 class_name Jump
 
+@onready var animation_player : AnimationPlayer = %AnimationPlayer
 @export var player: Player
 
 var jump_vertical_speed: float = 500
@@ -9,6 +10,7 @@ var last_direction := Vector2.ZERO
 const JUMP_HORIZONTAL_SPEED = 30
 
 func enter()->void:
+	animation_player.play("jump")
 	player.velocity_component.set_vertical(-jump_vertical_speed)
 	player.velocity_component.speed = JUMP_HORIZONTAL_SPEED
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcuxroey2dvjq"
-path="res://.godot/imported/chadwalk.png-49a7e1ba69125dc184225acb0e2dd47c.ctex"
+uid="uid://dlnv2bppml3po"
+path="res://.godot/imported/idle.png-143b6f5c0fa5fd1f4431b2f8a2dc2083.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/player/assets/chadwalk.png"
-dest_files=["res://.godot/imported/chadwalk.png-49a7e1ba69125dc184225acb0e2dd47c.ctex"]
+source_file="res://entities/player/assets/idle.png"
+dest_files=["res://.godot/imported/idle.png-143b6f5c0fa5fd1f4431b2f8a2dc2083.ctex"]
 
 [params]
 
