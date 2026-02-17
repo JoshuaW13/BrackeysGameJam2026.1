@@ -11,9 +11,9 @@ func _ready() -> void:
 	for i in range(5):
 		var new_item : Item
 		if i%2==0:
-			new_item = load("res://entities/coffee/coffee.tres")
+			new_item = preload("res://entities/coffee/coffee.tres")
 		else:
-			new_item  = load("res://entities/box/box.tres")
+			new_item  = preload("res://entities/box/box.tres")
 		add_item(new_item)
 
 func add_item(item: Item)->void:

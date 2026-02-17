@@ -19,6 +19,7 @@ size = Vector2(12, 16)
 length = 9.424508
 
 [sub_resource type="Animation" id="Animation_7thud"]
+resource_name = "jump"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -137,7 +138,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_gx6sm"]
 resource_name = "jump"
 length = 0.73333335
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -190,7 +190,7 @@ script = ExtResource("1_8fjmc")
 [node name="Pivot" type="Node2D" parent="." unique_id=318106126]
 
 [node name="InventorySpawn" type="Marker2D" parent="Pivot" unique_id=782173611]
-position = Vector2(16, -7)
+position = Vector2(16, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=1564657274]
 position = Vector2(0, -15)
