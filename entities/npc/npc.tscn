@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b3ilxt3m8c04n"]
+
+[ext_resource type="Script" uid="uid://0tdh8wsjk7x7" path="res://npc.gd" id="1_e3lg2"]
+[ext_resource type="Texture2D" uid="uid://ckmxixtxmlxyv" path="res://entities/player/assets/spritesheet.png" id="2_7bf1a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wfxk4"]
+radius = 6.0
+height = 16.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6suo"]
+size = Vector2(36.5, 16)
+
+[node name="NPC" type="CharacterBody2D" unique_id=1187843567]
+script = ExtResource("1_e3lg2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1093004087]
+texture = ExtResource("2_7bf1a")
+flip_h = true
+hframes = 7
+vframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=164818914]
+position = Vector2(1, 8)
+shape = SubResource("CapsuleShape2D_wfxk4")
+
+[node name="InteractArea2D" type="Area2D" parent="." unique_id=729080406]
+collision_layer = 3
+collision_mask = 3
+
+[node name="InteractCollisionShape2D" type="CollisionShape2D" parent="InteractArea2D" unique_id=1979648562]
+position = Vector2(1, 8)
+shape = SubResource("RectangleShape2D_y6suo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=493774532]
+root_node = NodePath("../Sprite2D")
+
+[connection signal="body_entered" from="InteractArea2D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="InteractArea2D" to="." method="_on_body_exited"]
