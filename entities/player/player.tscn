@@ -189,7 +189,7 @@ script = ExtResource("1_8fjmc")
 [node name="Pivot" type="Node2D" parent="." unique_id=318106126]
 
 [node name="InventorySpawn" type="Marker2D" parent="Pivot" unique_id=782173611]
-position = Vector2(16, -7)
+position = Vector2(16, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=1564657274]
 position = Vector2(0, -15)

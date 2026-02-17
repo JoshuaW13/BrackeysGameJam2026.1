@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cenqr3o7ulf8d"]
 
 [ext_resource type="Script" uid="uid://bp7dlmo4ex1k3" path="res://common/components/Inventory/inventory_item.gd" id="1_xaykg"]
+[ext_resource type="Texture2D" uid="uid://cur43nn35d1o4" path="res://entities/box/assets/Box.png" id="2_pp5sx"]
 
 [node name="InventoryItem" type="Node2D" unique_id=1115540126]
 script = ExtResource("1_xaykg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=699749586]
 unique_name_in_owner = true
+position = Vector2(0, -8)
+texture = ExtResource("2_pp5sx")
