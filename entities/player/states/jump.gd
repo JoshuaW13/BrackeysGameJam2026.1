@@ -10,6 +10,7 @@ const JUMP_HORIZONTAL_SPEED = 50
 
 func enter()->void:
 	animation_player.play("jump")
+	animation_player.queue("freefall")
 	player.velocity_component.set_vertical(-jump_vertical_speed)
 	player.velocity_component.speed = JUMP_HORIZONTAL_SPEED
 
