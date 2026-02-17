@@ -5,7 +5,6 @@ class_name Jump
 @export var player: Player
 
 var jump_vertical_speed: float = 500
-var jump_horizontal_speed: float = 1
 var last_direction := Vector2.ZERO
 const JUMP_HORIZONTAL_SPEED = 30
 

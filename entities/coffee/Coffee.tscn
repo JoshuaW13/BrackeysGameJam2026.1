@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://5bdamcr1kdgx"]
+
+[ext_resource type="Script" uid="uid://c2xy3tu4tjwh2" path="res://entities/coffee/coffee.gd" id="1_q6x18"]
+[ext_resource type="Texture2D" uid="uid://ksadikmlvtvc" path="res://entities/player/assets/Dude2.png" id="1_vbgfg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbgfg"]
+size = Vector2(16, 16)
+
+[node name="Coffee" type="RigidBody2D" unique_id=345192037]
+collision_layer = 4
+input_pickable = true
+script = ExtResource("1_q6x18")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=78928876]
+unique_name_in_owner = true
+position = Vector2(0, -8)
+texture = ExtResource("1_vbgfg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=602127240]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_vbgfg")

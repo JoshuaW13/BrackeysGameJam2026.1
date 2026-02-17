@@ -56,6 +56,7 @@ take={
 
 2d_physics/layer_1="floor"
 2d_physics/layer_2="entities"
+2d_physics/layer_3="nonMovableObjects"
 
 [physics]
 

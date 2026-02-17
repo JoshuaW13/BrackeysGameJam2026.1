@@ -33,5 +33,3 @@ shape = SubResource("RectangleShape2D_dvghe")
 [node name="CollisionFixer" type="CollisionShape2D" parent="." unique_id=1236624215]
 position = Vector2(0, -8)
 shape = SubResource("SeparationRayShape2D_dvghe")
-
-[connection signal="input_event" from="." to="." method="_on_input_event"]

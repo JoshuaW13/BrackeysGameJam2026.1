@@ -8,9 +8,13 @@ var current_item: InventoryItem
 
 func _ready() -> void:
 	pass
-	for i in range(3):
-		var box_item : Item = preload("res://entities/box/box.tres")
-		add_item(box_item)
+	for i in range(5):
+		var new_item : Item
+		if i%2==0:
+			new_item = preload("res://entities/coffee/coffee.tres")
+		else:
+			new_item  = preload("res://entities/box/box.tres")
+		add_item(new_item)
 
 func add_item(item: Item)->void:
 	inventory.push_back(item)
@@ -18,13 +22,15 @@ func add_item(item: Item)->void:
 		spawn_front()
 
 func remove_item()->void:
+	if inventory.is_empty():
+		return
 	inventory.pop_front()
 	spawn_front()
 
 func use_item()->void:
 	if !inventory.is_empty():
 		var item_to_spawn : PackedScene = inventory.front().scene
-		var item_instance : Box = item_to_spawn.instantiate()
+		var item_instance : RigidBody2D = item_to_spawn.instantiate()
 		item_instance.position = inventory_spawn.global_position
 		get_tree().current_scene.add_child(item_instance)
 	remove_item()

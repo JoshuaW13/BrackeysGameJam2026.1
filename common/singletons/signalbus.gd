@@ -1,3 +1,3 @@
 extends Node
 
-signal item_picked_up(item: Box)
+signal item_picked_up(item: PlaceableItem)
