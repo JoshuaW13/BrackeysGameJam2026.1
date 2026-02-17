@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="2_5soyf"]
 [ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="3_x7s5r"]
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="4_5soyf"]
-[ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="4_g7e41"]
+[ext_resource type="PackedScene" uid="uid://ci1ynfk1i6br5" path="res://levels/level2/Manager.tscn" id="4_g7e41"]
 
 [node name="Level2" type="Node2D" unique_id=1543521338]
 
@@ -31,9 +31,9 @@ tile_set = ExtResource("4_5soyf")
 z_index = 5
 position = Vector2(32, 135)
 
-[node name="NPC" parent="." unique_id=1187843567 instance=ExtResource("4_g7e41")]
-position = Vector2(472, 120)
-
 [node name="Box" parent="." unique_id=2021290329 instance=ExtResource("3_x7s5r")]
 z_index = 5
 position = Vector2(126, 56)
+
+[node name="NPC" parent="." unique_id=1187843567 instance=ExtResource("4_g7e41")]
+position = Vector2(476, 120)

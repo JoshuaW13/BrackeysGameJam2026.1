@@ -1,14 +1,15 @@
 extends CharacterBody2D
 
-@onready var interact:= $InteractArea2D
+@export var dialogue_id : String
+signal interacted(dialogue_lines)
 var is_in_area: bool = false
 
-func _ready():
-	$InteractArea2D.body_entered.connect(_on_body_entered)
-	
 func _input(event):
 	if event.is_action_pressed("interact") and is_in_area:
-		print("Do something!")
+		interact()
+		
+func interact():
+	emit_signal("interacted", dialogue_id)
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):

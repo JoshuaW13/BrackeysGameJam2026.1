@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b64tre6swvbpv" path="res://common/components/gravity/GravityComponent.tscn" id="8_26q78"]
 [ext_resource type="PackedScene" uid="uid://oqmrkm88j538" path="res://common/components/Inventory/Inventory.tscn" id="9_bectd"]
 [ext_resource type="PackedScene" uid="uid://bpku656ioj6cj" path="res://common/components/FlipComponents/flipOnVelocity/FlipOnVelocity.tscn" id="10_wvtmh"]
+[ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="12_a1qjk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7thud"]
 size = Vector2(12, 16)
@@ -250,3 +251,10 @@ shape = SubResource("SeparationRayShape2D_7thud")
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_gx6sm")
 autoplay = &"idle"
+
+[node name="DialoguePanel" parent="." unique_id=771276265 instance=ExtResource("12_a1qjk")]
+visible = false
+offset_left = -140.0
+offset_top = -35.0
+offset_right = -12.0
+offset_bottom = 13.0
