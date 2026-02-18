@@ -5,17 +5,12 @@ class_name Player
 @onready var velocity_component : VelocityComponent = %VelocityComponent
 @onready var gravity_component: GravityComponent = %GravityComponent
 @onready var inventory: Inventory = %Inventory
-@onready var dialogue_panel:= $DialoguePanel
 
 var push_strength: float = 10
 
 func _ready() -> void:
 	state_machine.start()
 	SignalBus.item_picked_up.connect(item_picked_up)
-	
-	var npcs = get_tree().get_nodes_in_group("npc")
-	for npc in npcs:
-		npc.interacted.connect(_on_npc_interacted)
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -39,7 +34,3 @@ func item_picked_up(item: PlaceableItem)->void:
 func _input(_event: InputEvent)-> void:
 	if _event.is_action_pressed("place"):
 		inventory.use_item()
-		
-func _on_npc_interacted(dialogue_id: String) -> void:
-	print("Signal from ", dialogue_id)
-	dialogue_panel.show_dialogue(dialogue_id)

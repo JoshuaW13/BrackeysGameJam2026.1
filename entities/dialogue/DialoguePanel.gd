@@ -1,34 +1,39 @@
 extends Panel
 
-@onready var dialogue = $TextLabel
-var dialogue_lines : Array = [] 
-var current_line : int = 0
+@onready var dialogue: Label = $TextLabel
+signal dialogue_finished
 
-func show_dialogue(dialogue_id: String) -> void:
-	if not dialogue_database.has(dialogue_id):
-		print("Dialogue ID not found:", dialogue_id)
+var dialogue_lines: Array = []
+var current_line: int = 0
+var is_active: bool = false
+
+func show_dialogue(lines: Array) -> void:
+	if lines.is_empty():
 		return
 
-	if not visible:
-		dialogue_lines = dialogue_database[dialogue_id]
+	if not is_active:
+		dialogue_lines = lines
 		current_line = 0
+		is_active = true
+
 		dialogue.text = dialogue_lines[current_line]
 		visible = true
-	else:
+	
+func _input(event):
+	if not visible:
+		return
+
+	if event.is_action_pressed("interact"):
 		current_line += 1
 		if current_line < dialogue_lines.size():
 			dialogue.text = dialogue_lines[current_line]
 		else:
-			hide_dialogue()
+			end_dialogue()
 
-func hide_dialogue() -> void:
+func end_dialogue() -> void:
 	visible = false
-	
-var dialogue_database := {
-	"Lv2Manager": [
-		"Hello unpaid intern.",
-		"What? I don't need no box. Why are you bringing trash in here.",
-        "Get out of here, I'm busy."
-	],
-}
+	is_active = false
+	dialogue.text = ""
+	emit_signal("dialogue_finished")
+
 	

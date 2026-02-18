@@ -5,8 +5,8 @@
 [sub_resource type="GDScript" id="GDScript_gwous"]
 script/source = "extends CharacterBody2D
 
-@export var dialogue_id : String
-signal interacted(dialogue_id)
+@export var npc_id : String
+signal interacted(npc_id)
 var is_in_area: bool = false
 
 func _input(event):
@@ -14,8 +14,8 @@ func _input(event):
 		interact()
 		
 func interact():
-	emit_signal(\"interacted\", dialogue_id)
-	print(dialogue_id, \"Sent signal\")
+	emit_signal(\"interacted\", npc_id)
+	print(npc_id, \"Sent signal\")
 
 func _on_body_entered(body):
 	if body.is_in_group(\"player\"):
