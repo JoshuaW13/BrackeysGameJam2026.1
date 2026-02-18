@@ -35,11 +35,10 @@ z_index = 5
 position = Vector2(32, 135)
 
 [node name="DialoguePanel" parent="Player" unique_id=771276265 instance=ExtResource("6_i707j")]
-visible = false
-offset_left = -32.0
-offset_top = -135.0
-offset_right = 96.0
-offset_bottom = -87.0
+offset_left = -141.0
+offset_top = -35.0
+offset_right = -13.0
+offset_bottom = 13.0
 
 [node name="Box" parent="." unique_id=2021290329 instance=ExtResource("3_x7s5r")]
 z_index = 5
