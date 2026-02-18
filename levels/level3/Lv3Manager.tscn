@@ -47,8 +47,15 @@ position = Vector2(126, 56)
 
 [node name="NPC" parent="." unique_id=1187843567 instance=ExtResource("6_nm1vd")]
 position = Vector2(476, 120)
+collision_layer = 0
 dialogue_id = "Lv3Manager"
 
 [node name="NPC2" parent="." unique_id=1576248944 instance=ExtResource("6_nm1vd")]
 position = Vector2(152, 120)
+collision_layer = 0
 dialogue_id = "Lv3Coworker"
+
+[node name="NPC3" parent="." unique_id=1961589590 instance=ExtResource("6_nm1vd")]
+position = Vector2(330, 71)
+collision_layer = 0
+dialogue_id = "Lv3Senior"

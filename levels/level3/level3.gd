@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var dialogue_panel:= $Player/DialoguePanel
-var npc_state := {"Lv3Manager": 0}
 
 func _ready() -> void:
 	var npcs = get_tree().get_nodes_in_group("npc")
@@ -37,13 +36,18 @@ func _on_npc_interacted(npc_id: String) -> void:
 			dialogue_panel.dialogue_finished.connect(
 				func(): npc_state[npc_id] += 1
 			)
-	
+
+var npc_state := {"Lv3Manager": 0, "Lv3Coworker": 0, "Lv3Senior": 0}
+
 var event_database := {
 	"Lv3Manager": [
 		["Dialogue", "ManagerDismissal"],
 	],
 	"Lv3Coworker": [
 		["Dialogue", "CoworkerHello"],
+	],
+	"Lv3Senior": [
+		["Dialogue", "SeniorHint"],
 	],
 }
 	
@@ -52,6 +56,11 @@ var dialogue_database := {
 		"Hello fellow intern!",
 		"Testing multiple NPC interactions.",
 		"Now go bother the manager.",
+	],
+	"SeniorHint": [
+		"Hey, pstt.",
+		"We might have some boxes around to help you get over this wall.",
+		"Good luck, I'm taking my lunch break.",
 	],
 	"ManagerDismissal": [
 		"Bothering me again!",
