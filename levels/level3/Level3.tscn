@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cm7n21143rigf" path="res://levels/level3/level3.gd" id="1_ym1xm"]
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="2_7px63"]
+[ext_resource type="PackedScene" uid="uid://d4nahe1lhtwqr" path="res://entities/door/door.tscn" id="3_hg36g"]
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="3_srxm4"]
 [ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="4_pxkmy"]
 [ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="5_tvlix"]
@@ -37,8 +38,11 @@ tile_set = ExtResource("2_7px63")
 
 [node name="FloorObjects" type="TileMapLayer" parent="." unique_id=622267143]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAHAAMAAwAAAAAAAAAQAAUAAwAAAAAAAAATAAYABQAAAAAAAAATAAcABQAAAAIAAAATAAgACAAAAAAAAAAWAAAABQAAAAAAAAAWAAEABQAAAAIAAAAWAAMABQAAAAAAAAAWAAQABQAAAAEAAAAWAAUABQAAAAIAAAAbAAgABgAJAAAAAAA=")
+tile_map_data = PackedByteArray("AAAHAAMAAwAAAAAAAAAQAAUAAwAAAAAAAAATAAYABQAAAAAAAAATAAcABQAAAAIAAAAWAAAABQAAAAAAAAAWAAEABQAAAAIAAAAWAAMABQAAAAAAAAAWAAQABQAAAAEAAAAWAAUABQAAAAIAAAAbAAgABgAJAAAAAAA=")
 tile_set = ExtResource("2_7px63")
+
+[node name="Door" parent="." unique_id=580264968 instance=ExtResource("3_hg36g")]
+position = Vector2(312, 128)
 
 [node name="Player" parent="." unique_id=914755556 instance=ExtResource("3_srxm4")]
 z_index = 5

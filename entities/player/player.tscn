@@ -243,7 +243,7 @@ position = Vector2(0, -63)
 zoom = Vector2(4, 4)
 
 [node name="CollisionFixer" type="CollisionShape2D" parent="." unique_id=2009747182]
-position = Vector2(0, -8)
+position = Vector2(0, -9)
 shape = SubResource("SeparationRayShape2D_7thud")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=55629763]
