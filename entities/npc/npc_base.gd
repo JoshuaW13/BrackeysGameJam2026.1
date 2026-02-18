@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var dialogue_id : String
+@export var npc_id : String
 signal interacted(dialogue_lines)
 var is_in_area: bool = false
 
@@ -9,7 +9,7 @@ func _input(event):
 		interact()
 		
 func interact():
-	emit_signal("interacted", dialogue_id)
+	emit_signal("interacted", npc_id)
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):

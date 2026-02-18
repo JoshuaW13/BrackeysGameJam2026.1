@@ -1,7 +1,10 @@
 extends Node2D
 
-@onready var dialogue_panel:= $Player/DialoguePanel
-@onready var player:= $Player
+signal lock_door(door_id: String)
+signal unlock_door(door_id: String)
+@onready var dialogue_panel : DialoguePanel = $Player/DialoguePanel
+@onready var player : Player = $Player
+var npc_id_2
 
 func _ready() -> void:
 	var npcs = get_tree().get_nodes_in_group("npc")
@@ -9,15 +12,15 @@ func _ready() -> void:
 		npc.interacted.connect(_on_npc_interacted)
 		
 func _on_npc_interacted(npc_id: String) -> void:
-	print("Signal from ", npc_id)
+	npc_id_2 = npc_id
 
 	if not npc_state.has(npc_id):
-		npc_state[npc_id] = 0
+		push_error("NPC id does not exist")
 
 	var event_index = npc_state[npc_id]
 
 	if not event_database.has(npc_id):
-		print("No events for NPC:", npc_id)
+		push_error("No events for NPC:", npc_id)
 		return
 
 	var npc_events = event_database[npc_id]
@@ -39,19 +42,25 @@ func _on_npc_interacted(npc_id: String) -> void:
 			match event[2]:
 				"HasCoffee":
 					passCheck = has_coffee()
+					emit_signal("unlock_door", "Lv3Door")
 			if passCheck:
 				var lines = dialogueOptions[0]
 				dialogue_panel.show_dialogue(lines)
 
-				dialogue_panel.dialogue_finished.connect(
-					func(): npc_state[npc_id] += 1
-				)
+				if not dialogue_panel.dialogue_finished.is_connected(add):
+					dialogue_panel.dialogue_finished.connect(add)
 			else:
 				var lines = dialogueOptions[1]
 				dialogue_panel.show_dialogue(lines)	
+				
+	print("End")
 			
+func add(): 
+	npc_state[npc_id_2] += 1
+	print(self) 
+	
 func has_coffee():
-	return player.inventory.front() == preload("res://entities/coffee/coffee.tres")
+	return player.inventory.has_item_of_type(Item.ItemType.COFEE)
 
 var npc_state := {"Lv3Manager": 0, "Lv3Coworker": 0, "Lv3Senior": 0}
 
@@ -86,7 +95,8 @@ var dialogue_database := {
 	],
 	"ManagerCoffee": [
 		[
-			"That's some good coffee"
+			"That's some good coffee",
+			"That's some good coffeeeeeeeeeeeeeeeeeeeeeee"
 		],
 		[
 			"Where is my coffee"

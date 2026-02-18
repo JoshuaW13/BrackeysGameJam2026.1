@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://cu2g47wkfn38h"]
+
+[ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="1_tje7f"]
+[ext_resource type="Texture2D" uid="uid://cvpdaw1jf75p2" path="res://entities/npc/human_coworker3.png" id="2_yxprm"]
+
+[resource]
+script = ExtResource("1_tje7f")
+npc_id = "Lv3Manager"
+texture = ExtResource("2_yxprm")
+metadata/_custom_type_script = "uid://caib8pj52pvm"

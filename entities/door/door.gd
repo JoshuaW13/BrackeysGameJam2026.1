@@ -1,10 +1,13 @@
 extends Node2D
 
-var is_locked: bool = false
-var is_in_area: String = ""
+@export var door_id : String
+
 @onready var door: Sprite2D = $Sprite2D
 @onready var animation: AnimationPlayer = $AnimationPlayer
 @onready var timer: Timer = $OpenTimer
+
+var is_locked: bool = false
+var is_in_area: String = ""
 
 func _input(event):
 	if event.is_action_pressed("interact") and is_in_area != "":
@@ -37,3 +40,4 @@ func _on_right_body_entered(body):
 func _on_right_body_exited(body):
 	if body.is_in_group("player"):
 		is_in_area = ""
+		

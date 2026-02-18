@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://5pgsaoywp5c1"]
+
+[ext_resource type="PackedScene" uid="uid://d4nahe1lhtwqr" path="res://entities/door/door.tscn" id="1_wjsrj"]
+
+[node name="Door" unique_id=580264968 instance=ExtResource("1_wjsrj")]
