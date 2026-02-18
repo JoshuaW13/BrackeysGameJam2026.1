@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dfwtrq5nnjf4w"]
+
+[ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="1_utv3x"]
+[ext_resource type="Texture2D" uid="uid://yq1wdvwq8asw" path="res://entities/npc/human_coworker7.png" id="2_y43vw"]
+
+[node name="NPC" unique_id=1187843567 instance=ExtResource("1_utv3x")]
+npc_id = "Lv3Senior"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1093004087]
+texture = ExtResource("2_y43vw")
+hframes = 1
+vframes = 1

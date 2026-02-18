@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="2_5soyf"]
 [ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="3_x7s5r"]
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="4_5soyf"]
-[ext_resource type="PackedScene" uid="uid://ci1ynfk1i6br5" path="res://levels/level2/Manager.tscn" id="4_g7e41"]
+[ext_resource type="PackedScene" uid="uid://ci1ynfk1i6br5" path="res://levels/level2/Lv2Manager.tscn" id="4_g7e41"]
 [ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="6_i707j"]
 
 [node name="Level2" type="Node2D" unique_id=1543521338]
