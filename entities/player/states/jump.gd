@@ -7,12 +7,15 @@ class_name Jump
 var jump_vertical_speed: float = 425
 var last_direction := Vector2.ZERO
 const JUMP_HORIZONTAL_SPEED = 50
+const JUMP_SOUND = preload("res://entities/player/assets/jump.wav")
 
 func enter()->void:
 	animation_player.play("jump")
 	animation_player.queue("freefall")
 	player.velocity_component.set_vertical(-jump_vertical_speed)
 	player.velocity_component.speed = JUMP_HORIZONTAL_SPEED
+	player.audioPlayer.stream = JUMP_SOUND
+	player.audioPlayer.play()
 
 func physics_update(_delta: float)-> void:
 	var direction: Vector2 = determine_direction()

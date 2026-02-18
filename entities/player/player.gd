@@ -5,6 +5,7 @@ class_name Player
 @onready var velocity_component : VelocityComponent = %VelocityComponent
 @onready var gravity_component: GravityComponent = %GravityComponent
 @onready var inventory: Inventory = %Inventory
+@onready var audioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var push_strength: float = 10
 
