@@ -7,4 +7,6 @@
 script = ExtResource("1_tje7f")
 npc_id = "Lv3Manager"
 texture = ExtResource("2_yxprm")
+dialogue = Array[Array]([["Ah what a perfect cup of coffee", "You're taking Steve's position now, what a useless fella, can't even make a good cuppa coffee."], ["Where is my coffee!", "You better not come back without my cup of HOT CAFFIENE FILLED BEAN WATER!"]])
+events = Array[Array]([["has_coffee", "state(0/1),unlock_door(Lv3ManagerDoor)", "state(1/0),unlock_door(Lv3ManagerDoor)"], ["", "", ""]])
 metadata/_custom_type_script = "uid://caib8pj52pvm"

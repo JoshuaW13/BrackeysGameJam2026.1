@@ -8,7 +8,7 @@ var dialogue_lines: Array = []
 var current_line: int = 0
 var is_active: bool = false
 
-func show_dialogue(lines: Array) -> void:
+func _on_npc_dialogue(npc_id, lines):
 	if lines.is_empty():
 		return
 
@@ -36,5 +36,3 @@ func end_dialogue() -> void:
 	is_active = false
 	dialogue.text = ""
 	emit_signal("dialogue_finished")
-
-	
