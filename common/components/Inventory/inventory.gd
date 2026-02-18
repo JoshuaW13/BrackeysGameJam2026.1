@@ -48,3 +48,9 @@ func spawn_front()->void:
 	current_item.item_resource = inventory.front()
 	current_item.scale = inventory_spawn_scale
 	inventory_spawn.add_child(current_item)
+
+func has_item_of_type(type: Item.ItemType)->bool:
+	for i in range(inventory.size()):
+		if inventory[i].type == type:
+			return true
+	return false
