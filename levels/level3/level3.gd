@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var dialogue_panel:= $Player/DialoguePanel
+@onready var player:= $Player
 
 func _ready() -> void:
 	var npcs = get_tree().get_nodes_in_group("npc")
@@ -26,21 +27,37 @@ func _on_npc_interacted(npc_id: String) -> void:
 		return
 
 	var event = npc_events[event_index]
+	var dialogue_id = event[1]
 	
 	match event[0]:
 		"Dialogue":
-			var dialogue_id = event[1]
 			var lines = dialogue_database.get(dialogue_id, [])
 			dialogue_panel.show_dialogue(lines)
+		"ConditionalDialogue":
+			var passCheck = false
+			var dialogueOptions = dialogue_database.get(dialogue_id, [])
+			match event[2]:
+				"HasCoffee":
+					passCheck = has_coffee()
+			if passCheck:
+				var lines = dialogueOptions[0]
+				dialogue_panel.show_dialogue(lines)
 
-			dialogue_panel.dialogue_finished.connect(
-				func(): npc_state[npc_id] += 1
-			)
+				dialogue_panel.dialogue_finished.connect(
+					func(): npc_state[npc_id] += 1
+				)
+			else:
+				var lines = dialogueOptions[1]
+				dialogue_panel.show_dialogue(lines)	
+			
+func has_coffee():
+	return player.inventory.front() == preload("res://entities/coffee/coffee.tres")
 
 var npc_state := {"Lv3Manager": 0, "Lv3Coworker": 0, "Lv3Senior": 0}
 
 var event_database := {
 	"Lv3Manager": [
+		["ConditionalDialogue", "ManagerCoffee", "HasCoffee"],
 		["Dialogue", "ManagerDismissal"],
 	],
 	"Lv3Coworker": [
@@ -66,5 +83,13 @@ var dialogue_database := {
 		"Bothering me again!",
 		"Considering how good you are at somehow getting here. You'll do well in the lab.",
 		"Go help them there, shoo",
+	],
+	"ManagerCoffee": [
+		[
+			"That's some good coffee"
+		],
+		[
+			"Where is my coffee"
+		]
 	],
 }

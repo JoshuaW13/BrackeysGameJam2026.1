@@ -13,7 +13,7 @@ func show_dialogue(lines: Array) -> void:
 
 	if not is_active:
 		dialogue_lines = lines
-		current_line = 0
+		current_line = -1
 		is_active = true
 
 		dialogue.text = dialogue_lines[current_line]
