@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c8wck7763l17b"
-path="res://.godot/imported/tinypixel.otf-f57633bcc49c72ed6b52f0fda2d0781d.fontdata"
+uid="uid://dj2q782d1ybvn"
+path="res://.godot/imported/Micro5-Regular.ttf-3d80af5e9bf63bb050e42c3c69c63e37.fontdata"
 
 [deps]
 
-source_file="res://tinypixel.otf"
-dest_files=["res://.godot/imported/tinypixel.otf-f57633bcc49c72ed6b52f0fda2d0781d.fontdata"]
+source_file="res://Micro5-Regular.ttf"
+dest_files=["res://.godot/imported/Micro5-Regular.ttf-3d80af5e9bf63bb050e42c3c69c63e37.fontdata"]
 
 [params]
 
