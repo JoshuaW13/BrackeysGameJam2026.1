@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://dd2ks5rqjvptf"]
 
-[ext_resource type="Script" uid="uid://b3nivh0g28r3h" path="res://entities/moving_platform/moving_floor_resource.gd" id="1_w1ksl"]
+[ext_resource type="Script" uid="uid://cio2vuvhc0lat" path="res://entities/moving_platform/moving_platform_base.gd" id="1_w1ksl"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=87318914]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1ksl"]
+size = Vector2(2, 2)
+
+[node name="MovingPlatform" type="CharacterBody2D" unique_id=87318914]
 script = ExtResource("1_w1ksl")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=216762314]
+[node name="Node2D" type="Node2D" parent="." unique_id=1351659895]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1695267091]
+shape = SubResource("RectangleShape2D_w1ksl")
+
+[node name="PauseTimer" type="Timer" parent="." unique_id=859684414]

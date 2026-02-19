@@ -5,7 +5,9 @@
 [ext_resource type="Resource" uid="uid://b8o48gs0uo4s8" path="res://levels/level3/map/door.tres" id="3_i8es6"]
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="3_srxm4"]
 [ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="4_pxkmy"]
+[ext_resource type="PackedScene" uid="uid://dd2ks5rqjvptf" path="res://entities/moving_platform/moving_platform.tscn" id="5_2hiva"]
 [ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="5_tvlix"]
+[ext_resource type="Resource" uid="uid://duiowty25ytwq" path="res://levels/level3/map/moving_platform.tres" id="6_0kcjn"]
 [ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="7_b67ty"]
 [ext_resource type="Resource" uid="uid://6unlur3hpyk1" path="res://levels/level3/npc/coworker/Coworker.tres" id="8_hg36g"]
 [ext_resource type="Resource" uid="uid://b6hvr15ioba7g" path="res://levels/level3/npc/senior/Senior.tres" id="9_skw0t"]
@@ -18,6 +20,12 @@ resource_name = "Door"
 _data = {
 &"Door": SubResource("Animation_b67ty")
 }
+
+[sub_resource type="Curve2D" id="Curve2D_jlrek"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 71, 110, 0, 0, 0, 0, 192, 110)
+}
+point_count = 2
 
 [node name="Level3" type="Node2D" unique_id=1543521338]
 
@@ -51,6 +59,16 @@ position = Vector2(126, 56)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=277830785]
 libraries/ = SubResource("AnimationLibrary_hg36g")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=403382344]
+curve = SubResource("Curve2D_jlrek")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1788516889]
+position = Vector2(71, 110)
+
+[node name="MovingPlatform" parent="Path2D/PathFollow2D" unique_id=87318914 instance=ExtResource("5_2hiva")]
+position = Vector2(473, 120)
+moving_platform = ExtResource("6_0kcjn")
 
 [node name="Player" parent="." unique_id=914755556 instance=ExtResource("3_srxm4")]
 z_index = 5

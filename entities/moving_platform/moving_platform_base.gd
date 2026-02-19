@@ -1,30 +1,83 @@
 extends CharacterBody2D
 
 @export var moving_platform : MovingPlatformResource
-var start_position: Vector2
-var target_position: Vector2
-var moving_forward := true
 
-@onready var sprite = $Sprite2D
-@onready var collision = $CollisionShape2D
+@onready var path_follow : PathFollow2D = get_parent()
+@onready var sprite : Node2D = $Node2D
+@onready var collision : CollisionShape2D = $CollisionShape2D
+@onready var pause_timer : Timer = $PauseTimer
+
+var moving_forward := true
+var direction := 1
 
 func _ready():
-	start_position = global_position
-	moving_platform.direction = moving_platform.direction.normalized()
-	target_position = start_position + moving_platform.direction * moving_platform.distance
-
 	_update_width()
+	path_follow.loop = false
+	pause_timer.timeout.connect(_on_pause_finished)
 
 func _physics_process(delta):
-	var target = target_position if moving_forward else start_position
-	var move_dir = (target - global_position).normalized()
+	if moving_platform.paused:
+		return
 
-	velocity = move_dir * moving_platform.speed
-	move_and_slide()
+	if moving_forward:
+		direction = 1
+	else: 
+		direction = -1
 
-	if global_position.distance_to(target) == 0:
-		moving_forward = !moving_forward
+	path_follow.progress += direction * moving_platform.speed * delta
+	global_position = path_follow.global_position
+
+	_check_ends()
+	
+func _check_ends():
+	if moving_forward and path_follow.progress_ratio >= 1:
+		path_follow.progress_ratio = 1
+		_start_pause()
+
+	elif not moving_forward and path_follow.progress_ratio <= 0:
+		path_follow.progress_ratio = 0
+		_start_pause()
+	
+func _start_pause():
+	moving_platform.paused = true
+	pause_timer.start(moving_platform.pause)
+	
+func _on_pause_finished():
+	moving_forward = !moving_forward
+	moving_platform.paused = false
 
 func _update_width():
-	pass
-	#Need to base it off of 16 pix intervals
+	for child in sprite.get_children():
+		child.queue_free()
+		
+	var total_width = moving_platform.width * 16
+	
+	var left_sprite = Sprite2D.new()
+	left_sprite.texture = moving_platform.left_texture
+	left_sprite.position.x = 8
+	sprite.add_child(left_sprite)
+
+	for i in range(1, moving_platform.width - 1):
+		var middle_sprite = Sprite2D.new()
+		middle_sprite.texture = moving_platform.middle_texture
+		middle_sprite.position.x = i * 16 + 8
+		sprite.add_child(middle_sprite)
+		
+	var right_sprite = Sprite2D.new()
+	right_sprite.texture = moving_platform.right_texture
+	right_sprite.position.x = total_width - 16 + 8
+	sprite.add_child(right_sprite)
+
+	sprite.position.x = -total_width / 2
+
+	if collision.shape is RectangleShape2D:
+		collision.shape.size.x = total_width
+		collision.shape.size.y = 8
+		collision.position.y = 4
+	
+	path_follow.progress += direction * 1
+	global_position = path_follow.global_position
+		
+func _on_unlock_platform(platform):
+	if moving_platform.platform_id == platform:
+		moving_platform.paused = false
