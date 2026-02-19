@@ -35,6 +35,16 @@ func use_item()->void:
 		get_tree().current_scene.add_child(item_instance)
 	remove_item()
 
+func cycle_left()->void:
+	var first_item: Item = inventory.pop_front()
+	inventory.append(first_item)
+	spawn_front()
+
+func cycle_right()->void:
+	var first_item: Item = inventory.pop_back()
+	inventory.push_front(first_item)
+	spawn_front()
+
 func spawn_front()->void:
 	if current_item:
 		current_item.queue_free()

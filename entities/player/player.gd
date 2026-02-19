@@ -35,3 +35,7 @@ func item_picked_up(item: PlaceableItem)->void:
 func _input(_event: InputEvent)-> void:
 	if _event.is_action_pressed("place"):
 		inventory.use_item()
+	if _event.is_action_pressed("cycle_inventory_right"):
+		inventory.cycle_right()
+	if _event.is_action_pressed("cycle_inventory_left"):
+		inventory.cycle_left()
