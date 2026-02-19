@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d4nahe1lhtwqr"]
 
 [ext_resource type="Texture2D" uid="uid://b3cvatfjsef4p" path="res://levels/office/assets/door.png" id="1_05v0y"]
-[ext_resource type="Script" uid="uid://531v8lisfg1w" path="res://entities/door/door.gd" id="1_bfv6c"]
+[ext_resource type="Script" uid="uid://531v8lisfg1w" path="res://entities/door/door_base.gd" id="1_bfv6c"]
 
 [sub_resource type="Animation" id="Animation_bfv6c"]
 length = 0.001

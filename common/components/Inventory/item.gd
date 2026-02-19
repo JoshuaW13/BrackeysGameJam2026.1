@@ -2,7 +2,7 @@ extends Resource
 class_name Item
 
 enum ItemType{
-	COFEE,
+	COFFEE,
 	BOX
 }
 @export var type: ItemType

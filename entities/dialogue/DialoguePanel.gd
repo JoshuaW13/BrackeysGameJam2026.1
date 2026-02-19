@@ -1,13 +1,25 @@
 extends Panel
+class_name DialoguePanel
 
+@onready var panel : DialoguePanel = %DialoguePanel
 @onready var dialogue: Label = $TextLabel
 signal dialogue_finished
 
 var dialogue_lines: Array = []
 var current_line: int = 0
 var is_active: bool = false
+var npc : String
 
-func show_dialogue(lines: Array) -> void:
+func _ready() -> void:
+	var npcs = get_tree().get_nodes_in_group("npc")
+
+	for npc in npcs:
+		if npc is NPC:
+			panel.dialogue_finished.connect(npc._on_finished_dialogue)
+			npc.npc_dialogue.connect(_on_npc_dialogue)
+
+func _on_npc_dialogue(npc_id, lines):
+	npc = npc_id
 	if lines.is_empty():
 		return
 
@@ -34,6 +46,4 @@ func end_dialogue() -> void:
 	visible = false
 	is_active = false
 	dialogue.text = ""
-	emit_signal("dialogue_finished")
-
-	
+	emit_signal("dialogue_finished", npc)
