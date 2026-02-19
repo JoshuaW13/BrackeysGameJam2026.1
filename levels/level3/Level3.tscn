@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://glsn33teik4t"]
+[gd_scene format=4 uid="uid://bhgeqs55t7qbc"]
 
 [ext_resource type="Script" uid="uid://cm7n21143rigf" path="res://levels/level3/level3.gd" id="1_ym1xm"]
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="2_7px63"]
@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="3_srxm4"]
 [ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="4_pxkmy"]
 [ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="5_tvlix"]
-[ext_resource type="PackedScene" uid="uid://dfwtrq5nnjf4w" path="res://levels/level3/Lv3Senior.tscn" id="6_b67ty"]
-[ext_resource type="PackedScene" uid="uid://48timdeseoik" path="res://levels/level3/Lv3Manager.tscn" id="7_hg36g"]
-[ext_resource type="PackedScene" uid="uid://ey4uw5vgqwhp" path="res://levels/level3/Lv3Coworker.tscn" id="8_skw0t"]
+[ext_resource type="PackedScene" path="res://levels/level3/Lv3Senior.tscn" id="6_b67ty"]
+[ext_resource type="PackedScene" path="res://levels/level3/Lv3Manager.tscn" id="7_hg36g"]
+[ext_resource type="PackedScene" path="res://levels/level3/Lv3Coworker.tscn" id="8_skw0t"]
 
 [sub_resource type="Animation" id="Animation_b67ty"]
 resource_name = "Door"
