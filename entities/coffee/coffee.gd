@@ -1,6 +1,15 @@
 extends PlaceableItem
 class_name Coffee
 
+enum Topping{
+	NONE,
+	CARAMEL,
+	CHOCOLATE,
+	MILK
+}
+
+var topping: Coffee.Topping = Topping.NONE
+
 func _ready() -> void:
 	if inventory_item == null:
 		inventory_item = load("res://entities/coffee/coffee.tres")
