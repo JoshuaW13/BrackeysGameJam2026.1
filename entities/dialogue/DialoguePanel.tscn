@@ -30,6 +30,7 @@ animations = [{
 }]
 
 [node name="DialoguePanel" type="Panel" unique_id=771276265]
+z_index = 10
 texture_filter = 1
 offset_right = 128.0
 offset_bottom = 48.0

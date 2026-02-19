@@ -1,5 +1,5 @@
 extends Resource
 class_name DialogueCondition
 
-func is_met(context)->bool:
+func is_met()->bool:
 	return true
