@@ -9,6 +9,7 @@ class_name Player
 
 const PICKUP_SOUND = preload("res://audio/pickup.wav")
 const DROP_SOUND = preload("res://audio/drop.wav")
+const CYCLE_SOUND = preload("res://audio/cycle.wav")
 
 var push_strength: float = 10
 
@@ -46,5 +47,9 @@ func _input(_event: InputEvent)-> void:
 			audioPlayer.play()
 	if _event.is_action_pressed("cycle_inventory_right"):
 		inventory.cycle_right()
+		audioPlayer.stream = CYCLE_SOUND
+		audioPlayer.play()
 	if _event.is_action_pressed("cycle_inventory_left"):
 		inventory.cycle_left()
+		audioPlayer.stream = CYCLE_SOUND
+		audioPlayer.play()
