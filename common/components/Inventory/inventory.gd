@@ -5,15 +5,20 @@ class_name Inventory
 @export var inventory_spawn_scale: Vector2 = Vector2(1, 1)
 var inventory: Array[Item] = []
 var current_item: InventoryItem
+var COFEE_RES = load("res://entities/coffee/coffee.tres")
+var BOX_RES = load("res://entities/box/box.tres")
+var next_item_id : int= 0
 
 func _ready() -> void:
 	pass
 	for i in range(5):
 		var new_item : Item
 		if i%2==0:
-			new_item = preload("res://entities/coffee/coffee.tres")
+			new_item = COFEE_RES.duplicate()
 		else:
-			new_item  = preload("res://entities/box/box.tres")
+			new_item  = BOX_RES.duplicate()
+		new_item.id = next_item_id
+		next_item_id += 1
 		add_item(new_item)
 
 func add_item(item: Item)->void:
@@ -27,13 +32,27 @@ func remove_item()->void:
 	inventory.pop_front()
 	spawn_front()
 
-func use_item()->void:
-	if !inventory.is_empty():
-		var item_to_spawn : PackedScene = inventory.front().scene
-		var item_instance : RigidBody2D = item_to_spawn.instantiate()
-		item_instance.position = inventory_spawn.global_position
-		get_tree().current_scene.add_child(item_instance)
+func use_item()->bool:
+	if inventory.is_empty():
+		return false
+	var item_to_spawn : PackedScene = inventory.front().scene
+	var item_instance : PlaceableItem = item_to_spawn.instantiate()
+	item_instance.position = inventory_spawn.global_position
+	get_tree().current_scene.add_child(item_instance)
 	remove_item()
+	return true
+
+func cycle_left()->void:
+	if inventory.is_empty(): return
+	var first_item: Item = inventory.pop_front()
+	inventory.append(first_item)
+	spawn_front()
+
+func cycle_right()->void:
+	if inventory.is_empty(): return
+	var first_item: Item = inventory.pop_back()
+	inventory.push_front(first_item)
+	spawn_front()
 
 func spawn_front()->void:
 	if current_item:

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://gowfo01sagqh"]
+
+[ext_resource type="Script" uid="uid://mq28onjc5uag" path="res://userInterface/screens/titleScreen/title_screen.gd" id="1_6fswb"]
+
+[node name="TitleScreen" type="Control" unique_id=371868285]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6fswb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2130968453]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -29.0
+offset_right = 66.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1911455194]
+layout_mode = 2
+text = "Title of the Game"
+
+[node name="HboxCOntainer" type="HBoxContainer" parent="VBoxContainer" unique_id=106157497]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="VBoxContainer/HboxCOntainer" unique_id=247719214]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 1000
+text = "Play"
+
+[node name="Options" type="Button" parent="VBoxContainer/HboxCOntainer" unique_id=1078787341]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Options"
+
+[connection signal="button_down" from="VBoxContainer/HboxCOntainer/Play" to="." method="_on_play_button_down"]

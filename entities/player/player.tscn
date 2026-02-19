@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b64tre6swvbpv" path="res://common/components/gravity/GravityComponent.tscn" id="8_26q78"]
 [ext_resource type="PackedScene" uid="uid://oqmrkm88j538" path="res://common/components/Inventory/Inventory.tscn" id="9_bectd"]
 [ext_resource type="PackedScene" uid="uid://bpku656ioj6cj" path="res://common/components/FlipComponents/flipOnVelocity/FlipOnVelocity.tscn" id="10_wvtmh"]
-[ext_resource type="AudioStream" uid="uid://2kafiddih3db" path="res://entities/player/assets/jump.wav" id="12_a1qjk"]
+[ext_resource type="AudioStream" uid="uid://2kafiddih3db" path="res://audio/jump.wav" id="12_a1qjk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7thud"]
 size = Vector2(12, 16)

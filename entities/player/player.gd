@@ -7,6 +7,10 @@ class_name Player
 @onready var inventory: Inventory = %Inventory
 @onready var audioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
+const PICKUP_SOUND = preload("res://audio/pickup.wav")
+const DROP_SOUND = preload("res://audio/drop.wav")
+const CYCLE_SOUND = preload("res://audio/cycle.wav")
+
 var push_strength: float = 10
 
 func _ready() -> void:
@@ -31,7 +35,21 @@ func _physics_process(delta):
 func item_picked_up(item: PlaceableItem)->void:
 	inventory.add_item(item.inventory_item)
 	item.call_deferred("queue_free")
+	audioPlayer.stream = PICKUP_SOUND
+	audioPlayer.play()
+
 
 func _input(_event: InputEvent)-> void:
 	if _event.is_action_pressed("place"):
-		inventory.use_item()
+		var useResult : bool = inventory.use_item()
+		if useResult:
+			audioPlayer.stream = DROP_SOUND
+			audioPlayer.play()
+	if _event.is_action_pressed("cycle_inventory_right"):
+		inventory.cycle_right()
+		audioPlayer.stream = CYCLE_SOUND
+		audioPlayer.play()
+	if _event.is_action_pressed("cycle_inventory_left"):
+		inventory.cycle_left()
+		audioPlayer.stream = CYCLE_SOUND
+		audioPlayer.play()

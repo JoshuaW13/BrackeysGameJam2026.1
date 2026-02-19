@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dd2ks5rqjvptf"]
+
+[ext_resource type="Script" uid="uid://b3nivh0g28r3h" path="res://entities/moving_platform/moving_floor_resource.gd" id="1_w1ksl"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=87318914]
+script = ExtResource("1_w1ksl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=216762314]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1695267091]
