@@ -8,6 +8,7 @@ class_name Player
 @onready var audioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 const PICKUP_SOUND = preload("res://audio/pickup.wav")
+const DROP_SOUND = preload("res://audio/drop.wav")
 
 var push_strength: float = 10
 
@@ -39,7 +40,10 @@ func item_picked_up(item: PlaceableItem)->void:
 
 func _input(_event: InputEvent)-> void:
 	if _event.is_action_pressed("place"):
-		inventory.use_item()
+		var useResult : bool = inventory.use_item()
+		if useResult:
+			audioPlayer.stream = DROP_SOUND
+			audioPlayer.play()
 	if _event.is_action_pressed("cycle_inventory_right"):
 		inventory.cycle_right()
 	if _event.is_action_pressed("cycle_inventory_left"):
