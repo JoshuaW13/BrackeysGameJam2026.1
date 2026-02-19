@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://go3qws4g2pnt"
-path="res://.godot/imported/human_coworker5.png-6aca0d95fccfc2d0dec4e672799ce4fc.ctex"
+uid="uid://yq1wdvwq8asw"
+path="res://.godot/imported/human_coworker7.png-10fbc2c2674782f541618f9726c718fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/npc/human_coworker5.png"
-dest_files=["res://.godot/imported/human_coworker5.png-6aca0d95fccfc2d0dec4e672799ce4fc.ctex"]
+source_file="res://entities/npc/assets/human_coworker7.png"
+dest_files=["res://.godot/imported/human_coworker7.png-10fbc2c2674782f541618f9726c718fa.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqc8gnx8g448d"
-path="res://.godot/imported/guard_stop.png-737193667a280cc27876820259fdf516.ctex"
+uid="uid://dhtmp2hnvwhh6"
+path="res://.godot/imported/alien2.png-7c98de7738d50d193f461b781205603e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/npc/guard_stop.png"
-dest_files=["res://.godot/imported/guard_stop.png-737193667a280cc27876820259fdf516.ctex"]
+source_file="res://entities/npc/assets/alien2.png"
+dest_files=["res://.godot/imported/alien2.png-7c98de7738d50d193f461b781205603e.ctex"]
 
 [params]
 

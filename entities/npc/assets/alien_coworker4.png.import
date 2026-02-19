@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2gxul8p6ko7a"
-path="res://.godot/imported/guard.png-48862ddde9bcb20cbea15852d793cad1.ctex"
+uid="uid://rqm6vl402pgn"
+path="res://.godot/imported/alien_coworker4.png-b639e1c9190e7aa651c4837b7fbe641e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/npc/guard.png"
-dest_files=["res://.godot/imported/guard.png-48862ddde9bcb20cbea15852d793cad1.ctex"]
+source_file="res://entities/npc/assets/alien_coworker4.png"
+dest_files=["res://.godot/imported/alien_coworker4.png-b639e1c9190e7aa651c4837b7fbe641e.ctex"]
 
 [params]
 

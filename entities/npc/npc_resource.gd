@@ -2,8 +2,6 @@ extends Resource
 class_name NPCResource
 
 @export var npc_id : String
-@export var dialogue_state : int
-@export var event_state : int
+@export var dialogue_index : int = 0
 @export var texture : Texture2D
-@export var dialogue : Array[Array]
-@export var events : Array[Array]
+@export var dialogues : Array[NPCDialogue]

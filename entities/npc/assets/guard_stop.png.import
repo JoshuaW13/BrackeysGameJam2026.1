@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ksv4c48lyk6x"
-path="res://.godot/imported/human_coworker2.png-d6633aed5687af0460b3d795f29c745f.ctex"
+uid="uid://dqc8gnx8g448d"
+path="res://.godot/imported/guard_stop.png-590cd635323bc0283fed83b76d90ffaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/npc/human_coworker2.png"
-dest_files=["res://.godot/imported/human_coworker2.png-d6633aed5687af0460b3d795f29c745f.ctex"]
+source_file="res://entities/npc/assets/guard_stop.png"
+dest_files=["res://.godot/imported/guard_stop.png-590cd635323bc0283fed83b76d90ffaf.ctex"]
 
 [params]
 

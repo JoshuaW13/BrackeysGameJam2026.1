@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3ilxt3m8c04n"]
 
 [ext_resource type="Script" uid="uid://0tdh8wsjk7x7" path="res://entities/npc/npc_base.gd" id="1_e3lg2"]
-[ext_resource type="Texture2D" uid="uid://cvpdaw1jf75p2" path="res://entities/npc/human_coworker3.png" id="2_e3lg2"]
+[ext_resource type="Texture2D" uid="uid://cvpdaw1jf75p2" path="res://entities/npc/assets/human_coworker3.png" id="2_e3lg2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wfxk4"]
 radius = 6.0

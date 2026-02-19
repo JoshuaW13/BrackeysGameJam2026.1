@@ -1,12 +1,10 @@
-[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://btr7lghoc8y4d"]
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://6unlur3hpyk1"]
 
 [ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="1_bl3cb"]
-[ext_resource type="Texture2D" uid="uid://ksv4c48lyk6x" path="res://entities/npc/human_coworker2.png" id="2_qcsys"]
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_la8pe"]
+[ext_resource type="Texture2D" uid="uid://ksv4c48lyk6x" path="res://entities/npc/assets/human_coworker2.png" id="3_l1f7p"]
 
 [resource]
 script = ExtResource("1_bl3cb")
 npc_id = "Lv3Coworker"
-texture = ExtResource("2_qcsys")
-dialogue = Array[Array]([["Hey you there! You are the new intern right.", "I'm busy, you go get the manager some coffee."], ["What are you still hanging around for.", "Go get the coffee already. Don't make the manager grumpy."]])
-events = Array[Array]([["", "state(1/1)", ""], ["", "", ""]])
-metadata/_custom_type_script = "uid://caib8pj52pvm"
+texture = ExtResource("3_l1f7p")
