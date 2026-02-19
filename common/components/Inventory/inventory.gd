@@ -32,13 +32,15 @@ func remove_item()->void:
 	inventory.pop_front()
 	spawn_front()
 
-func use_item()->void:
-	if !inventory.is_empty():
-		var item_to_spawn : PackedScene = inventory.front().scene
-		var item_instance : PlaceableItem = item_to_spawn.instantiate()
-		item_instance.position = inventory_spawn.global_position
-		get_tree().current_scene.add_child(item_instance)
+func use_item()->bool:
+	if inventory.is_empty():
+		return false
+	var item_to_spawn : PackedScene = inventory.front().scene
+	var item_instance : PlaceableItem = item_to_spawn.instantiate()
+	item_instance.position = inventory_spawn.global_position
+	get_tree().current_scene.add_child(item_instance)
 	remove_item()
+	return true
 
 func cycle_left()->void:
 	if inventory.is_empty(): return
