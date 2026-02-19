@@ -4,6 +4,7 @@ class_name NPC
 @export var npc : NPCResource
 @onready var sprite : Sprite2D = $Sprite2D
 signal npc_dialogue(npc_id, dialogue_lines)
+signal npc_completed(npc_id)
 signal unlock_door(door_id: String)
 var player
 var npc_id : String = ""
@@ -22,21 +23,27 @@ func _input(event):
 func interact():
 	var event = npc.dialogues[npc.dialogue_index]
 	if !event.condition or event.condition.is_met(player):
-		if !event.pass_functions:
+		print("TESTING")
+		if event.pass_functions:
+			print("TESTING: ", event.pass_functions)
 			perform_events(event.pass_functions)
 		perform_dialogue(event.pass_dialogues)
 	else:
-		if !event.fail_functions:
+		if event.fail_functions:
 			perform_events(event.fail_functions)
 		perform_dialogue(event.fail_dialogues)
 
 func perform_events(actions : Array[Array]):
 	for action in actions:
-		action[0].execute(action[1])
+		print("TESTING: ", action[0], action[1])
+		action[0].execute(self, action[1])
 	
 func perform_dialogue(lines : Array[String]):
 	in_dialogue = true
 	emit_signal("npc_dialogue", npc_id, lines)
+
+func complete():
+	emit_signal("npc_completed", npc_id)
 
 func _on_finished_dialogue(npc):
 	print(npc, self.npc_id)

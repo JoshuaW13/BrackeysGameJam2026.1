@@ -1,5 +1,5 @@
 extends Resource
 class_name DialogueFunction
 
-func execute(context):
+func execute(npc : NPC, args):
 	return true

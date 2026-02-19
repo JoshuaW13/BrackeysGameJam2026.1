@@ -1,11 +1,18 @@
 [gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://b6hvr15ioba7g"]
 
-[ext_resource type="Script" path="res://entities/npc/npc_dialogue.gd" id="1_88mqa"]
-[ext_resource type="Script" path="res://entities/npc/npc_resource.gd" id="1_hd7bg"]
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_88mqa"]
+[ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="1_hd7bg"]
+[ext_resource type="Resource" uid="uid://bwotuywaxi8re" path="res://entities/npc/npc_completed.tres" id="2_jghi0"]
 [ext_resource type="Texture2D" uid="uid://b0dnfrtii3wxv" path="res://entities/npc/assets/human_coworker4.png" id="2_rcwwy"]
+
+[sub_resource type="Resource" id="Resource_plioc"]
+script = ExtResource("1_88mqa")
+pass_functions = Array[Array]([[ExtResource("2_jghi0"), []]])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]
 script = ExtResource("1_hd7bg")
 npc_id = "Lv3Senior"
 texture = ExtResource("2_rcwwy")
+dialogues = Array[ExtResource("1_88mqa")]([SubResource("Resource_plioc")])
 metadata/_custom_type_script = "uid://caib8pj52pvm"

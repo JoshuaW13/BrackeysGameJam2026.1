@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://fx71krggk53"]
 
+[ext_resource type="Script" uid="uid://1tru1ycvf34j" path="res://levels/level3/level_3.gd" id="1_0kcjn"]
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="2_7px63"]
 [ext_resource type="PackedScene" uid="uid://d4nahe1lhtwqr" path="res://entities/door/door.tscn" id="3_hg36g"]
 [ext_resource type="Resource" uid="uid://b8o48gs0uo4s8" path="res://levels/level3/map/door.tres" id="3_i8es6"]
@@ -28,6 +29,7 @@ _data = {
 point_count = 2
 
 [node name="Level3" type="Node2D" unique_id=1543521338]
+script = ExtResource("1_0kcjn")
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=700171640]
 texture_filter = 1

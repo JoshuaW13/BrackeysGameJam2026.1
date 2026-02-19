@@ -1,12 +1,18 @@
 [gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://cu2g47wkfn38h"]
 
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_38ifr"]
 [ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="1_tje7f"]
+[ext_resource type="Resource" uid="uid://bwotuywaxi8re" path="res://entities/npc/npc_completed.tres" id="2_38ifr"]
 [ext_resource type="Texture2D" uid="uid://cvpdaw1jf75p2" path="res://entities/npc/assets/human_coworker3.png" id="2_yxprm"]
+
+[sub_resource type="Resource" id="Resource_64wai"]
+script = ExtResource("1_38ifr")
+pass_functions = Array[Array]([[ExtResource("2_38ifr"), []]])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]
 script = ExtResource("1_tje7f")
 npc_id = "Lv3Manager"
 texture = ExtResource("2_yxprm")
-dialogue = Array[Array]([["Ah what a perfect cup of coffee", "You're taking Steve's position now, what a useless fella, can't even make a good cuppa coffee."], ["Where is my coffee!", "You better not come back without my cup of HOT CAFFIENE FILLED BEAN WATER!"]])
-events = Array[Array]([["has_coffee", "state(0/1),unlock_door(Lv3ManagerDoor)", "state(1/0),unlock_door(Lv3ManagerDoor)"], ["", "", ""]])
+dialogues = Array[ExtResource("1_38ifr")]([SubResource("Resource_64wai")])
 metadata/_custom_type_script = "uid://caib8pj52pvm"
