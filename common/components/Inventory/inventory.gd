@@ -35,9 +35,10 @@ func remove_item()->void:
 func use_item()->bool:
 	if inventory.is_empty():
 		return false
-	var item_to_spawn : PackedScene = inventory.front().scene
-	var item_instance : PlaceableItem = item_to_spawn.instantiate()
+	var selected_item : Item = inventory.front()
+	var item_instance : PlaceableItem = selected_item.scene.instantiate()
 	item_instance.position = inventory_spawn.global_position
+	item_instance.inventory_item = selected_item
 	get_tree().current_scene.add_child(item_instance)
 	remove_item()
 	return true

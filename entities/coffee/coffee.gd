@@ -2,7 +2,8 @@ extends PlaceableItem
 class_name Coffee
 
 func _ready() -> void:
-	inventory_item = load("res://entities/coffee/coffee.tres")
+	if inventory_item == null:
+		inventory_item = load("res://entities/coffee/coffee.tres")
 	super._ready()
 
 func _integrate_forces(state):

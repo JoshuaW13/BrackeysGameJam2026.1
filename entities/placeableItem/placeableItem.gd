@@ -1,7 +1,7 @@
 extends RigidBody2D
 class_name PlaceableItem
 
-var inventory_item: Item
+@export var inventory_item: Item
 @onready var sprite: Sprite2D = $Sprite2D
 
 func _ready() -> void:
