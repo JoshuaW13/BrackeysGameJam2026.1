@@ -36,6 +36,7 @@ SignalBus="*uid://n8mfwst06qot"
 
 player=""
 npc=""
+box=""
 
 [input]
 
