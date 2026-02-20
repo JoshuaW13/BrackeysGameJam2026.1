@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c0gh0jpolf21c"]
+
+[ext_resource type="Script" uid="uid://oml24wnqcma" path="res://entities/toppings/caramel/caramel.gd" id="1_jfq4v"]
+[ext_resource type="Texture2D" uid="uid://b5gbqlemfcpec" path="res://entities/toppings/caramel/assets/Caramel.png" id="2_aqjgh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqjgh"]
+size = Vector2(7, 6)
+
+[node name="Caramel" type="StaticBody2D" unique_id=1972799758]
+collision_layer = 8
+input_pickable = true
+script = ExtResource("1_jfq4v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1781600383]
+position = Vector2(0, -8)
+texture = ExtResource("2_aqjgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1108396184]
+position = Vector2(-0.5, -3)
+shape = SubResource("RectangleShape2D_aqjgh")

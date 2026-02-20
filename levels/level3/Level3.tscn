@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://6unlur3hpyk1" path="res://levels/level3/npc/coworker/Coworker.tres" id="8_hg36g"]
 [ext_resource type="Resource" uid="uid://b6hvr15ioba7g" path="res://levels/level3/npc/senior/Senior.tres" id="9_skw0t"]
 [ext_resource type="Resource" uid="uid://cu2g47wkfn38h" path="res://levels/level3/npc/manager/Manager.tres" id="10_36mo7"]
+[ext_resource type="PackedScene" uid="uid://c0gh0jpolf21c" path="res://entities/toppings/caramel/Caramel.tscn" id="14_jlrek"]
 
 [sub_resource type="Animation" id="Animation_b67ty"]
 resource_name = "Door"
@@ -102,6 +103,9 @@ npc = ExtResource("9_skw0t")
 [node name="Manager" parent="." unique_id=404841392 instance=ExtResource("7_b67ty")]
 position = Vector2(473, 120)
 npc = ExtResource("10_36mo7")
+
+[node name="Caramel" parent="." unique_id=1972799758 instance=ExtResource("14_jlrek")]
+position = Vector2(256, 136)
 
 [connection signal="dialogue_finished" from="Player/DialoguePanel" to="Coworker" method="_on_finished_dialogue"]
 [connection signal="dialogue_finished" from="Player/DialoguePanel" to="Senior" method="_on_finished_dialogue"]
