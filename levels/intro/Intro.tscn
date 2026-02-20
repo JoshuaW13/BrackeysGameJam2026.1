@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://3gw5yhor47m5"]
 
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="1_chvk1"]
-[ext_resource type="Script" uid="uid://bo8x3qwulay6u" path="res://entities/player/player.gd" id="2_xlaoa"]
+[ext_resource type="Script" uid="uid://bo8x3qwulay6u" path="res://entities/player/player_base.gd" id="2_xlaoa"]
 [ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="3_6ypf1"]
 [ext_resource type="Texture2D" uid="uid://ckmxixtxmlxyv" path="res://entities/player/assets/spritesheet.png" id="3_uemab"]
 [ext_resource type="PackedScene" uid="uid://4j5ax7d2m7u3" path="res://common/stateMachine/stateMachine.tscn" id="4_hwllo"]

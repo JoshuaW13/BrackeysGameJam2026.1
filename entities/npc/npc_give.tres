@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="NPCGive" format=3 uid="uid://cq4s16jqot256"]
+
+[ext_resource type="Script" uid="uid://kndapyo58i03" path="res://entities/npc/npc_give.gd" id="1_85shw"]
+
+[resource]
+script = ExtResource("1_85shw")
+metadata/_custom_type_script = "uid://kndapyo58i03"

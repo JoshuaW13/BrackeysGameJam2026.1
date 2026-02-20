@@ -15,16 +15,10 @@ func _ready():
 				npc.npc_completed.connect(_on_npc_completed)
 	dialogue_panel.dialogue_finished.connect(_on_finished_dialogue)
 	
-	var next_item_id : int = 0
 	for i in range(3):
 		var new_item : Item = BOX_RES.duplicate(true)
-		new_item.id = next_item_id
-		next_item_id += 1
-		player.inventory.add_item(new_item)
-	for i in range(1):
-		var new_item : Item = COFFEE_RES.duplicate(true)
-		new_item.id = next_item_id
-		next_item_id += 1
+		new_item.id = player.player_resource.item_id
+		player.player_resource.item_id += 1
 		player.inventory.add_item(new_item)
 	
 func _on_npc_completed(npc_id):

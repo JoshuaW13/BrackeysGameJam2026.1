@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://6unlur3hpyk1" path="res://levels/level3/npc/coworker/Coworker.tres" id="8_hg36g"]
 [ext_resource type="Resource" uid="uid://b6hvr15ioba7g" path="res://levels/level3/npc/senior/Senior.tres" id="9_skw0t"]
 [ext_resource type="Resource" uid="uid://cu2g47wkfn38h" path="res://levels/level3/npc/manager/Manager.tres" id="10_36mo7"]
+[ext_resource type="Resource" uid="uid://2uvx3dsqep63" path="res://levels/level3/npc/player/player.tres" id="12_txbxs"]
 [ext_resource type="PackedScene" uid="uid://c0gh0jpolf21c" path="res://entities/toppings/caramel/Caramel.tscn" id="14_jlrek"]
 [ext_resource type="PackedScene" uid="uid://by865l7mcy08g" path="res://entities/toppings/chocolate/Chocolate.tscn" id="15_wapjl"]
 [ext_resource type="PackedScene" uid="uid://dp1uwbylxgsgr" path="res://entities/toppings/milk/Milk.tscn" id="16_d8t8m"]
@@ -93,6 +94,7 @@ moving_platform = ExtResource("6_0kcjn")
 [node name="Player" parent="." unique_id=914755556 instance=ExtResource("3_srxm4")]
 z_index = 5
 position = Vector2(19, 142)
+player_resource = ExtResource("12_txbxs")
 
 [node name="DialoguePanel" parent="Player" unique_id=771276265 instance=ExtResource("4_pxkmy")]
 visible = false

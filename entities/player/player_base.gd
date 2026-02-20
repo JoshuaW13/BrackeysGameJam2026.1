@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
+@export var player_resource : PlayerResource
+
 @onready var state_machine : StateMachine = %StateMachine
 @onready var velocity_component : VelocityComponent = %VelocityComponent
 @onready var gravity_component: GravityComponent = %GravityComponent
