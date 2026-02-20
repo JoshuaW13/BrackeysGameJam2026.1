@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" format=3 uid="uid://dj1j1gwgqlvmw"]
 
 [ext_resource type="Texture2D" uid="uid://seflqkom652x" path="res://levels/office/assets/office.png" id="1_56kyq"]
-[ext_resource type="Texture2D" uid="uid://buigpjci3g2rl" path="res://levels/office/assets/elevator_floor.png" id="2_dk68n"]
+[ext_resource type="Texture2D" uid="uid://buigpjci3g2rl" path="res://levels/office/assets/elevator.png" id="2_dk68n"]
 [ext_resource type="Texture2D" uid="uid://bwiq028pe3c2x" path="res://levels/office/assets/floating_floor.png" id="2_wobx2"]
 [ext_resource type="Texture2D" uid="uid://c77klk3yr6d7v" path="res://entities/thirdparty/Anokolisa_IndustrialProps.png" id="3_qcxjg"]
 [ext_resource type="Texture2D" uid="uid://b0plmi7pbwo60" path="res://levels/office/assets/office_fill.png" id="3_r41sj"]

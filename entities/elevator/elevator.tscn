@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcvaoo7upaf0j"]
 
 [ext_resource type="Script" uid="uid://c16tdkh6ilm14" path="res://entities/elevator/elevator_base.gd" id="1_3awjs"]
-[ext_resource type="Texture2D" uid="uid://buigpjci3g2rl" path="res://levels/office/assets/elevator_floor.png" id="2_mtiik"]
+[ext_resource type="Texture2D" uid="uid://buigpjci3g2rl" path="res://levels/office/assets/elevator.png" id="2_mtiik"]
 
 [sub_resource type="Animation" id="Animation_fhxjc"]
 length = 0.001

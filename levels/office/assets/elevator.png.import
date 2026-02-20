@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buigpjci3g2rl"
-path="res://.godot/imported/elevator_floor.png-4ede1aad080bb0a5d766e94c3048c23e.ctex"
+path="res://.godot/imported/elevator.png-aabeb1e489c48bb6244a61dc6ee71851.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/office/assets/elevator_floor.png"
-dest_files=["res://.godot/imported/elevator_floor.png-4ede1aad080bb0a5d766e94c3048c23e.ctex"]
+source_file="res://levels/office/assets/elevator.png"
+dest_files=["res://.godot/imported/elevator.png-aabeb1e489c48bb6244a61dc6ee71851.ctex"]
 
 [params]
 

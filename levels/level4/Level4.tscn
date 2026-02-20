@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="12_kvxrf"]
 [ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="13_fpstc"]
 [ext_resource type="Resource" uid="uid://gi7xe7nx8qa5" path="res://levels/level4/npc/coworker/Coworker.tres" id="14_17ofc"]
+[ext_resource type="PackedScene" uid="uid://5bdamcr1kdgx" path="res://entities/coffee/Coffee.tscn" id="15_72fm6"]
 [ext_resource type="Resource" uid="uid://do6fjg6hdq5uh" path="res://levels/level4/npc/manager/Manager.tres" id="16_rkjo7"]
 
 [sub_resource type="Animation" id="Animation_b67ty"]
@@ -107,3 +108,6 @@ npc = ExtResource("14_17ofc")
 [node name="Manager" parent="." unique_id=404841392 instance=ExtResource("13_fpstc")]
 position = Vector2(363, 64)
 npc = ExtResource("16_rkjo7")
+
+[node name="Coffee" parent="." unique_id=345192037 instance=ExtResource("15_72fm6")]
+position = Vector2(365, 140)

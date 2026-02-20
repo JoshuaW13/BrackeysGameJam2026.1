@@ -15,9 +15,14 @@ func _ready():
 	path_follow.loop = false
 	path_follow.rotates = false
 	pause_timer.timeout.connect(_on_pause_finished)
+	
+	var npcs = get_tree().get_nodes_in_group("npc")
+	for npc in npcs:
+		if npc is NPC:
+			npc.unlock.connect(_on_unlock_platform)
 
 func _physics_process(delta):
-	if moving_platform.paused:
+	if moving_platform.paused or moving_platform.is_locked:
 		return
 		
 	if moving_forward:
@@ -77,6 +82,6 @@ func update_width():
 	
 	global_position = path_follow.global_position
 		
-func _on_unlock_platform(platform):
-	if moving_platform.platform_id == platform:
-		moving_platform.paused = false
+func _on_unlock_platform(platform_id):
+	if moving_platform.platform_id == platform_id:
+		moving_platform.is_locked = false
