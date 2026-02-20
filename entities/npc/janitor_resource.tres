@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://nb5qcpwwgcee"]
+
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_vv5lu"]
+[ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="2_yorjm"]
+[ext_resource type="Texture2D" uid="uid://dqy1y43mnuvul" path="res://entities/npc/assets/janitor.png" id="3_yorjm"]
+
+[resource]
+script = ExtResource("2_yorjm")
+npc_id = "Janitor"
+texture = ExtResource("3_yorjm")
+metadata/_custom_type_script = "uid://caib8pj52pvm"
