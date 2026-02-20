@@ -106,9 +106,7 @@ position = Vector2(473, 120)
 npc = ExtResource("10_36mo7")
 
 [node name="Button" parent="." unique_id=332632268 instance=ExtResource("14_jlrek")]
-position = Vector2(224, 136)
-
-[node name="Caramel" parent="." unique_id=1972799758 instance=ExtResource("14_jlrek")]
+position = Vector2(214, 128)
 
 [connection signal="dialogue_finished" from="Player/DialoguePanel" to="Coworker" method="_on_finished_dialogue"]
 [connection signal="dialogue_finished" from="Player/DialoguePanel" to="Senior" method="_on_finished_dialogue"]
