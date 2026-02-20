@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="NPCUnlock" format=3 uid="uid://btgm6qohh31no"]
+
+[ext_resource type="Script" uid="uid://drmx81xn0axqq" path="res://entities/npc/npc_unlock.gd" id="1_otb6y"]
+
+[resource]
+script = ExtResource("1_otb6y")
+metadata/_custom_type_script = "uid://drmx81xn0axqq"

@@ -2,7 +2,7 @@ extends Resource
 class_name Item
 
 enum ItemType{
-	COFEE,
+	COFFEE,
 	BOX
 }
 var type: ItemType
@@ -19,7 +19,7 @@ var topping: Coffee.Topping = Coffee.Topping.NONE:
 				texture = CHOCOLATE_SPRITE
 			Coffee.Topping.MILK:
 				texture = MILK_SPRITE
-var COFEE_SPRITE: Texture2D = load("res://entities/coffee/black_coffee.png") 
+var COFFEE_SPRITE: Texture2D = load("res://entities/coffee/black_coffee.png") 
 var CARAMEL_SPRITE: Texture2D = load("res://entities/coffee/caramel_coffee.png") 
 var CHOCOLATE_SPRITE: Texture2D = load("res://entities/coffee/chocolate_coffee.png")
 var MILK_SPRITE: Texture2D = load("res://entities/coffee/milk_coffee.png")

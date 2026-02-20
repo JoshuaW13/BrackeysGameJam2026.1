@@ -7,6 +7,12 @@ extends Node2D
 
 var is_in_area: String = ""
 
+func _ready():
+	var npcs = get_tree().get_nodes_in_group("npc")
+	for npc in npcs:
+		if npc is NPC:
+			npc.unlock.connect(_on_unlock_door)
+
 func _input(event):
 	if event.is_action_pressed("interact") and is_in_area != "":
 		interact()

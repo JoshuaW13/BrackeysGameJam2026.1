@@ -7,7 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_6lb6q"]
 script = ExtResource("1_1iafl")
-pass_dialogues = Array[String](["Hey, new intern. Go get some coffee for the manager.", "We will have a terrible day if you don't get it to him quick."])
+pass_dialogues = Array[String](["Hey, new intern. Go get some coffee for the manager.", "We will have a terrible day if you don't get it to him quick.", "The door to his office is locked, so you'll have to find a way around."])
 pass_functions = Array[Array]([[ExtResource("2_suuu6"), []]])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 

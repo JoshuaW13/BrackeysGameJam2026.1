@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_wt8s8")
-door_id = "Lv3ManagerDoor"
+door_id = "Lv3Door"
 is_locked = true
 metadata/_custom_type_script = "uid://c0srv4ubxirr6"

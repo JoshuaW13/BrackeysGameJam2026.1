@@ -6,29 +6,29 @@ class_name Inventory
 var inventory: Array[Item] = []
 var extra_toppings: Array[Coffee.Topping] = []
 var current_item: InventoryItem
-var COFEE_RES = load("res://entities/coffee/coffee.tres")
+var COFFEE_RES = load("res://entities/coffee/coffee.tres")
 var BOX_RES = load("res://entities/box/box.tres")
 var next_item_id : int= 0
 
 func _ready() -> void:
 	pass
-	for i in range(3):
-		var new_item : Item = BOX_RES.duplicate(true)
-		new_item.id = next_item_id
-		next_item_id += 1
-		add_item(new_item)
-	for i in range(3):
-		var new_item : Item
-		if i%2==0:
-			new_item = COFEE_RES.duplicate(true)
-		else:
-			new_item  = BOX_RES.duplicate(true)
-		new_item.id = next_item_id
-		next_item_id += 1
-		add_item(new_item)
+	#for i in range(3):
+		#var new_item : Item = BOX_RES.duplicate(true)
+		#new_item.id = next_item_id
+		#next_item_id += 1
+		#add_item(new_item)
+	#for i in range(3):
+		#var new_item : Item
+		#if i%2==0:
+			#new_item = COFFEE_RES.duplicate(true)
+		#else:
+			#new_item  = BOX_RES.duplicate(true)
+		#new_item.id = next_item_id
+		#next_item_id += 1
+		#add_item(new_item)
 
 func add_item(item: Item)->void:
-	if item.type == Item.ItemType.COFEE and !extra_toppings.is_empty():
+	if item.type == Item.ItemType.COFFEE and !extra_toppings.is_empty():
 		item.topping = extra_toppings.pop_front()
 	inventory.push_back(item)
 	if inventory.size() == 1:
@@ -88,7 +88,7 @@ func has_item_of_type(type: Item.ItemType)->bool:
 func add_topping(topping: Topping)->void:
 	for i in range(inventory.size()):
 		var inventory_item = inventory[i]
-		if inventory_item.type==Item.ItemType.COFEE and inventory_item.topping == Coffee.Topping.NONE:
+		if inventory_item.type==Item.ItemType.COFFEE and inventory_item.topping == Coffee.Topping.NONE:
 			print("topping.type raw: ", topping.type)
 			print("inventory_item.topping raw: ", inventory_item.topping)
 			print("Setting topping type to "+str(topping.type))

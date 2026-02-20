@@ -7,7 +7,7 @@ enum Topping{
 	CHOCOLATE,
 	MILK
 }
-var COFEE_SPRITE: Texture2D = load("res://entities/coffee/black_coffee.png") 
+var COFFEE_SPRITE: Texture2D = load("res://entities/coffee/black_coffee.png") 
 var CARAMEL_SPRITE: Texture2D = load("res://entities/coffee/caramel_coffee.png") 
 var CHOCOLATE_SPRITE: Texture2D = load("res://entities/coffee/chocolate_coffee.png")
 var MILK_SPRITE: Texture2D = load("res://entities/coffee/milk_coffee.png")

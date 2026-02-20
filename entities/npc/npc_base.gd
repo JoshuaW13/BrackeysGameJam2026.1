@@ -5,7 +5,7 @@ class_name NPC
 @onready var sprite : Sprite2D = $Sprite2D
 signal npc_dialogue(npc_id, dialogue_lines)
 signal npc_completed(npc_id : String)
-signal unlock_door(door_id: String)
+signal unlock(item_id: String)
 var player
 var npc_id : String = ""
 var in_dialogue : bool = false
@@ -35,6 +35,7 @@ func interact():
 
 func perform_events(actions : Array[Array]):
 	for action in actions:
+		print(action[0])
 		action[0].execute([self], action[1])
 	
 func perform_dialogue(lines : Array[String]):
@@ -47,6 +48,10 @@ func complete():
 func _on_finished_dialogue(npc):
 	if self.npc_id == npc:
 		in_dialogue = false
+		
+func unlock_item(item_id):
+	print("TESTSTST")
+	emit_signal("unlock", item_id)
 	
 func _on_body_entered(body):
 	if body.is_in_group("player"):
