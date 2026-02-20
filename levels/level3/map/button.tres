@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ButtonResource" format=3 uid="uid://bbhmqtxgtg1g"]
+
+[ext_resource type="Texture2D" uid="uid://tpl0rrhqswj" path="res://levels/office/assets/button_off.png" id="1_b0fe6"]
+[ext_resource type="Script" uid="uid://b3r3102uphrkp" path="res://entities/button/button_resource.gd" id="1_coq3r"]
+[ext_resource type="Texture2D" uid="uid://bkf6pnsv5oqie" path="res://levels/office/assets/button_on.png" id="2_ysdsi"]
+
+[resource]
+script = ExtResource("1_coq3r")
+button_id = "Lv3Button"
+on_texture = ExtResource("2_ysdsi")
+off_texture = ExtResource("1_b0fe6")
+metadata/_custom_type_script = "uid://b3r3102uphrkp"

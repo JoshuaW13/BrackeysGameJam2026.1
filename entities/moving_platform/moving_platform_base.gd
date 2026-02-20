@@ -11,7 +11,7 @@ var moving_forward := true
 var direction := 1
 
 func _ready():
-	_update_width()
+	update_width()
 	path_follow.loop = false
 	pause_timer.timeout.connect(_on_pause_finished)
 
@@ -46,7 +46,7 @@ func _on_pause_finished():
 	moving_forward = !moving_forward
 	moving_platform.paused = false
 
-func _update_width():
+func update_width():
 	for child in sprite.get_children():
 		child.queue_free()
 		
