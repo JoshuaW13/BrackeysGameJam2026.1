@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://ci1ynfk1i6br5"]
-
-[ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="1_p7fy1"]
-[ext_resource type="Script" uid="uid://cc2cgvgrmops1" path="res://levels/level2/manager.gd" id="2_g0rjg"]
-
-[node name="NPC" unique_id=1187843567 instance=ExtResource("1_p7fy1")]
-script = ExtResource("2_g0rjg")
-dialogue_id = "Lv2Manager"

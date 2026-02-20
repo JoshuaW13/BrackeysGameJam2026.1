@@ -4,6 +4,7 @@ class_name Inventory
 @export var inventory_spawn: Marker2D
 @export var inventory_spawn_scale: Vector2 = Vector2(1, 1)
 var inventory: Array[Item] = []
+var extra_toppings: Array[Coffee.Topping] = []
 var current_item: InventoryItem
 var COFEE_RES = load("res://entities/coffee/coffee.tres")
 var BOX_RES = load("res://entities/box/box.tres")
@@ -22,6 +23,8 @@ func _ready() -> void:
 		add_item(new_item)
 
 func add_item(item: Item)->void:
+	if item.type == Item.ItemType.COFFEE and !extra_toppings.is_empty():
+		item.topping = extra_toppings.pop_front()
 	inventory.push_back(item)
 	if inventory.size() == 1:
 		spawn_front()
@@ -74,3 +77,11 @@ func has_item_of_type(type: Item.ItemType)->bool:
 		if inventory[i].type == type:
 			return true
 	return false
+
+func add_topping(topping: Topping)->void:
+	for i in range(inventory.size()):
+		var inventory_item = inventory[i]
+		if inventory_item.type==Item.ItemType.COFFEE:
+			inventory_item.topping = topping.type
+			return
+	extra_toppings.append(topping.type)

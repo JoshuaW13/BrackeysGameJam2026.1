@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bu3gp3ec5mq3n"]
 
-[ext_resource type="Script" uid="uid://bpoe1x3uhrjj2" path="res://common/components/xpCollector/xp_collector.gd" id="1_vu54g"]
+[ext_resource type="Script" uid="uid://bpoe1x3uhrjj2" path="res://common/components/toppingCollector/xp_collector.gd" id="1_vu54g"]
 
 [node name="XpCollector" type="Area2D" unique_id=1602479210]
 collision_layer = 0

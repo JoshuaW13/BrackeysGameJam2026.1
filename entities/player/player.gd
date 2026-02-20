@@ -16,6 +16,7 @@ var push_strength: float = 10
 func _ready() -> void:
 	state_machine.start()
 	SignalBus.item_picked_up.connect(item_picked_up)
+	SignalBus.topping_picked_up.connect(topping_picked_up)
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -35,6 +36,13 @@ func _physics_process(delta):
 func item_picked_up(item: PlaceableItem)->void:
 	inventory.add_item(item.inventory_item)
 	item.call_deferred("queue_free")
+	play_pickup_audio()
+
+func topping_picked_up(topping: Topping)->void:
+	topping.call_deferred("queue_free")
+	play_pickup_audio()
+
+func play_pickup_audio()->void:
 	audioPlayer.stream = PICKUP_SOUND
 	audioPlayer.play()
 

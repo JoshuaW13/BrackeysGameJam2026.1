@@ -9,3 +9,4 @@ enum ItemType{
 @export var scene: PackedScene
 @export var texture: Texture2D
 @export var id: int = 1
+var topping: Coffee.Topping = Coffee.Topping.NONE
