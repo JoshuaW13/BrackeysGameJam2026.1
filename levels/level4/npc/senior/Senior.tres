@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://0j1u3wpfptyo"]
+
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_fpqsw"]
+[ext_resource type="Resource" uid="uid://bwotuywaxi8re" path="res://entities/npc/npc_completed.tres" id="2_t8icl"]
+[ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="3_w33lr"]
+[ext_resource type="Texture2D" uid="uid://b0dnfrtii3wxv" path="res://entities/npc/assets/human_coworker4.png" id="4_0cddg"]
+
+[sub_resource type="Resource" id="Resource_plioc"]
+script = ExtResource("1_fpqsw")
+pass_dialogues = Array[String](["This wall behind me is too tall to go over. ", "There might be something around to help you get over."])
+pass_functions = Array[Array]([[ExtResource("2_t8icl"), []]])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
+
+[resource]
+script = ExtResource("3_w33lr")
+npc_id = "Lv3Senior"
+texture = ExtResource("4_0cddg")
+dialogues = Array[ExtResource("1_fpqsw")]([SubResource("Resource_plioc")])
+metadata/_custom_type_script = "uid://caib8pj52pvm"

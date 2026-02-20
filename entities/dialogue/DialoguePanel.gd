@@ -1,7 +1,7 @@
 extends Panel
 class_name DialoguePanel
 
-@onready var panel : DialoguePanel = %DialoguePanel
+@onready var panel : Control = self
 @onready var dialogue: Label = $TextLabel
 signal dialogue_finished(npc_id)
 

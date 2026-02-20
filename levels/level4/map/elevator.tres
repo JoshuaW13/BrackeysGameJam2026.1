@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ElevatorResource" format=3 uid="uid://w0kfewsa7xd5"]
+
+[ext_resource type="Script" uid="uid://ba1q3sfv2n2bl" path="res://entities/elevator/elevator_resource.gd" id="1_r261x"]
+
+[resource]
+script = ExtResource("1_r261x")
+scene_path = "res://userInterface/screens/levelSelect/LevelSelect.tscn"
+metadata/_custom_type_script = "uid://ba1q3sfv2n2bl"

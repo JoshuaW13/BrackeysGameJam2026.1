@@ -50,7 +50,6 @@ func _on_finished_dialogue(npc):
 		in_dialogue = false
 		
 func unlock_item(item_id):
-	print("TESTSTST")
 	emit_signal("unlock", item_id)
 	
 func _on_body_entered(body):

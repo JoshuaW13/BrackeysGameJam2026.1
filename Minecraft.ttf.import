@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dj2q782d1ybvn"
-path="res://.godot/imported/Micro5-Regular.ttf-3d80af5e9bf63bb050e42c3c69c63e37.fontdata"
+uid="uid://crgrfrxfx5rvq"
+path="res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata"
 
 [deps]
 
-source_file="res://Micro5-Regular.ttf"
-dest_files=["res://.godot/imported/Micro5-Regular.ttf-3d80af5e9bf63bb050e42c3c69c63e37.fontdata"]
+source_file="res://Minecraft.ttf"
+dest_files=["res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata"]
 
 [params]
 
@@ -29,14 +29,8 @@ oversampling=0.0
 Fallbacks=null
 fallbacks=[]
 Compress=null
-compress=false
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0),
-&"variation_embolden": 0.0
-}]
+compress=true
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}
