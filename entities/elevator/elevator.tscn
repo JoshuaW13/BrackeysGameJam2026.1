@@ -60,6 +60,3 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea2D" unique_id=229157892]
 position = Vector2(-0.125, 4.5)
 shape = SubResource("RectangleShape2D_05v0y")
-
-[connection signal="body_entered" from="InteractArea2D" to="." method="_on_right_body_entered"]
-[connection signal="body_exited" from="InteractArea2D" to="." method="_on_right_body_exited"]

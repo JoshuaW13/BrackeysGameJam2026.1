@@ -18,7 +18,6 @@ func _on_npc_completed(npc_id):
 		level_complete = true
 
 func _on_finished_dialogue(npc):
-	print("Test")
 	if level_complete:
-		print("Level Complete!")
+		GameData.mark_completed(get_tree().current_scene.name)
 		get_tree().change_scene_to_file("res://levels/intro/Intro.tscn")

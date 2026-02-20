@@ -31,6 +31,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SignalBus="*uid://n8mfwst06qot"
+GameData="*uid://b2gwk0gg02xuk"
 
 [global_group]
 
