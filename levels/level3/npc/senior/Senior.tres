@@ -7,6 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_plioc"]
 script = ExtResource("1_88mqa")
+pass_dialogues = Array[String](["U suck", ">:("])
 pass_functions = Array[Array]([[ExtResource("2_jghi0"), []]])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 

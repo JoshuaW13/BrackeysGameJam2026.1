@@ -3,7 +3,7 @@ class_name DialoguePanel
 
 @onready var panel : DialoguePanel = %DialoguePanel
 @onready var dialogue: Label = $TextLabel
-signal dialogue_finished
+signal dialogue_finished(npc_id)
 
 var dialogue_lines: Array = []
 var current_line: int = 0
