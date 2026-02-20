@@ -23,7 +23,7 @@ func _ready() -> void:
 		add_item(new_item)
 
 func add_item(item: Item)->void:
-	if item.type == Item.ItemType.COFFEE and !extra_toppings.is_empty():
+	if item.type == Item.ItemType.COFEE and !extra_toppings.is_empty():
 		item.topping = extra_toppings.pop_front()
 	inventory.push_back(item)
 	if inventory.size() == 1:
@@ -43,6 +43,8 @@ func use_item()->bool:
 	item_instance.position = inventory_spawn.global_position
 	item_instance.inventory_item = selected_item
 	get_tree().current_scene.add_child(item_instance)
+	if item_instance is Coffee:
+		item_instance.topping = selected_item.topping
 	remove_item()
 	return true
 
@@ -81,7 +83,8 @@ func has_item_of_type(type: Item.ItemType)->bool:
 func add_topping(topping: Topping)->void:
 	for i in range(inventory.size()):
 		var inventory_item = inventory[i]
-		if inventory_item.type==Item.ItemType.COFFEE:
+		if inventory_item.type==Item.ItemType.COFEE:
 			inventory_item.topping = topping.type
+			spawn_front()
 			return
 	extra_toppings.append(topping.type)
