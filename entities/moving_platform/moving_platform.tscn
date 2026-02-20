@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1ksl"]
 size = Vector2(2, 2)
 
-[node name="MovingPlatform" type="CharacterBody2D" unique_id=87318914]
+[node name="MovingPlatform" type="CharacterBody2D" unique_id=235287096]
 script = ExtResource("1_w1ksl")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1351659895]
