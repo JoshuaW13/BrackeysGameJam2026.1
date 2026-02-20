@@ -13,29 +13,29 @@ var direction := 1
 func _ready():
 	update_width()
 	path_follow.loop = false
+	path_follow.rotates = false
 	pause_timer.timeout.connect(_on_pause_finished)
 
 func _physics_process(delta):
 	if moving_platform.paused:
 		return
-
+		
 	if moving_forward:
 		direction = 1
 	else: 
 		direction = -1
-
+		
 	path_follow.progress += direction * moving_platform.speed * delta
 	global_position = path_follow.global_position
-
 	_check_ends()
 	
 func _check_ends():
-	if moving_forward and path_follow.progress_ratio >= 1:
-		path_follow.progress_ratio = 1
+	if moving_forward and path_follow.progress_ratio >= 1.00:
+		path_follow.progress_ratio = 1.00
 		_start_pause()
 
-	elif not moving_forward and path_follow.progress_ratio <= 0:
-		path_follow.progress_ratio = 0
+	elif not moving_forward and path_follow.progress_ratio <= 0.00:
+		path_follow.progress_ratio = 0.00
 		_start_pause()
 	
 func _start_pause():
@@ -75,7 +75,6 @@ func update_width():
 		collision.shape.size.y = 8
 		collision.position.y = 4
 	
-	path_follow.progress += direction * 1
 	global_position = path_follow.global_position
 		
 func _on_unlock_platform(platform):
