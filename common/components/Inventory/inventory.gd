@@ -13,6 +13,11 @@ var next_item_id : int= 0
 func _ready() -> void:
 	pass
 	for i in range(3):
+		var new_item : Item = BOX_RES.duplicate(true)
+		new_item.id = next_item_id
+		next_item_id += 1
+		add_item(new_item)
+	for i in range(3):
 		var new_item : Item
 		if i%2==0:
 			new_item = COFEE_RES.duplicate(true)

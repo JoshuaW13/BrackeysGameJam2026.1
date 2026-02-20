@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://1tru1ycvf34j" path="res://levels/level3/level_3.gd" id="1_0kcjn"]
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="2_7px63"]
+[ext_resource type="PackedScene" uid="uid://dcvaoo7upaf0j" path="res://entities/elevator/elevator.tscn" id="3_8y325"]
 [ext_resource type="PackedScene" uid="uid://d4nahe1lhtwqr" path="res://entities/door/door.tscn" id="3_hg36g"]
 [ext_resource type="Resource" uid="uid://b8o48gs0uo4s8" path="res://levels/level3/map/door.tres" id="3_i8es6"]
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="3_srxm4"]
+[ext_resource type="Resource" uid="uid://c5q6jmixwftu5" path="res://levels/level3/map/elevator.tres" id="4_n87ra"]
 [ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="4_pxkmy"]
 [ext_resource type="PackedScene" uid="uid://dd2ks5rqjvptf" path="res://entities/moving_platform/moving_platform.tscn" id="5_2hiva"]
 [ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="5_tvlix"]
@@ -53,7 +55,11 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAATAAcABQAAAAIAAAAWAAAABQAAAAAAAAAWAAEABQAAAAIAAAAWAAMABQAAAAAAAAAWAAQABQAAAAIAAAAbAAgABgAJAAAAAAATAAYABQAAAAAAAAAQAAQAFAAAAAAAAAA=")
 tile_set = ExtResource("2_7px63")
 
-[node name="Door" parent="." unique_id=580264968 instance=ExtResource("3_hg36g")]
+[node name="Elevator" parent="." unique_id=580264968 instance=ExtResource("3_8y325")]
+position = Vector2(38, 128)
+elevator = ExtResource("4_n87ra")
+
+[node name="Door" parent="." unique_id=1554516772 instance=ExtResource("3_hg36g")]
 position = Vector2(312, 136)
 door = ExtResource("3_i8es6")
 
@@ -114,10 +120,3 @@ position = Vector2(240, 136)
 
 [node name="Chocolate" parent="." unique_id=1900309792 instance=ExtResource("15_wapjl")]
 position = Vector2(256, 136)
-
-[connection signal="dialogue_finished" from="Player/DialoguePanel" to="Coworker" method="_on_finished_dialogue"]
-[connection signal="dialogue_finished" from="Player/DialoguePanel" to="Senior" method="_on_finished_dialogue"]
-[connection signal="dialogue_finished" from="Player/DialoguePanel" to="Manager" method="_on_finished_dialogue"]
-[connection signal="npc_dialogue" from="Coworker" to="Player/DialoguePanel" method="_on_npc_dialogue"]
-[connection signal="npc_dialogue" from="Senior" to="Player/DialoguePanel" method="_on_npc_dialogue"]
-[connection signal="npc_dialogue" from="Manager" to="Player/DialoguePanel" method="_on_npc_dialogue"]

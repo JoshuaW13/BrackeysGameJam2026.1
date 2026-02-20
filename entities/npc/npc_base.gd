@@ -25,11 +25,13 @@ func interact():
 	if !event.condition or event.condition.is_met(player):
 		if event.pass_functions:
 			perform_events(event.pass_functions)
-		perform_dialogue(event.pass_dialogues)
+		if event.pass_dialogues:
+			perform_dialogue(event.pass_dialogues)
 	else:
 		if event.fail_functions:
 			perform_events(event.fail_functions)
-		perform_dialogue(event.fail_dialogues)
+		if event.fail_dialogues:
+			perform_dialogue(event.fail_dialogues)
 
 func perform_events(actions : Array[Array]):
 	for action in actions:
