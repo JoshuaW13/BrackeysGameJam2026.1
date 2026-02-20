@@ -106,8 +106,6 @@ position = Vector2(473, 120)
 npc = ExtResource("10_36mo7")
 
 [node name="Button" parent="." unique_id=332632268 instance=ExtResource("14_jlrek")]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 position = Vector2(224, 136)
 
 [node name="Caramel" parent="." unique_id=1972799758 instance=ExtResource("14_jlrek")]
@@ -118,11 +116,3 @@ position = Vector2(224, 136)
 [connection signal="npc_dialogue" from="Coworker" to="Player/DialoguePanel" method="_on_npc_dialogue"]
 [connection signal="npc_dialogue" from="Senior" to="Player/DialoguePanel" method="_on_npc_dialogue"]
 [connection signal="npc_dialogue" from="Manager" to="Player/DialoguePanel" method="_on_npc_dialogue"]
-=======
-position = Vector2(214, 128)
-button = ExtResource("15_wapjl")
->>>>>>> Stashed changes
-=======
-position = Vector2(214, 128)
-button = ExtResource("15_wapjl")
->>>>>>> Stashed changes
