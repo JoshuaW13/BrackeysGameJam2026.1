@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://liya12kmskqx"]
+
+[ext_resource type="Texture2D" uid="uid://brc3u7ck6v7nn" path="res://userInterface/components/elevatorButton/assets/elevator_button.png" id="1_ywu6x"]
+[ext_resource type="Texture2D" uid="uid://buucv7paa0qst" path="res://userInterface/components/elevatorButton/assets/lit_elevator_button.png" id="2_mm6ir"]
+[ext_resource type="Script" uid="uid://bol24otxuslrc" path="res://userInterface/components/elevatorButton/elevator_button.gd" id="3_fihwe"]
+[ext_resource type="FontFile" uid="uid://dj2q782d1ybvn" path="res://Micro5-Regular.ttf" id="3_yn6hx"]
+
+[sub_resource type="Theme" id="Theme_fihwe"]
+default_font = ExtResource("3_yn6hx")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" unique_id=774372786]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+stretch_mode = 0
+script = ExtResource("3_fihwe")
+
+[node name="ElevatorButton" type="TextureButton" parent="." unique_id=414192278]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 13.14
+texture_normal = ExtResource("1_ywu6x")
+texture_pressed = ExtResource("2_mm6ir")
+texture_hover = ExtResource("2_mm6ir")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ElevatorButton" unique_id=1893537927]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -8.5
+offset_right = 11.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fihwe")
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1

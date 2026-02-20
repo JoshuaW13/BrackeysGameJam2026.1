@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buucv7paa0qst"
-path="res://.godot/imported/lit_elevator_button.png-31d3d3a9edb4d4880dd86c34c1db77c4.ctex"
+path="res://.godot/imported/lit_elevator_button.png-c25d0911e59c80c2067edd157111ec11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/elevator/lit_elevator_button.png"
-dest_files=["res://.godot/imported/lit_elevator_button.png-31d3d3a9edb4d4880dd86c34c1db77c4.ctex"]
+source_file="res://userInterface/components/elevatorButton/assets/lit_elevator_button.png"
+dest_files=["res://.godot/imported/lit_elevator_button.png-c25d0911e59c80c2067edd157111ec11.ctex"]
 
 [params]
 
