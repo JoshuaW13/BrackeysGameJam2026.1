@@ -9,7 +9,7 @@
 script = ExtResource("1_qvbha")
 platform_id = "Lv3Platform"
 width = 2
-speed = 75.0
+speed = 50.0
 left_texture = ExtResource("1_lx4h3")
 middle_texture = ExtResource("2_6gm6d")
 right_texture = ExtResource("3_hv5ls")

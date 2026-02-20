@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvbon1bf8ptph"
-path="res://.godot/imported/right_railing.png-f56d7dc9dc7dedb26d4c2281c6e92d6e.ctex"
+uid="uid://7ebujjm15rs7"
+path="res://.godot/imported/railing.png-e7fbf7ce343ced1b2fe13e97e0ecad5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/office/assets/right_railing.png"
-dest_files=["res://.godot/imported/right_railing.png-f56d7dc9dc7dedb26d4c2281c6e92d6e.ctex"]
+source_file="res://levels/office/assets/railing.png"
+dest_files=["res://.godot/imported/railing.png-e7fbf7ce343ced1b2fe13e97e0ecad5d.ctex"]
 
 [params]
 
