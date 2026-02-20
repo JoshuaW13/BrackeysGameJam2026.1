@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://by865l7mcy08g"]
+
+[ext_resource type="Texture2D" uid="uid://tlm6gfeph3pk" path="res://entities/toppings/chocolate/assets/Chocolate.png" id="1_gjloj"]
+[ext_resource type="Script" uid="uid://ljhxofylcm2i" path="res://entities/toppings/chocolate/chocolate.gd" id="1_q0qy7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjloj"]
+size = Vector2(7, 6)
+
+[node name="Chocolate" type="StaticBody2D" unique_id=1900309792]
+collision_layer = 8
+input_pickable = true
+script = ExtResource("1_q0qy7")
+metadata/_custom_type_script = "uid://3rrudxrg3w8s"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=85953424]
+position = Vector2(0, -8)
+texture = ExtResource("1_gjloj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1665472493]
+position = Vector2(0.5, -3)
+shape = SubResource("RectangleShape2D_gjloj")

@@ -12,12 +12,12 @@ var next_item_id : int= 0
 
 func _ready() -> void:
 	pass
-	for i in range(5):
+	for i in range(3):
 		var new_item : Item
 		if i%2==0:
-			new_item = COFEE_RES.duplicate()
+			new_item = COFEE_RES.duplicate(true)
 		else:
-			new_item  = BOX_RES.duplicate()
+			new_item  = BOX_RES.duplicate(true)
 		new_item.id = next_item_id
 		next_item_id += 1
 		add_item(new_item)
@@ -43,18 +43,18 @@ func use_item()->bool:
 	item_instance.position = inventory_spawn.global_position
 	item_instance.inventory_item = selected_item
 	get_tree().current_scene.add_child(item_instance)
-	if item_instance is Coffee:
+	if item_instance is Coffee :
 		item_instance.topping = selected_item.topping
 	remove_item()
 	return true
 
-func cycle_left()->void:
+func cycle_right()->void:
 	if inventory.is_empty(): return
 	var first_item: Item = inventory.pop_front()
 	inventory.append(first_item)
 	spawn_front()
 
-func cycle_right()->void:
+func cycle_left()->void:
 	if inventory.is_empty(): return
 	var first_item: Item = inventory.pop_back()
 	inventory.push_front(first_item)
@@ -83,8 +83,12 @@ func has_item_of_type(type: Item.ItemType)->bool:
 func add_topping(topping: Topping)->void:
 	for i in range(inventory.size()):
 		var inventory_item = inventory[i]
-		if inventory_item.type==Item.ItemType.COFEE:
+		if inventory_item.type==Item.ItemType.COFEE and inventory_item.topping == Coffee.Topping.NONE:
+			print("topping.type raw: ", topping.type)
+			print("inventory_item.topping raw: ", inventory_item.topping)
+			print("Setting topping type to "+str(topping.type))
 			inventory_item.topping = topping.type
+			print("topping type is  "+str(inventory_item.topping))
 			spawn_front()
 			return
 	extra_toppings.append(topping.type)

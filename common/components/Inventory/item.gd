@@ -11,6 +11,7 @@ var type: ItemType
 @export var id: int = 1
 var topping: Coffee.Topping = Coffee.Topping.NONE:
 	set(new_topping):
+		topping = new_topping
 		match new_topping:
 			Coffee.Topping.CARAMEL:
 				texture = CARAMEL_SPRITE

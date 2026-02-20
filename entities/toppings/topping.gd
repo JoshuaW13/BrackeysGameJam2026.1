@@ -1,9 +1,10 @@
 extends StaticBody2D
 class_name Topping
 
-var type: Coffee.Topping = Coffee.Topping.NONE
+@export var type: Coffee.Topping = Coffee.Topping.NONE
 
 func _input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	print("Taking the toppping!")
 	if event.is_action("take"):
 		print("Take")
 		if check_los():

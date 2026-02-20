@@ -14,6 +14,7 @@ var MILK_SPRITE: Texture2D = load("res://entities/coffee/milk_coffee.png")
 
 var topping: Coffee.Topping = Topping.NONE:
 	set(new_topping):
+		topping = new_topping
 		match new_topping:
 			Topping.CARAMEL:
 				sprite.texture = CARAMEL_SPRITE

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dp1uwbylxgsgr"]
+
+[ext_resource type="Script" uid="uid://b86wd0btdmgyd" path="res://entities/toppings/milk/milk.gd" id="1_1b3g1"]
+[ext_resource type="Texture2D" uid="uid://bg54i0b7srp4" path="res://entities/toppings/milk/assets/Milk.png" id="1_s3x81"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3x81"]
+size = Vector2(7, 11)
+
+[node name="Milk" type="StaticBody2D" unique_id=530609405]
+collision_layer = 8
+input_pickable = true
+script = ExtResource("1_1b3g1")
+metadata/_custom_type_script = "uid://3rrudxrg3w8s"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1040499602]
+position = Vector2(0, -8)
+texture = ExtResource("1_s3x81")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1833751290]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_s3x81")
