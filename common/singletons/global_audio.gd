@@ -3,6 +3,7 @@ extends Node
 @onready var _character_fx_player: AudioStreamPlayer = $PlayerCharacterFxPlayer
 @onready var _inventory_fx_player: AudioStreamPlayer = $InventoryFxPlayer
 @onready var _menu_fx_player: AudioStreamPlayer = $MenuFxPlayer
+@onready var _dialogue_fx_player: AudioStreamPlayer = $DialogueFxPlayer
 @onready var _music_track_1_player: AudioStreamPlayer = $MusicTrack1Player
 @onready var _music_track_2_player: AudioStreamPlayer = $MusicTrack2Player
 
@@ -51,6 +52,22 @@ func play_inventory_fx(fx):
 func play_menu_fx(fx):
 	_menu_fx_player.stream = fx
 	_menu_fx_player.play()
+	
+var _dialogue_fx = load("res://audio/dialogue blip.wav")
+var _dialogue_tween: Tween
+	
+func play_dialogue_fx():
+	if _dialogue_tween:
+		_dialogue_tween.kill()
+	_dialogue_tween = create_tween()
+	for i in range(20):
+		_dialogue_tween.tween_callback(_play_dialogue_fx_with_random_pitch)
+		_dialogue_tween.tween_interval(0.09)
+		
+func _play_dialogue_fx_with_random_pitch():
+	_dialogue_fx_player.stream = _dialogue_fx
+	_dialogue_fx_player.pitch_scale = randf_range(1.0, 1.3)
+	_dialogue_fx_player.play()
 	
 var _track_switch_tween: Tween
 
