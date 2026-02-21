@@ -17,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://b6hvr15ioba7g" path="res://levels/level3/npc/senior/Senior.tres" id="9_skw0t"]
 [ext_resource type="Resource" uid="uid://cu2g47wkfn38h" path="res://levels/level3/npc/manager/Manager.tres" id="10_36mo7"]
 [ext_resource type="Resource" uid="uid://2uvx3dsqep63" path="res://levels/level3/npc/player/player.tres" id="12_txbxs"]
+[ext_resource type="PackedScene" uid="uid://cn0usblebx0ws" path="res://userInterface/screens/pause/pause.tscn" id="18_8y325"]
 
 [sub_resource type="Animation" id="Animation_b67ty"]
 resource_name = "Door"
@@ -118,3 +119,5 @@ npc = ExtResource("9_skw0t")
 [node name="Manager" parent="." unique_id=404841392 instance=ExtResource("7_b67ty")]
 position = Vector2(480, 128)
 npc = ExtResource("10_36mo7")
+
+[node name="Pause" parent="." unique_id=1633453326 instance=ExtResource("18_8y325")]
