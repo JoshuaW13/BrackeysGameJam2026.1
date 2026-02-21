@@ -9,12 +9,13 @@
 script = ExtResource("1_62kbq")
 condition = ExtResource("2_0ix1b")
 pass_dialogues = Array[String](["Yo thanks for the cofee boss!"])
-fail_dialogues = Array[String](["HEY!", "YOU AREN\"T ALLOWED IN THERE!", "(Now if only I had some cofee)"])
+fail_dialogues = Array[String](["HEY! YOU AREN\"T ALLOWED IN THERE!", "(Now if only I had some cofee)"])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]
 script = ExtResource("2_867s3")
 npc_id = "Guard"
+npc_name = "Joe Mamma"
 texture = ExtResource("3_867s3")
 dialogues = Array[ExtResource("1_62kbq")]([SubResource("Resource_867s3")])
 metadata/_custom_type_script = "uid://caib8pj52pvm"

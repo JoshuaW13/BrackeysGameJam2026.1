@@ -3,6 +3,7 @@ class_name DialoguePanel
 
 @onready var panel : Control = self
 @onready var dialogue: Label = $TextLabel
+@onready var name_label : Label = $NameLabel
 signal dialogue_finished(npc_id)
 
 var dialogue_lines: Array = []
@@ -18,8 +19,9 @@ func _ready() -> void:
 			panel.dialogue_finished.connect(npc._on_finished_dialogue)
 			npc.npc_dialogue.connect(_on_npc_dialogue)
 
-func _on_npc_dialogue(npc_id, lines):
+func _on_npc_dialogue(npc_id, name,  lines):
 	npc = npc_id
+	name_label.text = name
 	if lines.is_empty():
 		return
 
@@ -29,10 +31,11 @@ func _on_npc_dialogue(npc_id, lines):
 		is_active = true
 
 		dialogue.text = dialogue_lines[current_line]
+		print("Turning visible")
 		visible = true
 	
 func _input(event):
-	if not visible:
+	if event.is_action_pressed("interact") and not visible:
 		return
 
 	if event.is_action_pressed("interact"):

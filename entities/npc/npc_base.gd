@@ -4,7 +4,7 @@ class_name NPC
 @export var npc : NPCResource
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var interact_area : Area2D = $InteractArea2D
-signal npc_dialogue(npc_id, dialogue_lines)
+signal npc_dialogue(npc_id, name, dialogue_lines)
 signal npc_completed(npc_id : String)
 signal unlock(item_id: String)
 var player
@@ -21,6 +21,13 @@ func _input(event):
 	if event.is_action_pressed("interact") and is_in_area and not in_dialogue:
 		interact()
 
+func force_interact()->void:
+	is_in_area = true
+	var cancel_event = InputEventAction.new()
+	cancel_event.action = "interact"
+	cancel_event.pressed = true
+	Input.parse_input_event(cancel_event)
+
 func interact():
 	if npc.dialogues.is_empty():
 		return
@@ -34,6 +41,7 @@ func interact():
 		if event.fail_functions:
 			perform_events(event.fail_functions)
 		if event.fail_dialogues:
+			print(event.fail_dialogues)
 			perform_dialogue(event.fail_dialogues)
 
 func perform_events(actions : Array[Array]):
@@ -42,7 +50,7 @@ func perform_events(actions : Array[Array]):
 	
 func perform_dialogue(lines : Array[String]):
 	in_dialogue = true
-	emit_signal("npc_dialogue", npc.npc_id, lines)
+	emit_signal("npc_dialogue", npc.npc_id,npc.npc_name, lines)
 
 func next():
 	npc.dialogue_index += 1
