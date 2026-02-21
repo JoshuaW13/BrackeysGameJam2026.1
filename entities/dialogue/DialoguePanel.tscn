@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1jrmnt21ht6p" path="res://entities/dialogue/DialoguePanel.gd" id="1_x2xht"]
 [ext_resource type="Texture2D" uid="uid://7l08561jhfp" path="res://entities/dialogue/DialoguePanel.png" id="2_kmpnn"]
-[ext_resource type="FontFile" uid="uid://dj2q782d1ybvn" path="res://Micro5-Regular.ttf" id="3_x2xht"]
+[ext_resource type="FontFile" uid="uid://nv6qj6gjad1q" path="res://m3x6.ttf" id="3_x2xht"]
 [ext_resource type="Texture2D" uid="uid://ceoj8ffyfh717" path="res://entities/dialogue/DialogueIndicator.png" id="4_vsw0j"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2xht"]
@@ -45,27 +45,27 @@ texture = ExtResource("2_kmpnn")
 texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
-offset_top = 2.0
+offset_top = -2.0
 offset_right = 57.0
-offset_bottom = 10.0
+offset_bottom = 11.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_x2xht")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "Janitor"
 vertical_alignment = 1
 
 [node name="TextLabel" type="Label" parent="." unique_id=1192386076]
 texture_filter = 1
 layout_mode = 0
-offset_left = 7.0
-offset_top = 13.0
-offset_right = 122.0
-offset_bottom = 43.0
+offset_left = 5.0
+offset_top = 9.0
+offset_right = 124.0
+offset_bottom = 46.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = -2
+theme_override_constants/line_spacing = -3
 theme_override_fonts/font = ExtResource("3_x2xht")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 15
 text = "Hey, you’re Chad, right?
 "
 autowrap_mode = 3

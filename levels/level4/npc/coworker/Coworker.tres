@@ -16,14 +16,14 @@ metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 [sub_resource type="Resource" id="Resource_x0cxi"]
 script = ExtResource("1_p0t1d")
 condition = ExtResource("3_tnr4d")
-pass_dialogues = Array[String](["Ah perfect, that will get me through the rest of the day. You can get up to the second floor now."])
+pass_dialogues = Array[String](["Ah perfect, that will get me through the rest of the day. ", "You can get up to the second floor now."])
 pass_functions = Array[Array]([[ExtResource("4_d10po"), ["Lv4Platform"]], [ExtResource("2_58puk"), []]])
 fail_dialogues = Array[String](["Get me some coffee first. Don't you need my help."])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [sub_resource type="Resource" id="Resource_58puk"]
 script = ExtResource("1_p0t1d")
-pass_dialogues = Array[String](["Oh, I should also let you know that his door is locked, you'll need to find a way to unlock it. Now leave me to my coffee."])
+pass_dialogues = Array[String](["Oh, I should also let you know that his door is locked, you'll need to find a way to unlock it. ", "Now leave me to my coffee."])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]
