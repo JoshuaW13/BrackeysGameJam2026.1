@@ -3,17 +3,23 @@
 [ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_1iafl"]
 [ext_resource type="Resource" uid="uid://cq4s16jqot256" path="res://entities/npc/npc_give.tres" id="2_suuu6"]
 [ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="2_t1fw0"]
+[ext_resource type="Resource" uid="uid://safdi0mduqwc" path="res://entities/npc/npc_next.tres" id="3_6lb6q"]
 [ext_resource type="Texture2D" uid="uid://ksv4c48lyk6x" path="res://entities/npc/assets/human_coworker2.png" id="3_suuu6"]
 
 [sub_resource type="Resource" id="Resource_6lb6q"]
 script = ExtResource("1_1iafl")
 pass_dialogues = Array[String](["Hey, new intern. Bring this coffee to the manager.", "We will have a terrible day if you don't get it to him quick.", "The door to his office is locked, so you'll have to find a way around."])
-pass_functions = Array[Array]([[ExtResource("2_suuu6"), ["res://entities/coffee/coffee.tres", 1]]])
+pass_functions = Array[Array]([[ExtResource("2_suuu6"), ["res://entities/coffee/coffee.tres", 1]], [ExtResource("3_6lb6q"), []]])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
+
+[sub_resource type="Resource" id="Resource_5oc7n"]
+script = ExtResource("1_1iafl")
+pass_dialogues = Array[String](["Get going, don't keep them waiting."])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]
 script = ExtResource("2_t1fw0")
 npc_id = "Lv3Coworker"
 texture = ExtResource("3_suuu6")
-dialogues = Array[ExtResource("1_1iafl")]([SubResource("Resource_6lb6q")])
+dialogues = Array[ExtResource("1_1iafl")]([SubResource("Resource_6lb6q"), SubResource("Resource_5oc7n")])
 completed = true

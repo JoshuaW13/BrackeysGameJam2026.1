@@ -2,6 +2,7 @@ extends Node2D
 
 @export var door : DoorResource
 @onready var sprite : Sprite2D = $Sprite2D
+@onready var lock : Sprite2D = $Lock
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var timer : Timer = $OpenTimer
 
@@ -15,6 +16,11 @@ func _ready():
 		if npc is Button2D:
 			npc.unlock.connect(_on_unlock_door)
 			npc.lock.connect(_on_lock_door)
+			
+	if door.is_locked:
+		lock.visible = true
+	else:
+		lock.visible = false
 
 func _input(event):
 	if event.is_action_pressed("interact") and is_in_area != "":
@@ -52,8 +58,10 @@ func _on_unlock_door(door_id):
 	print("Recieved unlock_door signal: ", door_id)
 	if door.door_id == door_id:
 		door.is_locked = false
+		lock.visible = false
 
 func _on_lock_door(door_id):
 	print("Recieved lock_door signal: ", door_id)
 	if door.door_id == door_id:
 		door.is_locked = true
+		lock.visible = true

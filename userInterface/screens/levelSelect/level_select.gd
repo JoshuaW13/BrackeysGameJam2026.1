@@ -3,9 +3,12 @@ extends Control
 @export var levels: Array[PackedScene] = []
 @onready var level_selection_grid: GridContainer =%GridContainer
 
+const LEVEL_SELECT_THEME = preload("res://audio/music/level_select.ogg")
 const BUTTON_SOUND = preload("res://audio/menubutton.wav")
 
 func _ready() -> void:
+	GlobalAudio.play_music(LEVEL_SELECT_THEME)
+	
 	for i in range(levels.size()+1):
 		var elevator_button_scene : PackedScene = load("res://userInterface/components/elevatorButton/ElevatorButton.tscn")
 		var elevator_button : ElevatorButton= elevator_button_scene.instantiate()
