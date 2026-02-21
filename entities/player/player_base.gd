@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var player_resource : PlayerResource
+@export var stunned: bool = false
 
 @onready var state_machine : StateMachine = %StateMachine
 @onready var velocity_component : VelocityComponent = %VelocityComponent
@@ -51,8 +52,9 @@ func play_pickup_audio()->void:
 	audioPlayer.stream = PICKUP_SOUND
 	audioPlayer.play()
 
-
 func _input(_event: InputEvent)-> void:
+	if stunned:
+		return
 	if _event.is_action_pressed("place"):
 		var useResult : bool = inventory.use_item()
 		if useResult:

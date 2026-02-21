@@ -14,5 +14,7 @@ func physics_update(_delta: float)-> void:
 		player.velocity_component.set_horizontal(0)
 
 func process_input(_event: InputEvent) -> void:
+	if player.stunned:
+		return
 	if _event.is_action_pressed("up"):
 		transition.emit(self, "Jump")
