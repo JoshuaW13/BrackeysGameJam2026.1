@@ -7,7 +7,7 @@ class_name Walk
 var last_direction := Vector2.ZERO
 const WALK_SPEED = 100.0
 
-const WALK_SOUND = preload("res://audio/step.wav")
+var WALK_SOUND = load("res://audio/step.wav")
 
 func enter()->void:
 	animation_player.play("walk")

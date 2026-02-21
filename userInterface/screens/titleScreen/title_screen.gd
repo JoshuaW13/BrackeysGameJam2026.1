@@ -1,7 +1,7 @@
 extends Control
 
-const MAIN_MENU_THEME = preload("res://audio/music/main.ogg")
-const BUTTON_SOUND = preload("res://audio/menubutton.wav")
+var MAIN_MENU_THEME = load("res://audio/music/main.ogg")
+var BUTTON_SOUND = load("res://audio/menubutton.wav")
 
 func _ready() -> void:
 	GlobalAudio.play_music(MAIN_MENU_THEME)
