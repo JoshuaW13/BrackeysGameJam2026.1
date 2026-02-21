@@ -11,11 +11,11 @@ enum DIRECTION{
 @export var duration: float = 1.25
 
 func move(character: CharacterBody2D, direction: DIRECTION) -> void:
-	var dir_vector := Vector2.LEFT if direction == DIRECTION.LEFT else Vector2.RIGHT
-	var target = character.global_position + dir_vector * move_distance
+	var dir := -1 if direction == DIRECTION.LEFT else 1
+	var target_x := character.global_position.x + dir * move_distance
 	
 	var tween = create_tween()
-	tween.tween_property(character, "global_position", target, duration)
+	tween.tween_property(character, "global_position:x", target_x, duration)
 	tween.finished.connect(_on_tween_finished)
 
 func _on_tween_finished() -> void:

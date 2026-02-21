@@ -41,7 +41,6 @@ func interact():
 		if event.fail_functions:
 			perform_events(event.fail_functions)
 		if event.fail_dialogues:
-			print(event.fail_dialogues)
 			perform_dialogue(event.fail_dialogues)
 
 func perform_events(actions : Array[Array]):
