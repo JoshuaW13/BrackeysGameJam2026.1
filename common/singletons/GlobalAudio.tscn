@@ -1,18 +1,14 @@
 [gd_scene format=3 uid="uid://df6m5ud8f6811"]
 
-[ext_resource type="Script" path="res://common/singletons/global_audio.gd" id="1_5vv2e"]
+[ext_resource type="Script" uid="uid://d04omxkkj5n4b" path="res://common/singletons/global_audio.gd" id="1_5vv2e"]
 
 [node name="GlobalAudio" type="Node" unique_id=367519782]
 script = ExtResource("1_5vv2e")
 
 [node name="PlayerCharacterFxPlayer" type="AudioStreamPlayer" parent="." unique_id=702947768]
-volume_db = -5.0
 
 [node name="InventoryFxPlayer" type="AudioStreamPlayer" parent="." unique_id=1055105371]
-volume_db = -5.0
 
 [node name="MenuFxPlayer" type="AudioStreamPlayer" parent="." unique_id=2098052365]
-volume_db = -5.0
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=362739348]
-volume_db = -5.0
