@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://bsa3agyyh503b"]
+
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_62kbq"]
+[ext_resource type="Resource" uid="uid://bhys6ud3vds8i" path="res://entities/npc/has_caramel_coffee.tres" id="2_0ix1b"]
+[ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="2_867s3"]
+[ext_resource type="Texture2D" uid="uid://b2gxul8p6ko7a" path="res://entities/guard/assets/guard.png" id="3_867s3"]
+[ext_resource type="Resource" uid="uid://safdi0mduqwc" path="res://entities/npc/npc_next.tres" id="3_lm8rc"]
+[ext_resource type="Resource" uid="uid://dogcpdxwyplsv" path="res://entities/npc/happy_guard.tres" id="4_o3x0y"]
+
+[sub_resource type="Resource" id="Resource_867s3"]
+script = ExtResource("1_62kbq")
+condition = ExtResource("2_0ix1b")
+pass_dialogues = Array[String](["Yo thanks for the cofee boss!"])
+pass_functions = Array[Array]([[ExtResource("3_lm8rc")], [ExtResource("4_o3x0y")]])
+fail_dialogues = Array[String](["HEY! YOU AREN\"T ALLOWED IN THERE!", "(Now if only I had some cofee)"])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
+
+[resource]
+script = ExtResource("2_867s3")
+npc_id = "Guard"
+npc_name = "Joe Mamma"
+texture = ExtResource("3_867s3")
+dialogues = Array[ExtResource("1_62kbq")]([SubResource("Resource_867s3")])
+metadata/_custom_type_script = "uid://caib8pj52pvm"

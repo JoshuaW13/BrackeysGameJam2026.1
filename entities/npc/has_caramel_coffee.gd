@@ -1,7 +1,7 @@
 extends DialogueCondition
 class_name HasCaramelCoffee
 
-func is_met(runtime_args, _args)->bool:
+func is_met(runtime_args, _args=[])->bool:
 	var player = runtime_args[0]
 	var guard = runtime_args[1]
 	if player is Player:

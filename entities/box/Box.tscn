@@ -18,6 +18,7 @@ input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_dvghe")
 can_sleep = false
 lock_rotation = true
+continuous_cd = 2
 linear_damp = 6.0
 script = ExtResource("1_dvghe")
 
