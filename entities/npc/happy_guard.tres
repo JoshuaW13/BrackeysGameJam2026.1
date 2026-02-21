@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="HappyGuard" format=3 uid="uid://dogcpdxwyplsv"]
+
+[ext_resource type="Script" uid="uid://cgtu717e2fe72" path="res://entities/npc/happy_guard.gd" id="1_nsfsl"]
+
+[resource]
+script = ExtResource("1_nsfsl")

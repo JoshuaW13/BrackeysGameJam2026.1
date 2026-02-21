@@ -4,6 +4,7 @@ class_name Guard
 @onready var velocity_component : VelocityComponent = $VelocityComponent
 @onready var gravity_component: GravityComponent = $GravityComponent
 @onready var move_character: MoveCharacter = $MoveCharacter
+@onready var detection_area: Area2D = $Area2D
 
 var action_texture : Texture2D = load("res://entities/guard/assets/guard_stop.png")
 
@@ -31,13 +32,16 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 			MoveCharacter.DIRECTION.RIGHT:
 				sprite.flip_h = true
 		if !captive.state_machine.current_state is Stunned:
-			captive.stun()
 			force_interact()
-			move_character.move(captive, direction)
+			if !detection_area.monitoring:
+				captive.stun()
+				move_character.move(captive, direction)
 
 func _on_move_character_character_moved() -> void:
 	if captive!=null:
 		sprite.texture = npc.texture
 		captive.release()
-		print("interact!")
 		captive = null
+
+func make_happy()->void:
+	detection_area.monitoring = false
