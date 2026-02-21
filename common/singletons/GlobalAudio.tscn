@@ -18,6 +18,9 @@ bus = &"FX"
 [node name="DialogueFxPlayer" type="AudioStreamPlayer" parent="." unique_id=212314716]
 bus = &"FX"
 
+[node name="WorldFxPlayer" type="AudioStreamPlayer" parent="." unique_id=1380367173]
+bus = &"FX"
+
 [node name="MusicTrack1Player" type="AudioStreamPlayer" parent="." unique_id=362739348]
 bus = &"Music"
 

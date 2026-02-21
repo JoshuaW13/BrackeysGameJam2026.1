@@ -7,12 +7,15 @@ func _ready():
 	load_game()
 
 func mark_completed(level_name: String):
-	print(level_name, " Complete!")
+	print(level_name)
 	completed_levels[level_name] = true
 	save_game()
 
 func is_completed(level_name: String) -> bool:
-	return completed_levels.has(level_name)
+	if not completed_levels.has(level_name):
+		completed_levels[level_name] = false
+		return false
+	return completed_levels[level_name]
 
 func save_game() -> void:
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)

@@ -4,6 +4,8 @@ extends Node2D
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var interact_area : Area2D = $InteractArea2D
 
+var OPEN_SOUND = load("res://audio/elevator open.wav")
+
 var is_in_area : bool = false
 
 func _ready():
@@ -17,6 +19,7 @@ func _input(event):
 		
 func interact():
 	animation.play("open")
+	GlobalAudio.play_world_fx(OPEN_SOUND)
 	
 func _on_animation_finished(animation_name):
 	if animation_name == "open":

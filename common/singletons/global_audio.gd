@@ -4,6 +4,7 @@ extends Node
 @onready var _inventory_fx_player: AudioStreamPlayer = $InventoryFxPlayer
 @onready var _menu_fx_player: AudioStreamPlayer = $MenuFxPlayer
 @onready var _dialogue_fx_player: AudioStreamPlayer = $DialogueFxPlayer
+@onready var _world_fx_player: AudioStreamPlayer = $WorldFxPlayer
 @onready var _music_track_1_player: AudioStreamPlayer = $MusicTrack1Player
 @onready var _music_track_2_player: AudioStreamPlayer = $MusicTrack2Player
 
@@ -52,6 +53,10 @@ func play_inventory_fx(fx):
 func play_menu_fx(fx):
 	_menu_fx_player.stream = fx
 	_menu_fx_player.play()
+	
+func play_world_fx(fx):
+	_world_fx_player.stream = fx
+	_world_fx_player.play()
 	
 var _dialogue_fx = load("res://audio/dialogue blip.wav")
 var _dialogue_tween: Tween
