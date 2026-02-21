@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b3cvatfjsef4p" path="res://levels/office/assets/door.png" id="1_05v0y"]
 [ext_resource type="Script" uid="uid://531v8lisfg1w" path="res://entities/door/door_base.gd" id="1_bfv6c"]
+[ext_resource type="Texture2D" uid="uid://bo1rdbgst5fug" path="res://entities/lock/lock.png" id="3_dsbe1"]
 
 [sub_resource type="Animation" id="Animation_bfv6c"]
 length = 0.001
@@ -109,6 +110,12 @@ shape = SubResource("RectangleShape2D_05v0y")
 [node name="OpenTimer" type="Timer" parent="." unique_id=1919160651]
 wait_time = 3.0
 one_shot = true
+
+[node name="Lock" type="Sprite2D" parent="." unique_id=162113410]
+modulate = Color(1, 1, 1, 0.627451)
+position = Vector2(-4.7683716e-07, 4.7683716e-07)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("3_dsbe1")
 
 [connection signal="body_entered" from="RightInteractArea2D" to="." method="_on_right_body_entered"]
 [connection signal="body_exited" from="RightInteractArea2D" to="." method="_on_right_body_exited"]

@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @onready var path_follow : PathFollow2D = get_parent()
 @onready var sprite : Node2D = $Node2D
+@onready var lock : Sprite2D = $Lock
 @onready var collision : CollisionShape2D = $CollisionShape2D
 @onready var pause_timer : Timer = $PauseTimer
 
@@ -20,6 +21,11 @@ func _ready():
 	for npc in npcs:
 		if npc is NPC or npc is ButtonResource:
 			npc.unlock.connect(_on_unlock_platform)
+			
+	if moving_platform.is_locked:
+		lock.visible = true
+	else:
+		lock.visible = false
 
 func _physics_process(delta):
 	if moving_platform.paused or moving_platform.is_locked:
@@ -85,7 +91,9 @@ func update_width():
 func _on_unlock_platform(platform_id):
 	if moving_platform.platform_id == platform_id:
 		moving_platform.is_locked = false
+		lock.visible = false
 
 func _on_lock_platform(platform_id):
 	if moving_platform.platform_id == platform_id:
 		moving_platform.is_locked = true
+		lock.visible = true
