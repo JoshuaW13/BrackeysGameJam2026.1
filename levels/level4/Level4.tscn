@@ -17,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://gi7xe7nx8qa5" path="res://levels/level4/npc/coworker/Coworker.tres" id="14_17ofc"]
 [ext_resource type="PackedScene" uid="uid://5bdamcr1kdgx" path="res://entities/coffee/Coffee.tscn" id="15_72fm6"]
 [ext_resource type="Resource" uid="uid://do6fjg6hdq5uh" path="res://levels/level4/npc/manager/Manager.tres" id="16_rkjo7"]
+[ext_resource type="PackedScene" uid="uid://cn0usblebx0ws" path="res://userInterface/screens/pause/pause.tscn" id="18_2xpus"]
 
 [sub_resource type="Animation" id="Animation_b67ty"]
 resource_name = "Door"
@@ -117,3 +118,5 @@ npc = ExtResource("16_rkjo7")
 
 [node name="Coffee" parent="." unique_id=345192037 instance=ExtResource("15_72fm6")]
 position = Vector2(365, 140)
+
+[node name="Pause" parent="." unique_id=1633453326 instance=ExtResource("18_2xpus")]
