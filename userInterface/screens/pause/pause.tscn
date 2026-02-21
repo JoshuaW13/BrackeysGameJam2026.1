@@ -2,81 +2,101 @@
 
 [ext_resource type="FontFile" uid="uid://nv6qj6gjad1q" path="res://m3x6.ttf" id="1_6os6o"]
 [ext_resource type="Script" uid="uid://cytsubvnc45nw" path="res://userInterface/screens/pause/pause.gd" id="1_k741f"]
+[ext_resource type="Texture2D" uid="uid://dec3566smkjnf" path="res://userInterface/screens/pause/assets/music.png" id="3_p301d"]
+[ext_resource type="Texture2D" uid="uid://dnfag6ar6hh2j" path="res://userInterface/screens/pause/assets/sound.png" id="4_h3y1d"]
 
 [node name="Pause" type="Control" unique_id=1633453326]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -864.0
+offset_bottom = -486.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k741f")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1801877789]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0, 0, 0, 0.1764706)
+offset_right = 288.0
+offset_bottom = 162.0
+color = Color(0, 0, 0, 0.32941177)
 
 [node name="BoxContainer" type="BoxContainer" parent="." unique_id=1125881208]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+offset_right = 288.0
+offset_bottom = 162.0
 alignment = 1
 vertical = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer" unique_id=1403334925]
-custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
-theme_override_constants/separation = 31
+size_flags_vertical = 4
+theme_override_constants/separation = 9
 alignment = 1
 
 [node name="ContinueButton" type="Button" parent="BoxContainer/VBoxContainer" unique_id=389255785]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/line_spacing = -5
 theme_override_fonts/font = ExtResource("1_6os6o")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 24
 text = "Continue"
-icon_alignment = 1
 
 [node name="RestartButton" type="Button" parent="BoxContainer/VBoxContainer" unique_id=1395277801]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("1_6os6o")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 24
 text = "Restart"
 icon_alignment = 1
 
 [node name="MainButton" type="Button" parent="BoxContainer/VBoxContainer" unique_id=1816713092]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("1_6os6o")
-theme_override_font_sizes/font_size = 63
+theme_override_font_sizes/font_size = 24
 text = "Main Menu"
 icon_alignment = 1
 
-[node name="SFXSlider" type="HSlider" parent="." unique_id=1543570197]
-custom_minimum_size = Vector2(150, 50)
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1070836015]
+custom_minimum_size = Vector2(100, 25)
 layout_mode = 0
-offset_left = 975.0
-offset_top = 6.0
-offset_right = 1125.0
-offset_bottom = 56.0
+offset_left = 6.0000005
+offset_top = 28.00001
+offset_right = 106.0
+offset_bottom = 53.000008
+scale = Vector2(0.4, 0.4)
+value = 100.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="SFXSlider" type="HSlider" parent="." unique_id=1543570197]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 0
+offset_left = 6.0000157
+offset_top = 9.0
+offset_right = 106.000015
+offset_bottom = 34.0
+scale = Vector2(0.4, 0.4)
 max_value = 2.0
 value = 1.0
 tick_count = 10
 ticks_on_borders = true
 
-[node name="MusicSlider" type="HSlider" parent="." unique_id=1070836015]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 0
-offset_left = 975.0
-offset_top = 53.0
-offset_right = 1125.0
-offset_bottom = 103.0
-value = 100.0
-tick_count = 10
-ticks_on_borders = true
+[node name="MusicSprite2D" type="Sprite2D" parent="." unique_id=1669629923]
+position = Vector2(57, 33)
+scale = Vector2(0.6875002, 0.6875002)
+texture = ExtResource("3_p301d")
+
+[node name="SoundSprite2D" type="Sprite2D" parent="." unique_id=2032407138]
+position = Vector2(57.000004, 14)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("4_h3y1d")
