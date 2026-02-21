@@ -11,7 +11,6 @@ var JUMP_SOUND = load("res://audio/jump.wav")
 
 func enter()->void:
 	animation_player.play("jump")
-	animation_player.queue("freefall")
 	player.velocity_component.set_vertical(-jump_vertical_speed)
 	player.velocity_component.speed = JUMP_HORIZONTAL_SPEED
 	GlobalAudio.play_character_fx(JUMP_SOUND)
@@ -20,6 +19,8 @@ func physics_update(_delta: float)-> void:
 	var direction: Vector2 = determine_direction()
 	if player.is_on_floor():
 		transition.emit(self,"Idle")
+	if player.velocity_component.velocity.y > 0:
+		transition.emit(self, "FreeFall")
 	player.velocity_component.set_horizontal(direction.x)
 
 func determine_direction() -> Vector2:
