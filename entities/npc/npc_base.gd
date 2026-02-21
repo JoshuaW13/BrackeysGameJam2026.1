@@ -49,7 +49,7 @@ func perform_events(actions : Array[Array]):
 	
 func perform_dialogue(lines : Array[String]):
 	in_dialogue = true
-	emit_signal("npc_dialogue", npc.npc_id,npc.npc_name, lines)
+	emit_signal("npc_dialogue", npc.npc_id, npc.npc_name, lines)
 
 func next():
 	npc.dialogue_index += 1

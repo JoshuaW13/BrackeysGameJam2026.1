@@ -8,7 +8,6 @@
 [ext_resource type="Resource" uid="uid://b8o48gs0uo4s8" path="res://levels/level3/map/door.tres" id="3_i8es6"]
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="3_srxm4"]
 [ext_resource type="Resource" uid="uid://c5q6jmixwftu5" path="res://levels/level3/map/elevator.tres" id="4_n87ra"]
-[ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="4_pxkmy"]
 [ext_resource type="PackedScene" uid="uid://dd2ks5rqjvptf" path="res://entities/moving_platform/moving_platform.tscn" id="5_2hiva"]
 [ext_resource type="PackedScene" uid="uid://sbehcn24hh4v" path="res://entities/box/Box.tscn" id="5_tvlix"]
 [ext_resource type="Resource" uid="uid://duiowty25ytwq" path="res://levels/level3/map/moving_platform.tres" id="6_0kcjn"]
@@ -92,20 +91,6 @@ moving_platform = ExtResource("6_0kcjn")
 z_index = 5
 position = Vector2(19, 142)
 player_resource = ExtResource("12_txbxs")
-
-[node name="DialoguePanel" parent="Player" unique_id=771276265 instance=ExtResource("4_pxkmy")]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -130.0
-offset_right = 64.0
-offset_bottom = -82.575
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Coworker" parent="." unique_id=800059897 instance=ExtResource("7_b67ty")]
 position = Vector2(151, 128)
