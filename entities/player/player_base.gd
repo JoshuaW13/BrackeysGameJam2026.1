@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var player_resource : PlayerResource
+@export var stunned: bool = false
 
 @onready var state_machine : StateMachine = %StateMachine
 @onready var velocity_component : VelocityComponent = %VelocityComponent
@@ -44,8 +45,9 @@ func topping_picked_up(topping: Topping)->void:
 	inventory.add_topping(topping)
 	topping.call_deferred("queue_free")
 	GlobalAudio.play_inventory_fx(PICKUP_SOUND)
-
 func _input(_event: InputEvent)-> void:
+	if stunned:
+		return
 	if _event.is_action_pressed("place"):
 		var useResult : bool = inventory.use_item()
 		if useResult:

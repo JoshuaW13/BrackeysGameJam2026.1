@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2gxul8p6ko7a"
-path="res://.godot/imported/guard.png-85761084c8dbd97a67383d38bbd3b968.ctex"
+uid="uid://dqc8gnx8g448d"
+path="res://.godot/imported/guard_stop.png-7b2a6edf64be9d0b62cf8a3e56c9c95e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/npc/assets/guard.png"
-dest_files=["res://.godot/imported/guard.png-85761084c8dbd97a67383d38bbd3b968.ctex"]
+source_file="res://entities/guard/assets/guard_stop.png"
+dest_files=["res://.godot/imported/guard_stop.png-7b2a6edf64be9d0b62cf8a3e56c9c95e.ctex"]
 
 [params]
 
