@@ -58,6 +58,7 @@ func next():
 	npc.dialogue_index += 1
 	
 func complete():
+	print("Emitting npc completed")
 	emit_signal("npc_completed", npc.npc_id)
 
 func _on_finished_dialogue(npc_id):

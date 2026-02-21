@@ -3,14 +3,13 @@ extends Node2D
 @onready var player : Player = $Player
 var BOX_RES = load("res://entities/box/box.tres")
 var COFFEE_RES = load("res://entities/coffee/coffee.tres")
-var remaining_npcs := {}
 var level_complete : bool = false
 
 func _ready():
 	for npc in get_tree().get_nodes_in_group("npc"):
 		if npc is NPC:
 			if !npc.npc.completed:
-				remaining_npcs[npc.npc.npc_id] = true
+				print("Connecting npc completed")
 				npc.npc_completed.connect(_on_npc_completed)
 	player.dialogue_panel.dialogue_finished.connect(_on_finished_dialogue)
 	
@@ -27,12 +26,9 @@ func _ready():
 		new_item.id = next_item_id
 		next_item_id += 1
 		player.inventory.add_item(new_item)
-	
-func _on_npc_completed(npc_id):
-	remaining_npcs.erase(npc_id)
 
-	if remaining_npcs.is_empty():
-		level_complete = true
+func _on_npc_completed(npc_id: String)->void:
+	print("Level complete!")
 
 func _on_finished_dialogue(npc):
 	if level_complete:

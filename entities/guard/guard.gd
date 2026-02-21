@@ -26,18 +26,18 @@ func determine_move_direction(body: Node2D)->MoveCharacter.DIRECTION:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	var direction = determine_move_direction(body)
 	if body is Player:
-		sprite.texture = action_texture
 		captive = body
 		match direction:
 			MoveCharacter.DIRECTION.LEFT:
 				sprite.flip_h = false
 			MoveCharacter.DIRECTION.RIGHT:
 				sprite.flip_h = true
-		if !captive.state_machine.current_state is Stunned:
+		if !captive.state_machine.current_state is Stunned and not happy:
 			if captive.inventory.holding_item_of_type(Item.ItemType.COFFEE, Coffee.Topping.CARAMEL):
 				make_happy()
 			force_interact()
 			if !happy:
+				sprite.texture = action_texture
 				captive.stun()
 				move_character.move(captive, direction)
 
@@ -49,4 +49,5 @@ func _on_move_character_character_moved() -> void:
 
 func make_happy()->void:
 	happy = true
+	sprite.texture = npc.texture
 	detection_area.monitoring = false
