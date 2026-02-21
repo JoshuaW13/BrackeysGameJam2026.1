@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://b64tre6swvbpv" path="res://common/components/gravity/GravityComponent.tscn" id="8_26q78"]
 [ext_resource type="PackedScene" uid="uid://oqmrkm88j538" path="res://common/components/Inventory/Inventory.tscn" id="9_bectd"]
 [ext_resource type="PackedScene" uid="uid://bpku656ioj6cj" path="res://common/components/FlipComponents/flipOnVelocity/FlipOnVelocity.tscn" id="10_wvtmh"]
-[ext_resource type="AudioStream" uid="uid://2kafiddih3db" path="res://audio/jump.wav" id="12_a1qjk"]
-[ext_resource type="AudioStream" uid="uid://bcc4lvcjpj7kx" path="res://audio/step.wav" id="13_j3ovn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7thud"]
 size = Vector2(12, 16)
@@ -251,13 +249,6 @@ shape = SubResource("SeparationRayShape2D_7thud")
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_gx6sm")
 autoplay = &"idle"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=319224581]
-stream = ExtResource("12_a1qjk")
-
-[node name="WalkSoundPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1778548379]
-stream = ExtResource("13_j3ovn")
-volume_db = 4.86
 
 [node name="WalkSoundTimer" type="Timer" parent="." unique_id=1785473329]
 wait_time = 0.36

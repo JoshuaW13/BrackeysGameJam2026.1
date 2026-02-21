@@ -7,6 +7,8 @@ class_name Walk
 var last_direction := Vector2.ZERO
 const WALK_SPEED = 100.0
 
+const WALK_SOUND = preload("res://audio/step.wav")
+
 func enter()->void:
 	animation_player.play("walk")
 	player.velocity_component.speed = WALK_SPEED
@@ -33,7 +35,7 @@ func determine_direction() -> Vector2:
 	
 func play_footstep():
 	if player.walkSoundTimer.is_stopped():
-		player.walkSoundPlayer.play()
+		GlobalAudio.play_character_fx(WALK_SOUND)
 		player.walkSoundTimer.start()
 
 func physics_update(_delta: float) -> void:
