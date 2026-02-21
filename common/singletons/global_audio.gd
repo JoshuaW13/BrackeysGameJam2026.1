@@ -3,26 +3,39 @@ extends Node
 @onready var _character_fx_player: AudioStreamPlayer = $PlayerCharacterFxPlayer
 @onready var _inventory_fx_player: AudioStreamPlayer = $InventoryFxPlayer
 @onready var _menu_fx_player: AudioStreamPlayer = $MenuFxPlayer
-@onready var _music_player: AudioStreamPlayer = $MusicPlayer
+@onready var _music_track_1_player: AudioStreamPlayer = $MusicTrack1Player
+@onready var _music_track_2_player: AudioStreamPlayer = $MusicTrack2Player
 
-var _fx_volume : float = 1.0
-var _music_volume : float = 1.0
+var _current_music_on_track_1 = true
 
-var fx_volume : float :
+var _fx_bus_index = AudioServer.get_bus_index("FX")
+var _music_bus_index = AudioServer.get_bus_index("Music")
+
+var _fx_volume: float = 1.0
+var _music_volume: float = 1.0
+var _music_track_1_volume: float = 1.0:
+	set(value):
+		_music_track_1_volume = value
+		_music_track_1_player.volume_linear = _music_track_1_volume
+var _music_track_2_volume: float = 0.0:
+	set(value):
+		_music_track_2_volume = value
+		_music_track_2_player.volume_linear = _music_track_2_volume
+var _music_fade_time: float = 0.5
+
+var fx_volume : float:
 	get:
 		return _fx_volume
 	set(value):
 		_fx_volume = clamp(value, 0.0, 2.0)
-		_character_fx_player.volume_linear = _fx_volume
-		_inventory_fx_player.volume_linear = _fx_volume
-		_menu_fx_player.volume_linear = _fx_volume
+		AudioServer.set_bus_volume_db(_fx_bus_index, linear_to_db(_fx_volume))
 		
-var music_volume : float :
+var music_volume : float:
 	get:
 		return _music_volume
 	set(value):
 		_music_volume = clamp(value, 0.0, 2.0)
-		_music_player.volume_linear = _music_volume
+		AudioServer.set_bus_volume_db(_music_bus_index, linear_to_db(_music_volume))
 		
 
 func play_character_fx(fx):
@@ -38,9 +51,30 @@ func play_menu_fx(fx):
 	_menu_fx_player.play()
 
 func play_music(track):
-	_music_player.stream = track
-	_music_player.play()
+	if _current_music_on_track_1:
+		# switch to track 2
+		_music_track_2_player.stream = track
+		_music_track_2_player.play()
+		_current_music_on_track_1 = false
+		var tween = create_tween().set_parallel(true)
+		tween.tween_property(self, "_music_track_2_volume", 1.0, _music_fade_time)
+		tween.tween_property(self, "_music_track_1_volume", 0.0, _music_fade_time)
+		tween.finished.connect(func():
+			_music_track_1_player.stop()
+		)
+	else:
+		# switch to track 1
+		_music_track_1_player.stream = track
+		_music_track_1_player.play()
+		_current_music_on_track_1 = true
+		var tween = create_tween().set_parallel(true)
+		tween.tween_property(self, "_music_track_1_volume", 1.0, _music_fade_time)
+		tween.tween_property(self, "_music_track_2_volume", 0.0, _music_fade_time)
+		tween.finished.connect(func():
+			_music_track_2_player.stop()
+		)
+
 	
 func _ready() -> void:
-	fx_volume = 0.4
-	music_volume = 0.4
+	fx_volume = 0.2
+	music_volume = 0.2

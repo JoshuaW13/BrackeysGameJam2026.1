@@ -2,13 +2,12 @@ extends CharacterBody2D
 class_name Player
 
 @export var player_resource : PlayerResource
-@export var stunned: bool = false
-
 @onready var state_machine : StateMachine = %StateMachine
 @onready var velocity_component : VelocityComponent = %VelocityComponent
 @onready var gravity_component: GravityComponent = %GravityComponent
 @onready var inventory: Inventory = %Inventory
 @onready var walkSoundTimer: Timer = $WalkSoundTimer
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 const PICKUP_SOUND = preload("res://audio/pickup.wav")
 const DROP_SOUND = preload("res://audio/drop.wav")
@@ -46,7 +45,7 @@ func topping_picked_up(topping: Topping)->void:
 	topping.call_deferred("queue_free")
 	GlobalAudio.play_inventory_fx(PICKUP_SOUND)
 func _input(_event: InputEvent)-> void:
-	if stunned:
+	if state_machine.current_state is Stunned:
 		return
 	if _event.is_action_pressed("place"):
 		var useResult : bool = inventory.use_item()
@@ -58,3 +57,12 @@ func _input(_event: InputEvent)-> void:
 	if _event.is_action_pressed("cycle_inventory_left"):
 		inventory.cycle_left()
 		GlobalAudio.play_inventory_fx(CYCLE_SOUND)
+
+func stun()->void:
+	var current_state: State = state_machine.current_state
+	current_state.transition.emit(current_state, "Stunned")
+
+func release()->void:
+	var current_state: State = state_machine.current_state
+	if current_state is Stunned:
+		current_state.transition.emit(current_state, "Idle")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cqrvukbmc64i2"]
+
+[ext_resource type="Script" uid="uid://crikskxdgide3" path="res://common/components/moveCharacter/move_character.gd" id="1_vxpxr"]
+
+[node name="MoveCharacter" type="Node2D" unique_id=976887618]
+script = ExtResource("1_vxpxr")

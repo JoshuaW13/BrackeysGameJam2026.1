@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dqeoxoyl2sx4b" path="res://entities/player/states/free_fall.gd" id="7_7thud"]
 [ext_resource type="PackedScene" uid="uid://1pp8jw5odpso" path="res://common/components/velocity/velocityComponent.tscn" id="7_qiwj3"]
 [ext_resource type="PackedScene" uid="uid://b64tre6swvbpv" path="res://common/components/gravity/GravityComponent.tscn" id="8_26q78"]
+[ext_resource type="Script" uid="uid://ql14moplhp6o" path="res://entities/player/stunned.gd" id="8_a1qjk"]
 [ext_resource type="PackedScene" uid="uid://oqmrkm88j538" path="res://common/components/Inventory/Inventory.tscn" id="9_bectd"]
 [ext_resource type="PackedScene" uid="uid://bpku656ioj6cj" path="res://common/components/FlipComponents/flipOnVelocity/FlipOnVelocity.tscn" id="10_wvtmh"]
 [ext_resource type="Texture2D" uid="uid://b2veu0j38hij4" path="res://userInterface/screens/pause/assets/pause.png" id="12_a1qjk"]
@@ -217,6 +218,9 @@ player = NodePath("../..")
 [node name="FreeFall" type="Node" parent="StateMachine" unique_id=891422636 node_paths=PackedStringArray("player")]
 script = ExtResource("7_7thud")
 player = NodePath("../..")
+
+[node name="Stunned" type="Node" parent="StateMachine" unique_id=2046932036]
+script = ExtResource("8_a1qjk")
 
 [node name="VelocityComponent" parent="." unique_id=1962091022 instance=ExtResource("7_qiwj3")]
 unique_name_in_owner = true
