@@ -12,6 +12,7 @@
 
 [node name="Pause" type="Control" unique_id=1633453326]
 process_mode = 3
+z_index = 50
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

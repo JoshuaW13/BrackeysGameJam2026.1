@@ -5,6 +5,7 @@ extends Node2D
 @onready var lock : Sprite2D = $Lock
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var timer : Timer = $OpenTimer
+signal npc_dialogue
 
 var is_in_area: String = ""
 
@@ -27,6 +28,9 @@ func _input(event):
 		interact()
 		
 func interact():
+	if door.is_locked:
+		print("Test")
+		emit_signal("npc_dialogue", "message", "", ["The door is locked"])
 	if not door.is_locked and timer.is_stopped():
 		timer.start()
 		if is_in_area == "left":

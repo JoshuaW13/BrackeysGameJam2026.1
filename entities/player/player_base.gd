@@ -15,6 +15,7 @@ const DROP_SOUND = preload("res://audio/drop.wav")
 const CYCLE_SOUND = preload("res://audio/cycle.wav")
 
 var push_strength: float = 10
+var can_move: bool = true
 
 func _ready() -> void:
 	state_machine.start()
@@ -22,6 +23,10 @@ func _ready() -> void:
 	SignalBus.topping_picked_up.connect(topping_picked_up)
 
 func _physics_process(delta):
+	if not can_move:
+		velocity = Vector2.ZERO
+		return
+
 	if not is_on_floor():
 		gravity_component.apply(delta)
 	velocity_component.apply(self)
@@ -48,6 +53,8 @@ func topping_picked_up(topping: Topping)->void:
 	
 func _input(_event: InputEvent)-> void:
 	if get_viewport().gui_get_hovered_control() != null:
+		return
+	if not can_move:
 		return
 		
 	if state_machine.current_state is Stunned:
