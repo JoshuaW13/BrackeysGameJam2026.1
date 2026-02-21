@@ -1,4 +1,4 @@
-extends Panel
+extends Control
 class_name DialoguePanel
 
 @onready var panel : Control = self

@@ -1,24 +1,34 @@
 extends Control
 
-@onready var continue_button : Button = $BoxContainer/VBoxContainer/ContinueButton
-@onready var restart_button : Button = $BoxContainer/VBoxContainer/RestartButton
-@onready var main_button : Button = $BoxContainer/VBoxContainer/MainButton
-@onready var sfx_slider : Slider = $SFXSlider
-@onready var music_slider : Slider = $MusicSlider
+@onready var pause_button : Button = $PauseButton
+@onready var pause_panel : Panel = $Panel
+@onready var continue_button : Button = $Panel/BoxContainer/VBoxContainer/ContinueButton
+@onready var restart_button : Button = $Panel/BoxContainer/VBoxContainer/RestartButton
+@onready var main_button : Button = $Panel/BoxContainer/VBoxContainer/MainButton
+@onready var sfx_slider : Slider = $Panel/SFXSlider
+@onready var music_slider : Slider = $Panel/MusicSlider
 
 func _ready() -> void:
 	sfx_slider.value = GlobalAudio.fx_volume
 	music_slider.value = GlobalAudio.music_volume
 	
+	pause_button.pressed.connect(_on_pause_pressed)
 	continue_button.pressed.connect(_on_continue_pressed)
 	restart_button.pressed.connect(_on_restart_pressed)
 	main_button.pressed.connect(_on_main_pressed)
 	sfx_slider.value_changed.connect(_on_sfx_slider_changed)
 	music_slider.value_changed.connect(_on_music_slider_changed)
 
+func _on_pause_pressed() -> void:
+	pause_panel.show()
+	pause_button.hide()
+		
+	get_tree().paused = true
+	
 func _on_continue_pressed() -> void:
 	get_tree().paused = false
-	hide()
+	pause_panel.hide()
+	pause_button.show()
 
 func _on_restart_pressed() -> void:
 	get_tree().paused = false

@@ -8,23 +8,17 @@ class_name Player
 @onready var inventory: Inventory = %Inventory
 @onready var walkSoundTimer: Timer = $WalkSoundTimer
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
-@onready var pause_button : Button = $Camera2D/PauseButton
-@onready var pause_menu : Control = $Camera2D/Pause
 
 const PICKUP_SOUND = preload("res://audio/pickup.wav")
 const DROP_SOUND = preload("res://audio/drop.wav")
 const CYCLE_SOUND = preload("res://audio/cycle.wav")
 
 var push_strength: float = 10
-var is_paused : bool = false
 
 func _ready() -> void:
 	state_machine.start()
 	SignalBus.item_picked_up.connect(item_picked_up)
 	SignalBus.topping_picked_up.connect(topping_picked_up)
-	
-	pause_button.pressed.connect(_toggle_pause)
-	pause_menu.hide()
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -76,14 +70,3 @@ func release()->void:
 	var current_state: State = state_machine.current_state
 	if current_state is Stunned:
 		current_state.transition.emit(current_state, "Idle")
-
-func _toggle_pause() -> void:
-	is_paused = !is_paused
-	get_tree().paused = is_paused
-	
-	if is_paused:
-		pause_menu.show()
-		pause_button.hide()
-	else:
-		pause_menu.hide()
-		pause_button.show()

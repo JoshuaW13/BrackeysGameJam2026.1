@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dd2ks5rqjvptf" path="res://entities/moving_platform/moving_platform.tscn" id="10_8ytww"]
 [ext_resource type="Resource" uid="uid://ora4qi6qjg4v" path="res://levels/level5/map/moving_platform.tres" id="11_f2nou"]
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="12_5k51j"]
-[ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="13_2y4ay"]
 [ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="14_ppvdb"]
 [ext_resource type="Resource" uid="uid://d4gfw7bu8p7tm" path="res://levels/level5/npc/coworker/Coworker.tres" id="15_7toq1"]
 [ext_resource type="Resource" uid="uid://birpyatv6clgc" path="res://levels/level5/npc/manager/Manager.tres" id="16_yneqc"]
@@ -92,11 +91,6 @@ moving_platform = ExtResource("11_f2nou")
 [node name="Player" parent="." unique_id=914755556 instance=ExtResource("12_5k51j")]
 z_index = 5
 position = Vector2(19, 142)
-
-[node name="DialoguePanel" parent="Player" unique_id=771276265 instance=ExtResource("13_2y4ay")]
-visible = false
-offset_top = -130.0
-offset_bottom = -82.575
 
 [node name="Coworker" parent="." unique_id=800059897 instance=ExtResource("14_ppvdb")]
 position = Vector2(151, 128)

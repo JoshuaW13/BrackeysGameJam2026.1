@@ -19,6 +19,7 @@ metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 [resource]
 script = ExtResource("1_tje7f")
 npc_id = "Lv3Manager"
+npc_name = "Sarah"
 texture = ExtResource("2_yxprm")
 dialogues = Array[ExtResource("1_38ifr")]([SubResource("Resource_64wai")])
 metadata/_custom_type_script = "uid://caib8pj52pvm"

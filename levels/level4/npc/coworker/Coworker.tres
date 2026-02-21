@@ -29,6 +29,7 @@ metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 [resource]
 script = ExtResource("3_58puk")
 npc_id = "Lv4Coworker"
+npc_name = "Roger"
 texture = ExtResource("4_tnr4d")
 dialogues = Array[ExtResource("1_p0t1d")]([SubResource("Resource_6lb6q"), SubResource("Resource_x0cxi"), SubResource("Resource_58puk")])
 completed = true
