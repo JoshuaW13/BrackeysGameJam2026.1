@@ -35,11 +35,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 				sprite.flip_h = true
 		if !captive.state_machine.current_state is Stunned:
 			if captive.inventory.holding_item_of_type(Item.ItemType.COFFEE, Coffee.Topping.CARAMEL):
-				print("Making guard happy")
 				make_happy()
 			force_interact()
 			if !happy:
-				print("Stun guard")
 				captive.stun()
 				move_character.move(captive, direction)
 
