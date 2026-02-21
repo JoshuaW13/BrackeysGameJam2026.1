@@ -27,6 +27,7 @@ tile_set = ExtResource("1_qcew6")
 position = Vector2(33, 190)
 
 [node name="DialoguePanel" parent="Player" unique_id=505615283 instance=ExtResource("3_7s4v0")]
+visible = false
 offset_left = -48.0
 offset_top = -122.0
 offset_right = -48.0

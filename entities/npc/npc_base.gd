@@ -22,6 +22,8 @@ func _input(event):
 		interact()
 
 func interact():
+	if npc.dialogues.is_empty():
+		return
 	var event = npc.dialogues[npc.dialogue_index]
 	if !event.condition or event.condition.is_met([player[0]], []):
 		if event.pass_functions:

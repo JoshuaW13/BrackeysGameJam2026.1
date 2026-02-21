@@ -25,7 +25,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is Player:
 		sprite.texture = action_texture
 		captive = body
-		interact()
+		print("interact!")
 		match direction:
 			MoveCharacter.DIRECTION.LEFT:
 				sprite.flip_h = false
@@ -39,4 +39,5 @@ func _on_move_character_character_moved() -> void:
 	if captive!=null:
 		sprite.texture = npc.texture
 		captive.release()
+		interact()
 		captive = null
