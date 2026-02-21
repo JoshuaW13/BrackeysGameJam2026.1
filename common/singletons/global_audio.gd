@@ -6,6 +6,8 @@ extends Node
 @onready var _music_track_1_player: AudioStreamPlayer = $MusicTrack1Player
 @onready var _music_track_2_player: AudioStreamPlayer = $MusicTrack2Player
 
+var _global_volume_modifier = 0.5
+
 var _current_music_on_track_1 = true
 
 var _fx_bus_index = AudioServer.get_bus_index("FX")
@@ -28,14 +30,14 @@ var fx_volume : float:
 		return _fx_volume
 	set(value):
 		_fx_volume = clamp(value, 0.0, 2.0)
-		AudioServer.set_bus_volume_db(_fx_bus_index, linear_to_db(_fx_volume))
+		AudioServer.set_bus_volume_db(_fx_bus_index, linear_to_db(_fx_volume * _global_volume_modifier))
 		
 var music_volume : float:
 	get:
 		return _music_volume
 	set(value):
 		_music_volume = clamp(value, 0.0, 2.0)
-		AudioServer.set_bus_volume_db(_music_bus_index, linear_to_db(_music_volume))
+		AudioServer.set_bus_volume_db(_music_bus_index, linear_to_db(_music_volume * _global_volume_modifier))
 		
 
 func play_character_fx(fx):
@@ -79,8 +81,13 @@ func play_music(track):
 		_track_switch_tween.finished.connect(func():
 			_music_track_2_player.stop()
 		)
-
+		
+var music_muffled: bool = false:
+	set(value):
+		music_muffled = value
+		AudioServer.set_bus_effect_enabled(_music_bus_index, 0, music_muffled)
 	
+
 func _ready() -> void:
-	fx_volume = 0.2
-	music_volume = 0.2
+	fx_volume = _fx_volume
+	music_volume = _music_volume

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d04omxkkj5n4b" path="res://common/singletons/global_audio.gd" id="1_5vv2e"]
 
 [node name="GlobalAudio" type="Node" unique_id=367519782]
+process_mode = 3
 script = ExtResource("1_5vv2e")
 
 [node name="PlayerCharacterFxPlayer" type="AudioStreamPlayer" parent="." unique_id=702947768]
