@@ -45,9 +45,10 @@ func interact():
 
 func perform_events(actions : Array[Array]):
 	for action in actions:
-		if action.size()>1:
+		if action.size() > 1:
 			action[0].execute([self, player[0]], action[1])
-		action[0].execute([self, player[0]])
+		else:
+			action[0].execute([self, player[0]])
 
 func perform_dialogue(lines : Array[String]):
 	in_dialogue = true
