@@ -10,9 +10,9 @@ class_name Player
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var dialogue_panel: DialoguePanel = $Camera2D/DialoguePanel
 
-const PICKUP_SOUND = preload("res://audio/pickup.wav")
-const DROP_SOUND = preload("res://audio/drop.wav")
-const CYCLE_SOUND = preload("res://audio/cycle.wav")
+var PICKUP_SOUND = load("res://audio/pickup.wav")
+var DROP_SOUND = load("res://audio/drop.wav")
+var CYCLE_SOUND = load("res://audio/cycle.wav")
 
 var push_strength: float = 10
 var can_move: bool = true

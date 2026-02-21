@@ -7,7 +7,7 @@ class_name Jump
 var jump_vertical_speed: float = 425
 var last_direction := Vector2.ZERO
 const JUMP_HORIZONTAL_SPEED = 50
-const JUMP_SOUND = preload("res://audio/jump.wav")
+var JUMP_SOUND = load("res://audio/jump.wav")
 
 func enter()->void:
 	animation_player.play("jump")

@@ -3,8 +3,8 @@ extends Control
 @export var levels: Array[PackedScene] = []
 @onready var level_selection_grid: GridContainer =%GridContainer
 
-const LEVEL_SELECT_THEME = preload("res://audio/music/level_select.ogg")
-const BUTTON_SOUND = preload("res://audio/menubutton.wav")
+var LEVEL_SELECT_THEME = load("res://audio/music/level_select.ogg")
+var BUTTON_SOUND = load("res://audio/menubutton.wav")
 
 func _ready() -> void:
 	GlobalAudio.play_music(LEVEL_SELECT_THEME)

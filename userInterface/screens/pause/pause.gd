@@ -24,20 +24,24 @@ func _on_pause_pressed() -> void:
 	pause_button.hide()
 		
 	get_tree().paused = true
+	GlobalAudio.music_muffled = true
 	
 func _on_continue_pressed() -> void:
 	get_tree().paused = false
+	GlobalAudio.music_muffled = false
 	pause_panel.hide()
 	pause_button.show()
 
 func _on_restart_pressed() -> void:
 	get_tree().paused = false
+	GlobalAudio.music_muffled = false
 	var current_scene = get_tree().current_scene
 	if current_scene:
 		get_tree().reload_current_scene()
 
 func _on_main_pressed() -> void:
 	get_tree().paused = false
+	GlobalAudio.music_muffled = false
 	get_tree().change_scene_to_file("res://userInterface/screens/levelSelect/LevelSelect.tscn")
 	
 func _on_sfx_slider_changed(value: float) -> void:
