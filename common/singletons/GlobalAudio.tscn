@@ -6,9 +6,16 @@
 script = ExtResource("1_5vv2e")
 
 [node name="PlayerCharacterFxPlayer" type="AudioStreamPlayer" parent="." unique_id=702947768]
+bus = &"FX"
 
 [node name="InventoryFxPlayer" type="AudioStreamPlayer" parent="." unique_id=1055105371]
+bus = &"FX"
 
 [node name="MenuFxPlayer" type="AudioStreamPlayer" parent="." unique_id=2098052365]
+bus = &"FX"
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=362739348]
+[node name="MusicTrack1Player" type="AudioStreamPlayer" parent="." unique_id=362739348]
+bus = &"Music"
+
+[node name="MusicTrack2Player" type="AudioStreamPlayer" parent="." unique_id=1575602526]
+bus = &"Music"
