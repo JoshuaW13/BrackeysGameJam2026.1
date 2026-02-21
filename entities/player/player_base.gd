@@ -8,6 +8,7 @@ class_name Player
 @onready var inventory: Inventory = %Inventory
 @onready var walkSoundTimer: Timer = $WalkSoundTimer
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var dialogue_panel: DialoguePanel = $Camera2D/DialoguePanel
 
 const PICKUP_SOUND = preload("res://audio/pickup.wav")
 const DROP_SOUND = preload("res://audio/drop.wav")

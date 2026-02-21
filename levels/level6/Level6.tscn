@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://25146g838218" path="res://levels/level6/level_6.gd" id="1_7s4v0"]
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="1_qcew6"]
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="2_min74"]
-[ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="3_7s4v0"]
 [ext_resource type="PackedScene" uid="uid://t72fulv0v6ne" path="res://entities/guard/Guard.tscn" id="3_s62ab"]
 [ext_resource type="Resource" uid="uid://bsa3agyyh503b" path="res://levels/level6/npc/Guard.tres" id="4_min74"]
+[ext_resource type="PackedScene" uid="uid://c0gh0jpolf21c" path="res://entities/toppings/caramel/Caramel.tscn" id="7_klmgf"]
 
 [node name="Level6" type="Node2D" unique_id=1102819748]
 script = ExtResource("1_7s4v0")
@@ -17,7 +17,7 @@ tile_set = ExtResource("1_qcew6")
 tile_set = ExtResource("1_qcew6")
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=686772205]
-tile_map_data = PackedByteArray("AAAAAAwAAQABAAAAAAABAAwAAQACAAAAAAACAAwAAQAAAAAAAAADAAwAAQABAAAAAAAEAAwAAQACAAAAAAAFAAwAAQAAAAAAAAAGAAwAAQABAAAAAAAHAAwAAQACAAAAAAAIAAwAAQAAAAAAAAAJAAwAAQABAAAAAAAKAAwAAQACAAAAAAALAAwAAQAAAAAAAAAMAAwAAQABAAAAAAANAAwAAQACAAAAAAAOAAwAAQAAAAAAAAAPAAwAAQABAAAAAAAQAAwAAQACAAAAAAARAAwAAQAAAAAAAAASAAwAAQABAAAAAAATAAwAAQACAAAAAAAUAAwAAQAAAAAAAAAVAAwAAQABAAAAAAAWAAwAAQACAAAAAAAXAAwAAQAAAAAAAAAYAAwAAQABAAAAAAAZAAwAAQACAAAAAAAaAAwAAQAAAAAAAAAbAAwAAQABAAAAAAAcAAwAAQACAAAAAAAdAAwAAQAAAAAAAAAeAAwAAQABAAAAAAAfAAwAAQACAAAAAAAgAAwAAQAAAAAAAAAhAAwAAQABAAAAAAAiAAwAAQACAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAwAAQABAAAAAAABAAwAAQACAAAAAAACAAwAAQAAAAAAAAADAAwAAQABAAAAAAAEAAwAAQACAAAAAAAFAAwAAQAAAAAAAAAGAAwAAQABAAAAAAAHAAwAAQACAAAAAAAIAAwAAQAAAAAAAAAJAAwAAQABAAAAAAAKAAwAAQACAAAAAAALAAwAAQAAAAAAAAAMAAwAAQABAAAAAAANAAwAAQACAAAAAAAOAAwAAQAAAAAAAAAPAAwAAQABAAAAAAAQAAwAAQACAAAAAAARAAwAAQAAAAAAAAASAAwAAQABAAAAAAATAAwAAQACAAAAAAAUAAwAAQAAAAAAAAAVAAwAAQABAAAAAAAWAAwAAQACAAAAAAAXAAwAAQAAAAAAAAAYAAwAAQABAAAAAAAZAAwAAQACAAAAAAAaAAwAAQAAAAAAAAAbAAwAAQABAAAAAAAcAAwAAQACAAAAAAAdAAwAAQAAAAAAAAAeAAwAAQABAAAAAAAfAAwAAQACAAAAAAAgAAwAAQAAAAAAAAAhAAwAAQABAAAAAAAiAAwAAQACAAAAAAANAAgAAQAAAAAAAAAOAAgAAQAAAAAAAAAPAAgAAQAAAAAAAAAQAAgAAQAAAAAAAAARAAgAAQAAAAAAAAASAAgAAQAAAAAAAAATAAgAAQAAAAAAAAAUAAgAAQAAAAAAAAAVAAgAAQAAAAAAAAAWAAgAAQAAAAAAAAAXAAgAAQAAAAAAAAA=")
 tile_set = ExtResource("1_qcew6")
 
 [node name="FloorObjects" type="TileMapLayer" parent="." unique_id=1468851620]
@@ -26,15 +26,9 @@ tile_set = ExtResource("1_qcew6")
 [node name="Player" parent="." unique_id=1865279112 instance=ExtResource("2_min74")]
 position = Vector2(33, 190)
 
-[node name="DialoguePanel" parent="Player" unique_id=505615283 instance=ExtResource("3_7s4v0")]
-visible = false
-offset_left = -48.0
-offset_top = -122.0
-offset_right = -48.0
-offset_bottom = -122.0
-
 [node name="Guard" parent="." unique_id=175337513 groups=["npc"] instance=ExtResource("3_s62ab")]
 position = Vector2(225, 188)
 npc = ExtResource("4_min74")
 
-[connection signal="npc_dialogue" from="Guard" to="Player/DialoguePanel" method="_on_npc_dialogue"]
+[node name="Caramel" parent="." unique_id=1972799758 instance=ExtResource("7_klmgf")]
+position = Vector2(96, 192)
