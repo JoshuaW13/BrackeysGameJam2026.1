@@ -13,7 +13,7 @@ condition = ExtResource("2_64wai")
 pass_dialogues = Array[String](["Hi", "<3"])
 pass_functions = Array[Array]([[ExtResource("2_38ifr"), []], [ExtResource("3_o2jwc"), ["Lv3Door"]]])
 fail_dialogues = Array[String](["The audacity to come here without a cup of coffee! You better run out that door and find a cup.", "GET ME MY CUP OF BEAN WATER!"])
-fail_functions = Array[Array]([[ExtResource("3_o2jwc"), "Lv3Door"]])
+fail_functions = Array[Array]([[ExtResource("3_o2jwc"), ["Lv3Door"]]])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]

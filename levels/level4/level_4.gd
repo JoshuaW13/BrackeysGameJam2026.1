@@ -11,12 +11,12 @@ func _ready():
 	for npc in get_tree().get_nodes_in_group("npc"):
 		if npc is NPC:
 			if !npc.npc.completed:
-				remaining_npcs[npc.npc_id] = true
+				remaining_npcs[npc.npc.npc_id] = true
 				npc.npc_completed.connect(_on_npc_completed)
 	dialogue_panel.dialogue_finished.connect(_on_finished_dialogue)
 	
 	var next_item_id : int = 0
-	for i in range(3):
+	for i in range(2):
 		var new_item : Item = BOX_RES.duplicate(true)
 		new_item.id = next_item_id
 		next_item_id += 1

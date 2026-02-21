@@ -9,4 +9,6 @@ script = ExtResource("3_af73n")
 button_id = "Lv4Button"
 on_texture = ExtResource("2_y3noy")
 off_texture = ExtResource("1_8bqe1")
+item_id = "Lv4Door"
+toggle = true
 metadata/_custom_type_script = "uid://b3r3102uphrkp"

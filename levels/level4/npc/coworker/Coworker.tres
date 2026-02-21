@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://gi7xe7nx8qa5"]
 
 [ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_p0t1d"]
-[ext_resource type="Resource" uid="uid://bwotuywaxi8re" path="res://entities/npc/npc_completed.tres" id="2_2x10j"]
+[ext_resource type="Resource" uid="uid://safdi0mduqwc" path="res://entities/npc/npc_next.tres" id="2_58puk"]
 [ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="3_58puk"]
 [ext_resource type="Resource" uid="uid://dhlaf78huuqsx" path="res://entities/npc/has_coffee.tres" id="3_tnr4d"]
 [ext_resource type="Resource" uid="uid://btgm6qohh31no" path="res://entities/npc/npc_unlock.tres" id="4_d10po"]
@@ -10,7 +10,7 @@
 [sub_resource type="Resource" id="Resource_6lb6q"]
 script = ExtResource("1_p0t1d")
 pass_dialogues = Array[String](["You need to get a coffee to the guy upstairs right. ", "How about this. If you get me a coffee, I'll help get you up there."])
-pass_functions = Array[Array]([[ExtResource("2_2x10j"), []]])
+pass_functions = Array[Array]([[ExtResource("2_58puk"), []]])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [sub_resource type="Resource" id="Resource_x0cxi"]

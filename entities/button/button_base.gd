@@ -1,11 +1,12 @@
 extends Node2D
+class_name Button2D
 
 @export var button : ButtonResource
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var interact_area : Area2D = $InteractArea2D
 
-signal button_pressed(button_id : String)
-signal button_unpressed(button_id : String)
+signal unlock(item_id : String)
+signal lock(item_id : String)
 var pressed : bool = false
 
 func _ready():
@@ -17,18 +18,17 @@ func _on_body_entered(body):
 	if body.is_in_group("box"):
 		pressed = true
 		update_sprite()
-		emit_signal("button_pressed", button.button_id)
-		
+		emit_signal("unlock", button.item_id)
+
 func _on_body_exited(body):
 	if body.is_in_group("box"):
 		pressed = false
 		update_sprite()
-		emit_signal("button_unpressed", button.button_id)
+		if button.toggle:
+			emit_signal("lock", button.item_id)
 
 func update_sprite():
 	if pressed:
 		sprite.texture = button.on_texture
 	else:
-		sprite.texture = button.off_texture
-	
-	
+		sprite.texture = button.off_texture	
