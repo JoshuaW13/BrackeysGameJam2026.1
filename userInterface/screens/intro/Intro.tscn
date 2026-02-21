@@ -507,7 +507,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxk5i"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_byiri"]
 texture = ExtResource("10_byiri")
 0:0/0 = 0
 1:0/0 = 0
@@ -515,7 +515,7 @@ texture = ExtResource("10_byiri")
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wpn7y"]
-sources/0 = SubResource("TileSetAtlasSource_nxk5i")
+sources/0 = SubResource("TileSetAtlasSource_byiri")
 
 [node name="Intro" type="Node2D" unique_id=2026370204]
 script = ExtResource("1_ck25q")
