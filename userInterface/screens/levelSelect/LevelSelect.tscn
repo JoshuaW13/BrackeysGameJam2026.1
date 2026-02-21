@@ -16,6 +16,7 @@ grow_vertical = 2
 texture = ExtResource("1_8mq18")
 script = ExtResource("1_j70xv")
 levels = Array[PackedScene]([ExtResource("2_cjkd3"), ExtResource("3_cjkd3"), ExtResource("5_ix788"), ExtResource("6_3dv8l"), ExtResource("6_3dv8l")])
+level_names = Array[String](["Level1", "Level2", "Level3", "Level4", "Level5"])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=958110154]
 layout_mode = 1
