@@ -19,7 +19,9 @@ func _ready() -> void:
 	for npc in npcs:
 		if npc is NPC:
 			panel.dialogue_finished.connect(npc._on_finished_dialogue)
-		npc.npc_dialogue.connect(_on_npc_dialogue)
+			npc.npc_dialogue.connect(_on_npc_dialogue)
+		if npc is Door:
+			npc.npc_dialogue.connect(_on_npc_dialogue)
 			
 func _on_npc_dialogue(npc_id, name, lines):
 	npc = npc_id

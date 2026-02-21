@@ -1,4 +1,5 @@
 extends Node2D
+class_name Door
 
 @export var door : DoorResource
 @onready var sprite : Sprite2D = $Sprite2D
