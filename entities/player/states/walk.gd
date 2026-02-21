@@ -28,6 +28,11 @@ func determine_direction() -> Vector2:
 		last_direction.x = 0
 
 	return direction
+	
+func play_footstep():
+	if player.walkSoundTimer.is_stopped():
+		player.walkSoundPlayer.play()
+		player.walkSoundTimer.start()
 
 func physics_update(_delta: float) -> void:
 	var direction: Vector2 = determine_direction()
@@ -38,6 +43,8 @@ func physics_update(_delta: float) -> void:
 		transition.emit(self, "Idle")
 		player.velocity_component.set_horizontal(0)
 		return
+	else:
+		play_footstep()
 
 	player.velocity_component.set_horizontal(direction.x)
 
