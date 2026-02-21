@@ -8,7 +8,7 @@ extends Node
 func play_character_fx(fx):
 	_character_fx_player.stream = fx
 	_character_fx_player.play()
-	
+
 func play_inventory_fx(fx):
 	_inventory_fx_player.stream = fx
 	_inventory_fx_player.play()
