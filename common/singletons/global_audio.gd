@@ -21,7 +21,7 @@ var _music_track_2_volume: float = 0.0:
 	set(value):
 		_music_track_2_volume = value
 		_music_track_2_player.volume_linear = _music_track_2_volume
-var _music_fade_time: float = 0.5
+var _music_fade_time: float = 1.0
 
 var fx_volume : float:
 	get:
@@ -49,6 +49,8 @@ func play_inventory_fx(fx):
 func play_menu_fx(fx):
 	_menu_fx_player.stream = fx
 	_menu_fx_player.play()
+	
+var _track_switch_tween: Tween
 
 func play_music(track):
 	if _current_music_on_track_1:
@@ -56,10 +58,12 @@ func play_music(track):
 		_music_track_2_player.stream = track
 		_music_track_2_player.play()
 		_current_music_on_track_1 = false
-		var tween = create_tween().set_parallel(true)
-		tween.tween_property(self, "_music_track_2_volume", 1.0, _music_fade_time)
-		tween.tween_property(self, "_music_track_1_volume", 0.0, _music_fade_time)
-		tween.finished.connect(func():
+		if _track_switch_tween:
+			_track_switch_tween.kill()
+		_track_switch_tween = create_tween().set_parallel(true)
+		_track_switch_tween.tween_property(self, "_music_track_2_volume", 1.0, _music_fade_time)
+		_track_switch_tween.tween_property(self, "_music_track_1_volume", 0.0, _music_fade_time)
+		_track_switch_tween.finished.connect(func():
 			_music_track_1_player.stop()
 		)
 	else:
@@ -67,10 +71,12 @@ func play_music(track):
 		_music_track_1_player.stream = track
 		_music_track_1_player.play()
 		_current_music_on_track_1 = true
-		var tween = create_tween().set_parallel(true)
-		tween.tween_property(self, "_music_track_1_volume", 1.0, _music_fade_time)
-		tween.tween_property(self, "_music_track_2_volume", 0.0, _music_fade_time)
-		tween.finished.connect(func():
+		if _track_switch_tween:
+			_track_switch_tween.kill()
+		_track_switch_tween = create_tween().set_parallel(true)
+		_track_switch_tween.tween_property(self, "_music_track_1_volume", 1.0, _music_fade_time)
+		_track_switch_tween.tween_property(self, "_music_track_2_volume", 0.0, _music_fade_time)
+		_track_switch_tween.finished.connect(func():
 			_music_track_2_player.stop()
 		)
 
