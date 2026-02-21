@@ -18,11 +18,13 @@ func _ready():
 	var next_item_id : int = 0
 	for i in range(2):
 		var new_item : Item = BOX_RES.duplicate(true)
+		new_item.type = 1
 		new_item.id = next_item_id
 		next_item_id += 1
 		player.inventory.add_item(new_item)
 	for i in range(1):
 		var new_item : Item = COFFEE_RES.duplicate(true)
+		new_item.type = 0
 		new_item.id = next_item_id
 		next_item_id += 1
 		player.inventory.add_item(new_item)
