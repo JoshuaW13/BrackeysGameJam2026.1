@@ -52,7 +52,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_x2xht")
 theme_override_font_sizes/font_size = 8
-text = "Test"
+text = "Janitor"
 vertical_alignment = 1
 
 [node name="TextLabel" type="Label" parent="." unique_id=1192386076]
@@ -66,7 +66,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -2
 theme_override_fonts/font = ExtResource("3_x2xht")
 theme_override_font_sizes/font_size = 8
-text = "Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii What is this font style. Need to find a new one."
+text = "Hey, you’re Chad, right?
+"
 autowrap_mode = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1557467251]
