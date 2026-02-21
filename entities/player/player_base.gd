@@ -7,8 +7,6 @@ class_name Player
 @onready var velocity_component : VelocityComponent = %VelocityComponent
 @onready var gravity_component: GravityComponent = %GravityComponent
 @onready var inventory: Inventory = %Inventory
-@onready var audioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
-@onready var walkSoundPlayer: AudioStreamPlayer2D = $WalkSoundPlayer
 @onready var walkSoundTimer: Timer = $WalkSoundTimer
 
 const PICKUP_SOUND = preload("res://audio/pickup.wav")
@@ -40,29 +38,21 @@ func _physics_process(delta):
 func item_picked_up(item: PlaceableItem)->void:
 	inventory.add_item(item.inventory_item)
 	item.call_deferred("queue_free")
-	play_pickup_audio()
+	GlobalAudio.play_inventory_fx(PICKUP_SOUND)
 
 func topping_picked_up(topping: Topping)->void:
 	inventory.add_topping(topping)
 	topping.call_deferred("queue_free")
-	play_pickup_audio()
-
-func play_pickup_audio()->void:
-	audioPlayer.stream = PICKUP_SOUND
-	audioPlayer.play()
-
+	GlobalAudio.play_inventory_fx(PICKUP_SOUND)
 
 func _input(_event: InputEvent)-> void:
 	if _event.is_action_pressed("place"):
 		var useResult : bool = inventory.use_item()
 		if useResult:
-			audioPlayer.stream = DROP_SOUND
-			audioPlayer.play()
+			GlobalAudio.play_inventory_fx(DROP_SOUND)
 	if _event.is_action_pressed("cycle_inventory_right"):
 		inventory.cycle_right()
-		audioPlayer.stream = CYCLE_SOUND
-		audioPlayer.play()
+		GlobalAudio.play_inventory_fx(CYCLE_SOUND)
 	if _event.is_action_pressed("cycle_inventory_left"):
 		inventory.cycle_left()
-		audioPlayer.stream = CYCLE_SOUND
-		audioPlayer.play()
+		GlobalAudio.play_inventory_fx(CYCLE_SOUND)
