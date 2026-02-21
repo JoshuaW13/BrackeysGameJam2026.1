@@ -11,6 +11,9 @@ func _ready() -> void:
 	animation_player.play("cutscene")
 	skip_button.pressed.connect(_load_level_select_scene)
 
+func _play_dialogue_sound(blips: int) -> void:
+	GlobalAudio.play_dialogue_fx(blips)
+
 func _animation_finished() -> void:
 	_load_level_select_scene()
 

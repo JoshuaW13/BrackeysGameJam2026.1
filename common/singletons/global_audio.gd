@@ -56,13 +56,13 @@ func play_menu_fx(fx):
 var _dialogue_fx = load("res://audio/dialogue blip.wav")
 var _dialogue_tween: Tween
 	
-func play_dialogue_fx():
+func play_dialogue_fx(blips: int):
 	if _dialogue_tween:
 		_dialogue_tween.kill()
 	_dialogue_tween = create_tween()
-	for i in range(20):
+	for i in range(blips):
 		_dialogue_tween.tween_callback(_play_dialogue_fx_with_random_pitch)
-		_dialogue_tween.tween_interval(0.09)
+		_dialogue_tween.tween_interval(0.08)
 		
 func _play_dialogue_fx_with_random_pitch():
 	_dialogue_fx_player.stream = _dialogue_fx
