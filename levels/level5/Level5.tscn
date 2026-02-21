@@ -1,22 +1,22 @@
 [gd_scene format=4 uid="uid://g36app671hpg"]
 
-[ext_resource type="Script" uid="uid://d2va7hfj2j4kd" path="res://levels/level5/level_4.gd" id="1_i73qc"]
-[ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="2_fl00m"]
-[ext_resource type="PackedScene" uid="uid://bgkl8k8sonye8" path="res://entities/boundary/boundary.tscn" id="3_pj6cn"]
-[ext_resource type="PackedScene" uid="uid://dcvaoo7upaf0j" path="res://entities/elevator/elevator.tscn" id="4_nd4wx"]
-[ext_resource type="Resource" uid="uid://dbwedgg5hf7gf" path="res://levels/level5/map/elevator.tres" id="5_nn0am"]
-[ext_resource type="PackedScene" uid="uid://d4nahe1lhtwqr" path="res://entities/door/door.tscn" id="6_rfn0t"]
-[ext_resource type="Resource" uid="uid://dxc7k0p2uibir" path="res://levels/level5/map/door.tres" id="7_g6s3p"]
-[ext_resource type="PackedScene" uid="uid://cu22wa1tphfuh" path="res://entities/button/button.tscn" id="8_ihrtq"]
-[ext_resource type="Resource" uid="uid://dgfw0ryxmhvch" path="res://levels/level5/map/button.tres" id="9_kcuwr"]
-[ext_resource type="PackedScene" uid="uid://dd2ks5rqjvptf" path="res://entities/moving_platform/moving_platform.tscn" id="10_fvqqq"]
-[ext_resource type="Resource" uid="uid://ora4qi6qjg4v" path="res://levels/level5/map/moving_platform.tres" id="11_opnrk"]
-[ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="12_158cf"]
-[ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="13_0vcfe"]
-[ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="14_mtu7q"]
-[ext_resource type="Resource" uid="uid://d4gfw7bu8p7tm" path="res://levels/level5/npc/coworker/Coworker.tres" id="15_1n4we"]
-[ext_resource type="Resource" uid="uid://birpyatv6clgc" path="res://levels/level5/npc/manager/Manager.tres" id="16_jbsr7"]
-[ext_resource type="PackedScene" uid="uid://5bdamcr1kdgx" path="res://entities/coffee/Coffee.tscn" id="17_lslll"]
+[ext_resource type="Script" uid="uid://d2va7hfj2j4kd" path="res://levels/level5/level_5.gd" id="1_v7uf0"]
+[ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="2_yywr6"]
+[ext_resource type="PackedScene" uid="uid://bgkl8k8sonye8" path="res://entities/boundary/boundary.tscn" id="3_1ywkl"]
+[ext_resource type="PackedScene" uid="uid://dcvaoo7upaf0j" path="res://entities/elevator/elevator.tscn" id="4_2e1nt"]
+[ext_resource type="Resource" uid="uid://dbwedgg5hf7gf" path="res://levels/level5/map/elevator.tres" id="5_pt1h2"]
+[ext_resource type="PackedScene" uid="uid://d4nahe1lhtwqr" path="res://entities/door/door.tscn" id="6_c6r47"]
+[ext_resource type="Resource" uid="uid://dxc7k0p2uibir" path="res://levels/level5/map/door.tres" id="7_mr2h6"]
+[ext_resource type="PackedScene" uid="uid://cu22wa1tphfuh" path="res://entities/button/button.tscn" id="8_cjejr"]
+[ext_resource type="Resource" uid="uid://dgfw0ryxmhvch" path="res://levels/level5/map/button.tres" id="9_eumxo"]
+[ext_resource type="PackedScene" uid="uid://dd2ks5rqjvptf" path="res://entities/moving_platform/moving_platform.tscn" id="10_8ytww"]
+[ext_resource type="Resource" uid="uid://ora4qi6qjg4v" path="res://levels/level5/map/moving_platform.tres" id="11_f2nou"]
+[ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="12_5k51j"]
+[ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="13_2y4ay"]
+[ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="14_ppvdb"]
+[ext_resource type="Resource" uid="uid://d4gfw7bu8p7tm" path="res://levels/level5/npc/coworker/Coworker.tres" id="15_7toq1"]
+[ext_resource type="Resource" uid="uid://birpyatv6clgc" path="res://levels/level5/npc/manager/Manager.tres" id="16_yneqc"]
+[ext_resource type="PackedScene" uid="uid://5bdamcr1kdgx" path="res://entities/coffee/Coffee.tscn" id="17_mtu8g"]
 
 [sub_resource type="Animation" id="Animation_b67ty"]
 resource_name = "Door"
@@ -33,28 +33,28 @@ _data = {
 point_count = 4
 
 [node name="Level4" type="Node2D" unique_id=1543521338]
-script = ExtResource("1_i73qc")
+script = ExtResource("1_v7uf0")
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=1910592354]
 tile_map_data = PackedByteArray("AAALAAkAFwAEAAIAAAALAAgAFwAEAAEAAAALAAcAFwAEAAEAAAALAAYAFwAEAAEAAAALAAUAFwAEAAEAAAALAAQAFwAEAAEAAAALAAMAFwAEAAEAAAALAAIAFwAEAAEAAAALAAEAFwAEAAEAAAALAAAAFwAEAAAAAAAKAAkAFwAEAAIAAAAKAAgAFwAEAAEAAAAKAAcAFwAEAAEAAAAKAAYAFwAEAAEAAAAKAAUAFwAEAAEAAAAKAAQAFwAEAAEAAAAKAAMAFwAEAAEAAAAKAAIAFwAEAAEAAAAKAAEAFwAEAAEAAAAKAAAAFwAEAAAAAAAJAAkAFwAEAAIAAAAJAAgAFwAEAAEAAAAJAAcAFwAEAAEAAAAJAAYAFwAEAAEAAAAJAAUAFwAEAAEAAAAJAAQAFwAEAAEAAAAJAAMAFwAEAAEAAAAJAAIAFwAEAAEAAAAJAAEAFwAEAAEAAAAJAAAAFwAEAAAAAAAIAAkAFwAEAAIAAAAIAAgAFwAEAAEAAAAIAAcAFwAEAAEAAAAIAAYAFwAEAAEAAAAIAAUAFwAEAAEAAAAIAAQAFwAEAAEAAAAIAAMAFwAEAAEAAAAIAAIAFwAEAAEAAAAIAAEAFwAEAAEAAAAIAAAAFwAEAAAAAAAHAAkAFwAEAAIAAAAHAAgAFwAEAAEAAAAHAAcAFwAEAAEAAAAHAAYAFwAEAAEAAAAHAAUAFwAEAAEAAAAHAAQAFwAEAAEAAAAHAAMAFwAEAAEAAAAHAAIAFwAEAAEAAAAHAAEAFwAEAAEAAAAHAAAAFwAEAAAAAAAGAAkAFwADAAIAAAAGAAgAFwADAAEAAAAGAAcAFwADAAEAAAAGAAYAFwADAAEAAAAGAAUAFwADAAEAAAAGAAQAFwADAAEAAAAGAAMAFwADAAEAAAAGAAIAFwADAAEAAAAGAAEAFwADAAEAAAAGAAAAFwADAAAAAAAFAAkAFwACAAIAAAAFAAgAFwACAAEAAAAFAAcAFwACAAEAAAAFAAYAFwACAAEAAAAFAAUAFwACAAEAAAAFAAQAFwACAAEAAAAFAAMAFwACAAEAAAAFAAIAFwACAAEAAAAFAAEAFwACAAEAAAAFAAAAFwACAAAAAAAEAAkAFwABAAIAAAAEAAgAFwABAAEAAAAEAAcAFwABAAEAAAAEAAYAFwABAAEAAAAEAAUAFwABAAEAAAAEAAQAFwABAAEAAAAEAAMAFwABAAEAAAAEAAIAFwABAAEAAAAEAAEAFwABAAEAAAAEAAAAFwABAAAAAAADAAkAFwABAAIAAAADAAgAFwABAAEAAAADAAcAFwABAAEAAAADAAYAFwABAAEAAAADAAUAFwABAAEAAAADAAQAFwABAAEAAAADAAMAFwABAAEAAAADAAIAFwABAAEAAAADAAEAFwABAAEAAAADAAAAFwABAAAAAAACAAkAFwABAAIAAAACAAgAFwABAAEAAAACAAcAFwABAAEAAAACAAYAFwABAAEAAAACAAUAFwABAAEAAAACAAQAFwABAAEAAAACAAMAFwABAAEAAAACAAIAFwABAAEAAAACAAEAFwABAAEAAAACAAAAFwABAAAAAAABAAkAFwABAAIAAAABAAgAFwABAAEAAAABAAcAFwABAAEAAAABAAYAFwABAAEAAAABAAUAFwABAAEAAAABAAQAFwABAAEAAAABAAMAFwABAAEAAAABAAIAFwABAAEAAAABAAEAFwABAAEAAAABAAAAFwABAAAAAAAAAAkAFwABAAIAAAAAAAgAFwABAAEAAAAAAAcAFwABAAEAAAAAAAYAFwABAAEAAAAAAAUAFwABAAEAAAAAAAQAFwABAAEAAAAAAAMAFwABAAEAAAAAAAIAFwABAAEAAAAAAAEAFwABAAEAAAAAAAAAFwABAAAAAAAXAAkAFwAHAAIAAAAXAAgAFwAHAAEAAAAXAAcAFwAHAAEAAAAXAAYAFwAHAAEAAAAXAAUAFwAHAAEAAAAXAAQAFwAHAAEAAAAXAAMAFwAHAAEAAAAXAAIAFwAHAAEAAAAXAAEAFwAHAAEAAAAXAAAAFwAHAAAAAAAWAAkAFwAHAAIAAAAWAAgAFwAHAAEAAAAWAAcAFwAHAAEAAAAWAAYAFwAHAAEAAAAWAAUAFwAHAAEAAAAWAAQAFwAHAAEAAAAWAAMAFwAHAAEAAAAWAAIAFwAHAAEAAAAWAAEAFwAHAAEAAAAWAAAAFwAHAAAAAAAVAAkAFwAHAAIAAAAVAAgAFwAHAAEAAAAVAAcAFwAHAAEAAAAVAAYAFwAHAAEAAAAVAAUAFwAHAAEAAAAVAAQAFwAHAAEAAAAVAAMAFwAHAAEAAAAVAAIAFwAHAAEAAAAVAAEAFwAHAAEAAAAVAAAAFwAHAAAAAAAUAAkAFwAHAAIAAAAUAAgAFwAHAAEAAAAUAAcAFwAHAAEAAAAUAAYAFwAHAAEAAAAUAAUAFwAHAAEAAAAUAAQAFwAHAAEAAAAUAAMAFwAHAAEAAAAUAAIAFwAHAAEAAAAUAAEAFwAHAAEAAAAUAAAAFwAHAAAAAAATAAkAFwAHAAIAAAATAAgAFwAHAAEAAAATAAcAFwAHAAEAAAATAAYAFwAHAAEAAAATAAUAFwAHAAEAAAATAAQAFwAHAAEAAAATAAMAFwAHAAEAAAATAAIAFwAHAAEAAAATAAEAFwAHAAEAAAATAAAAFwAHAAAAAAASAAkAFwAHAAIAAAASAAgAFwAHAAEAAAASAAcAFwAHAAEAAAASAAYAFwAHAAEAAAASAAUAFwAHAAEAAAASAAQAFwAHAAEAAAASAAMAFwAHAAEAAAASAAIAFwAHAAEAAAASAAEAFwAHAAEAAAASAAAAFwAHAAAAAAARAAkAFwAHAAIAAAARAAgAFwAHAAEAAAARAAcAFwAHAAEAAAARAAYAFwAHAAEAAAARAAUAFwAHAAEAAAARAAQAFwAHAAEAAAARAAMAFwAHAAEAAAARAAIAFwAHAAEAAAARAAEAFwAHAAEAAAARAAAAFwAHAAAAAAAQAAkAFwAHAAIAAAAQAAgAFwAHAAEAAAAQAAcAFwAHAAEAAAAQAAYAFwAHAAEAAAAQAAUAFwAHAAEAAAAQAAQAFwAHAAEAAAAQAAMAFwAHAAEAAAAQAAIAFwAHAAEAAAAQAAEAFwAHAAEAAAAQAAAAFwAHAAAAAAAPAAkAFwAHAAIAAAAPAAgAFwAHAAEAAAAPAAcAFwAHAAEAAAAPAAYAFwAHAAEAAAAPAAUAFwAHAAEAAAAPAAQAFwAHAAEAAAAPAAMAFwAHAAEAAAAPAAIAFwAHAAEAAAAPAAEAFwAHAAEAAAAPAAAAFwAHAAAAAAAOAAkAFwAHAAIAAAAOAAgAFwAHAAEAAAAOAAcAFwAHAAEAAAAOAAYAFwAHAAEAAAAOAAUAFwAHAAEAAAAOAAQAFwAHAAEAAAAOAAMAFwAHAAEAAAAOAAIAFwAHAAEAAAAOAAEAFwAHAAEAAAAOAAAAFwAHAAAAAAANAAkAFwAGAAIAAAANAAgAFwAGAAEAAAANAAcAFwAGAAEAAAANAAYAFwAGAAEAAAANAAUAFwAGAAEAAAANAAQAFwAGAAEAAAANAAMAFwAGAAEAAAANAAIAFwAGAAEAAAANAAEAFwAGAAEAAAANAAAAFwAGAAAAAAAMAAkAFwAFAAIAAAAMAAgAFwAFAAEAAAAMAAcAFwAFAAEAAAAMAAYAFwAFAAEAAAAMAAUAFwAFAAEAAAAMAAQAFwAFAAEAAAAMAAMAFwAFAAEAAAAMAAIAFwAFAAEAAAAMAAEAFwAFAAEAAAAMAAAAFwAFAAAAAAD//wkAFwAAAAIAAAD//wgAFwAAAAEAAAD//wcAFwAAAAEAAAD//wYAFwAAAAEAAAD//wUAFwAAAAEAAAD//wQAFwAAAAEAAAD//wMAFwAAAAEAAAD//wIAFwAAAAEAAAD//wEAFwAAAAEAAAD//wAAFwAAAAAAAAAYAAkAFwAIAAIAAAAYAAgAFwAIAAEAAAAYAAcAFwAIAAEAAAAYAAYAFwAIAAEAAAAYAAUAFwAIAAEAAAAYAAQAFwAIAAEAAAAYAAMAFwAIAAEAAAAYAAIAFwAIAAEAAAAYAAEAFwAIAAEAAAAYAAAAFwAIAAAAAAA=")
-tile_set = ExtResource("2_fl00m")
+tile_set = ExtResource("2_yywr6")
 
 [node name="BackgroundObjects" type="TileMapLayer" parent="." unique_id=352136323]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAGAAgABgAAAAAAAAAIAAgABgAMAAAAAAAJAAgABgALAAAAAAAUAAMABgAJAAAAAAAVAAMABgALAAAAAAASAAIABwABAAEAAAA=")
-tile_set = ExtResource("2_fl00m")
+tile_set = ExtResource("2_yywr6")
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=2138636679]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAAAAkAAQAAAAAAAAABAAkAAQABAAAAAAACAAkAAQABAAAAAAADAAkAAQABAAAAAAAEAAkAAQABAAAAAAAFAAkAAQABAAAAAAAGAAkAAQABAAAAAAAHAAkAAQABAAAAAAAPAAkAAQABAAAAAAAQAAkAAQABAAAAAAARAAkAAQABAAAAAAASAAkAAQABAAAAAAATAAkAAQABAAAAAAAUAAkAAQABAAAAAAAVAAkAAQABAAAAAAAWAAkAAQABAAAAAAAXAAkAAQACAAAAAAAOAAkAAQABAAAAAAAIAAkAAQABAAAAAAAJAAkAAQABAAAAAAAKAAkAAQABAAAAAAALAAkAAQABAAAAAAAMAAkAAQABAAAAAAANAAkAAQABAAAAAAAEAAMAAQACAAAAAAADAAMAAQABAAAAAAACAAMAAQABAAAAAAABAAMAAQABAAAAAAAAAAMAAQAAAAAAAAAXAAQAAQACAAAAAAAWAAQAAQABAAAAAAAVAAQAAQABAAAAAAAUAAQAAQABAAAAAAATAAQAAQABAAAAAAASAAQAAQABAAAAAAARAAQAAQABAAAAAAAQAAQAAQABAAAAAAAPAAQAAQAAAAAAAAA=")
-tile_set = ExtResource("2_fl00m")
+tile_set = ExtResource("2_yywr6")
 
 [node name="FloorObjects" type="TileMapLayer" parent="." unique_id=622267143]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAPAAcABQAAAAIAAAAPAAYABQAAAAEAAAASAAgABQAAAAIAAAASAAcABQAAAAEAAAAVAAcABQAAAAIAAAAVAAYABQAAAAEAAAAQAAIABQAAAAIAAAAQAAEABQAAAAEAAAAQAAAABQAAAAAAAAAPAAUABQAAAAAAAAASAAYABQAAAAAAAAAVAAUABQAAAAAAAAA=")
-tile_set = ExtResource("2_fl00m")
+tile_set = ExtResource("2_yywr6")
 
-[node name="WorldBoundaryArea2D" parent="." unique_id=1273123177 instance=ExtResource("3_pj6cn")]
+[node name="WorldBoundaryArea2D" parent="." unique_id=1273123177 instance=ExtResource("3_1ywkl")]
 position = Vector2(224, 312)
 collision_layer = 16777215
 collision_mask = 16777215
@@ -63,20 +63,20 @@ spawn_path = NodePath("Marker2D")
 [node name="Marker2D" type="Marker2D" parent="WorldBoundaryArea2D" unique_id=19427666]
 position = Vector2(-186, -194)
 
-[node name="Elevator" parent="." unique_id=580264968 instance=ExtResource("4_nd4wx")]
+[node name="Elevator" parent="." unique_id=580264968 instance=ExtResource("4_2e1nt")]
 position = Vector2(38, 128)
-elevator = ExtResource("5_nn0am")
+elevator = ExtResource("5_pt1h2")
 
-[node name="Door" parent="." unique_id=1554516772 instance=ExtResource("6_rfn0t")]
+[node name="Door" parent="." unique_id=1554516772 instance=ExtResource("6_c6r47")]
 position = Vector2(264, 56)
-door = ExtResource("7_g6s3p")
+door = ExtResource("7_mr2h6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=277830785]
 libraries/ = SubResource("AnimationLibrary_hg36g")
 
-[node name="Button" parent="." unique_id=949530896 groups=["npc"] instance=ExtResource("8_ihrtq")]
+[node name="Button" parent="." unique_id=949530896 groups=["npc"] instance=ExtResource("8_cjejr")]
 position = Vector2(16, 40)
-button = ExtResource("9_kcuwr")
+button = ExtResource("9_eumxo")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=403382344]
 position = Vector2(323, -8)
@@ -86,14 +86,14 @@ curve = SubResource("Curve2D_jlrek")
 position = Vector2(-227, 56)
 rotates = false
 
-[node name="MovingPlatform" parent="Path2D/PathFollow2D" unique_id=87318914 instance=ExtResource("10_fvqqq")]
-moving_platform = ExtResource("11_opnrk")
+[node name="MovingPlatform" parent="Path2D/PathFollow2D" unique_id=87318914 instance=ExtResource("10_8ytww")]
+moving_platform = ExtResource("11_f2nou")
 
-[node name="Player" parent="." unique_id=914755556 instance=ExtResource("12_158cf")]
+[node name="Player" parent="." unique_id=914755556 instance=ExtResource("12_5k51j")]
 z_index = 5
 position = Vector2(19, 142)
 
-[node name="DialoguePanel" parent="Player" unique_id=771276265 instance=ExtResource("13_0vcfe")]
+[node name="DialoguePanel" parent="Player" unique_id=771276265 instance=ExtResource("13_2y4ay")]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -107,13 +107,13 @@ offset_bottom = -82.575
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Coworker" parent="." unique_id=800059897 instance=ExtResource("14_mtu7q")]
+[node name="Coworker" parent="." unique_id=800059897 instance=ExtResource("14_ppvdb")]
 position = Vector2(151, 128)
-npc = ExtResource("15_1n4we")
+npc = ExtResource("15_7toq1")
 
-[node name="Manager" parent="." unique_id=404841392 instance=ExtResource("14_mtu7q")]
+[node name="Manager" parent="." unique_id=404841392 instance=ExtResource("14_ppvdb")]
 position = Vector2(364, 48)
-npc = ExtResource("16_jbsr7")
+npc = ExtResource("16_yneqc")
 
-[node name="Coffee" parent="." unique_id=345192037 instance=ExtResource("17_lslll")]
+[node name="Coffee" parent="." unique_id=345192037 instance=ExtResource("17_mtu8g")]
 position = Vector2(365, 140)

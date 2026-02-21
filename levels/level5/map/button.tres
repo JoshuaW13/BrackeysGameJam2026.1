@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_bld08")
-button_id = "Lv4Button"
+button_id = "Lv5Button"
 on_texture = ExtResource("2_0yn0n")
 off_texture = ExtResource("1_h2tl3")
 item_id = "Lv4Door"

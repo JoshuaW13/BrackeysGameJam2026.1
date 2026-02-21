@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("4_avnnr")
-platform_id = "Lv4Platform"
+platform_id = "Lv5Platform"
 width = 2
 speed = 40.0
 pause = 2.0

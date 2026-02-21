@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b8ml8xw0lawlu" path="res://userInterface/screens/levelSelect/level_select.gd" id="1_j70xv"]
 [ext_resource type="PackedScene" uid="uid://oehl4hjqc3lw" path="res://levels/level1/Level1.tscn" id="2_cjkd3"]
 [ext_resource type="PackedScene" uid="uid://fx71krggk53" path="res://levels/level3/Level3.tscn" id="3_cjkd3"]
+[ext_resource type="PackedScene" uid="uid://d3tg02mdcuvum" path="res://levels/level4/Level4.tscn" id="5_ix788"]
 
 [node name="LevelSelect" type="TextureRect" unique_id=734897922]
 anchors_preset = 15
@@ -13,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_8mq18")
 script = ExtResource("1_j70xv")
-levels = Array[PackedScene]([ExtResource("2_cjkd3"), ExtResource("3_cjkd3")])
+levels = Array[PackedScene]([ExtResource("2_cjkd3"), ExtResource("3_cjkd3"), ExtResource("5_ix788")])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=958110154]
 layout_mode = 1

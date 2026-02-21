@@ -17,7 +17,7 @@ metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]
 script = ExtResource("5_td3jc")
-npc_id = "Lv4Manager"
+npc_id = "Lv5Manager"
 texture = ExtResource("6_q0tqm")
 dialogues = Array[ExtResource("1_ygpfe")]([SubResource("Resource_64wai")])
 metadata/_custom_type_script = "uid://caib8pj52pvm"
