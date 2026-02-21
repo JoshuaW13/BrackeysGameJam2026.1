@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="1_chvk1"]
 [ext_resource type="Texture2D" uid="uid://buigpjci3g2rl" path="res://levels/office/assets/elevator.png" id="2_6ypf1"]
 [ext_resource type="Texture2D" uid="uid://4tu0mgi5hs44" path="res://entities/player/assets/walk.png" id="2_51ka6"]
+[ext_resource type="Texture2D" uid="uid://dqb3b6g0q6xg2" path="res://entities/player/assets/nod.png" id="4_n5sd1"]
 [ext_resource type="Texture2D" uid="uid://bdem0ajwtid4v" path="res://entities/dialogue/heyChad.png" id="5_chvk1"]
 [ext_resource type="Texture2D" uid="uid://ddw7aqg01vmo7" path="res://entities/dialogue/goodLuck.png" id="6_8vlvi"]
 [ext_resource type="Texture2D" uid="uid://dqy1y43mnuvul" path="res://entities/npc/assets/janitor.png" id="15_xlaoa"]
@@ -85,14 +86,14 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Characters/Player:scale")
+tracks/6/path = NodePath("Characters/Player:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1e-05, 1e-05)]
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_6ypf1"]
@@ -105,7 +106,7 @@ tracks/0/path = NodePath("Characters/Player:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3, 16.466667, 18.233334),
+"times": PackedFloat32Array(0, 1.5, 3, 16.133333, 18.233334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(23, 112), Vector2(23, 112), Vector2(78, 111), Vector2(78, 111), Vector2(127, 111)]
@@ -117,10 +118,10 @@ tracks/1/path = NodePath("Characters/Player:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 3.1666667, 16.466667, 18.266666),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 3.1666667, 8.200699, 8.453812, 16.1, 18.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [&"idle", &"walk", &"idle", &"walk", &"idle"]
+"values": [&"idle", &"walk", &"idle", &"nod", &"idle", &"walk", &"idle"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -129,10 +130,10 @@ tracks/2/path = NodePath("Characters/Janitor:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.5666666),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 3.5666666, 17.676544),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"mop", &"idle"]
+"values": [&"mop", &"idle", &"mop"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -153,7 +154,7 @@ tracks/4/path = NodePath("Characters/Dialogue/goodLuck:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 9.6, 16.266666),
+"times": PackedFloat32Array(0, 9.6, 15.7),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -165,7 +166,7 @@ tracks/5/path = NodePath("Elevator:animation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 14.739036, 16.005495, 18.305494, 18.895494),
+"times": PackedFloat32Array(0, 14.739036, 15.066667, 18.305494, 19.266666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [&"closed", &"opening", &"opened", &"closing", &"closed"]
@@ -173,14 +174,14 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Characters/Player:scale")
+tracks/6/path = NodePath("Characters/Player:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 18.266666, 19.597832),
+"times": PackedFloat32Array(0, 18.347641, 19.266666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n5sd1"]
@@ -300,6 +301,18 @@ animations = [{
 atlas = ExtResource("2_51ka6")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3t6l"]
+atlas = ExtResource("4_n5sd1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq5dm"]
+atlas = ExtResource("4_n5sd1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gic8"]
+atlas = ExtResource("4_n5sd1")
+region = Rect2(64, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ck25q"]
 atlas = ExtResource("2_51ka6")
 region = Rect2(0, 0, 32, 32)
@@ -336,6 +349,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3t6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq5dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gic8")
+}],
+"loop": true,
+"name": &"nod",
 "speed": 5.0
 }, {
 "frames": [{
@@ -446,7 +473,6 @@ autoplay = &"begin"
 position = Vector2(128, 112)
 sprite_frames = SubResource("SpriteFrames_b3t6l")
 animation = &"closed"
-frame_progress = 0.054916147
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1869104904]
 position = Vector2(28, 119)
@@ -454,11 +480,11 @@ position = Vector2(28, 119)
 [node name="Characters" type="Node2D" parent="." unique_id=653697610]
 
 [node name="Player" type="AnimatedSprite2D" parent="Characters" unique_id=1147269966]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(23, 112)
-scale = Vector2(1e-05, 1e-05)
 sprite_frames = SubResource("SpriteFrames_xlaoa")
 animation = &"idle"
-frame_progress = 0.13824907
+frame_progress = 0.6600707
 
 [node name="Janitor" type="AnimatedSprite2D" parent="Characters" unique_id=613149563]
 position = Vector2(100, 110.99999)
@@ -466,7 +492,7 @@ rotation = 3.1415927
 scale = Vector2(1.0078757, -0.99577737)
 sprite_frames = SubResource("SpriteFrames_al7a4")
 animation = &"mop"
-frame_progress = 0.7000561
+frame_progress = 0.66007054
 
 [node name="Dialogue" type="Node2D" parent="Characters" unique_id=1050736462]
 
