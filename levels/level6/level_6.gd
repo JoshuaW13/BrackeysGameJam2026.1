@@ -13,7 +13,7 @@ func _ready():
 			if !npc.npc.completed:
 				remaining_npcs[npc.npc.npc_id] = true
 				npc.npc_completed.connect(_on_npc_completed)
-	dialogue_panel.dialogue_finished.connect(_on_finished_dialogue)
+	player.dialogue_panel.dialogue_finished.connect(_on_finished_dialogue)
 	
 	var next_item_id : int = 0
 	for i in range(2):

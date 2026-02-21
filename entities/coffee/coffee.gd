@@ -12,7 +12,7 @@ var CARAMEL_SPRITE: Texture2D = load("res://entities/coffee/caramel_coffee.png")
 var CHOCOLATE_SPRITE: Texture2D = load("res://entities/coffee/chocolate_coffee.png")
 var MILK_SPRITE: Texture2D = load("res://entities/coffee/milk_coffee.png")
 
-var topping: Coffee.Topping = Topping.NONE:
+@export var topping: Coffee.Topping = Topping.NONE:
 	set(new_topping):
 		topping = new_topping
 		match new_topping:
