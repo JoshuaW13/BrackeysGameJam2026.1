@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cn0usblebx0ws"]
+
+[ext_resource type="FontFile" uid="uid://nv6qj6gjad1q" path="res://m3x6.ttf" id="1_6os6o"]
+[ext_resource type="Script" uid="uid://cytsubvnc45nw" path="res://userInterface/screens/pause/pause.gd" id="1_k741f"]
+
+[node name="Pause" type="Control" unique_id=1633453326]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k741f")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1801877789]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.1764706)
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1125881208]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+alignment = 1
+vertical = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer" unique_id=1403334925]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_constants/separation = 31
+alignment = 1
+
+[node name="ContinueButton" type="Button" parent="BoxContainer/VBoxContainer" unique_id=389255785]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_6os6o")
+theme_override_font_sizes/font_size = 64
+text = "Continue"
+icon_alignment = 1
+
+[node name="RestartButton" type="Button" parent="BoxContainer/VBoxContainer" unique_id=1395277801]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_6os6o")
+theme_override_font_sizes/font_size = 64
+text = "Restart"
+icon_alignment = 1
+
+[node name="MainButton" type="Button" parent="BoxContainer/VBoxContainer" unique_id=1816713092]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_6os6o")
+theme_override_font_sizes/font_size = 63
+text = "Main Menu"
+icon_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="." unique_id=1543570197]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 975.0
+offset_top = 6.0
+offset_right = 1125.0
+offset_bottom = 56.0
+max_value = 2.0
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1070836015]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 975.0
+offset_top = 53.0
+offset_right = 1125.0
+offset_bottom = 103.0
+value = 100.0
+tick_count = 10
+ticks_on_borders = true
