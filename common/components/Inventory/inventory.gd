@@ -85,10 +85,10 @@ func has_item_of_type(type: Item.ItemType)->bool:
 			return true
 	return false
 	
-func holding_item_of_type(type: Item.ItemType)->bool:
+func holding_item_of_type(type: Item.ItemType, topping: Coffee.Topping = Coffee.Topping.NONE)->bool:
 	if inventory.is_empty():
 		return false
-	if current_item.item_resource.type == type:
+	if current_item.item_resource.type == type and current_item.item_resource.topping == topping:
 		inventory.pop_front()
 		current_item.queue_free()
 		current_item = null

@@ -25,6 +25,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is Player:
 		sprite.texture = action_texture
 		captive = body
+		interact()
 		match direction:
 			MoveCharacter.DIRECTION.LEFT:
 				sprite.flip_h = false

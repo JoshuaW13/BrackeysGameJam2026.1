@@ -3,6 +3,7 @@ class_name NPC
 
 @export var npc : NPCResource
 @onready var sprite : Sprite2D = $Sprite2D
+@onready var interact_area : Area2D = $InteractArea2D
 signal npc_dialogue(npc_id, dialogue_lines)
 signal npc_completed(npc_id : String)
 signal unlock(item_id: String)
@@ -13,6 +14,8 @@ var is_in_area : bool = false
 func _ready():
 	sprite.texture = npc.texture
 	player = get_tree().get_nodes_in_group("player")
+	interact_area.body_entered.connect(_on_body_entered)
+	interact_area.body_exited.connect(_on_body_exited)
 
 func _input(event):
 	if event.is_action_pressed("interact") and is_in_area and not in_dialogue:
