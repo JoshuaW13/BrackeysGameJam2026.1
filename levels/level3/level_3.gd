@@ -1,7 +1,9 @@
 extends Node2D
 
+@export var level_resource : LevelResource
 @onready var player : Player = $Player
 @onready var dialogue_panel : DialoguePanel = $Player/Camera2D/DialoguePanel
+signal npc_dialogue(id, type, dialogue_lines)
 var BOX_RES = load("res://entities/box/box.tres")
 var COFFEE_RES = load("res://entities/coffee/coffee.tres")
 var remaining_npcs := {}
@@ -31,5 +33,5 @@ func _on_npc_completed(npc_id):
 
 func _on_finished_dialogue(npc):
 	if level_complete:
+		emit_signal("npc_dialogue", "message", "Level Complete!")
 		GameData.mark_completed(get_tree().current_scene.name)
-		get_tree().change_scene_to_file("res://levels/intro/Intro.tscn")
