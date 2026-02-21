@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://clayenhbjyel1"]
+
+[ext_resource type="Texture2D" uid="uid://b5vxoi2pdf317" path="res://userInterface/components/skipButton/assets/skip.png" id="1_dd74j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dd74j"]
+
+[node name="SkipButton" type="Button" unique_id=136063212]
+offset_right = 32.0
+offset_bottom = 32.0
+scale = Vector2(0.25, 0.25)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dd74j")
+icon = ExtResource("1_dd74j")
+icon_alignment = 1
