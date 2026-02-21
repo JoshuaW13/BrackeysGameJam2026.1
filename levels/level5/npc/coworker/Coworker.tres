@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://d4gfw7bu8p7tm"]
+
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_834cl"]
+[ext_resource type="Resource" uid="uid://safdi0mduqwc" path="res://entities/npc/npc_next.tres" id="2_ag35i"]
+[ext_resource type="Resource" uid="uid://dhlaf78huuqsx" path="res://entities/npc/has_coffee.tres" id="3_hl3sg"]
+[ext_resource type="Resource" uid="uid://btgm6qohh31no" path="res://entities/npc/npc_unlock.tres" id="4_owu08"]
+[ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="5_7psc7"]
+[ext_resource type="Texture2D" uid="uid://ksv4c48lyk6x" path="res://entities/npc/assets/human_coworker2.png" id="6_glcgd"]
+
+[sub_resource type="Resource" id="Resource_6lb6q"]
+script = ExtResource("1_834cl")
+pass_dialogues = Array[String](["You need to get a coffee to the guy upstairs right. ", "How about this. If you get me a coffee, I'll help get you up there."])
+pass_functions = Array[Array]([[ExtResource("2_ag35i"), []]])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
+
+[sub_resource type="Resource" id="Resource_x0cxi"]
+script = ExtResource("1_834cl")
+condition = ExtResource("3_hl3sg")
+pass_dialogues = Array[String](["Ah perfect, that will get me through the rest of the day. ", "You can get up to the second floor now."])
+pass_functions = Array[Array]([[ExtResource("4_owu08"), ["Lv4Platform"]], [ExtResource("2_ag35i"), []]])
+fail_dialogues = Array[String](["Get me some coffee first. Don't you need my help."])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
+
+[sub_resource type="Resource" id="Resource_58puk"]
+script = ExtResource("1_834cl")
+pass_dialogues = Array[String](["Oh, I should also let you know that his door is locked, you'll need to find a way to unlock it. ", "Now leave me to my coffee."])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
+
+[resource]
+script = ExtResource("5_7psc7")
+npc_id = "Lv4Coworker"
+texture = ExtResource("6_glcgd")
+dialogues = Array[ExtResource("1_834cl")]([SubResource("Resource_6lb6q"), SubResource("Resource_x0cxi"), SubResource("Resource_58puk")])
+completed = true

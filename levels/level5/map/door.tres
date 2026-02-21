@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DoorResource" format=3 uid="uid://dxc7k0p2uibir"]
+
+[ext_resource type="Script" uid="uid://c0srv4ubxirr6" path="res://entities/door/door_resource.gd" id="1_sahj7"]
+
+[resource]
+script = ExtResource("1_sahj7")
+door_id = "Lv4Door"
+is_locked = true
+metadata/_custom_type_script = "uid://c0srv4ubxirr6"

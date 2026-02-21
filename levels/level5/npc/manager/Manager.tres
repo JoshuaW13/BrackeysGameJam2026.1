@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://birpyatv6clgc"]
+
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_ygpfe"]
+[ext_resource type="Resource" uid="uid://dhlaf78huuqsx" path="res://entities/npc/has_coffee.tres" id="2_oqhad"]
+[ext_resource type="Resource" uid="uid://bwotuywaxi8re" path="res://entities/npc/npc_completed.tres" id="3_ldbtc"]
+[ext_resource type="Resource" uid="uid://btgm6qohh31no" path="res://entities/npc/npc_unlock.tres" id="4_n8bbq"]
+[ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="5_td3jc"]
+[ext_resource type="Texture2D" uid="uid://cvpdaw1jf75p2" path="res://entities/npc/assets/human_coworker3.png" id="6_q0tqm"]
+
+[sub_resource type="Resource" id="Resource_64wai"]
+script = ExtResource("1_ygpfe")
+condition = ExtResource("2_oqhad")
+pass_dialogues = Array[String](["Hi", "<3"])
+pass_functions = Array[Array]([[ExtResource("3_ldbtc"), []], [ExtResource("4_n8bbq"), ["Lv3Door"]]])
+fail_dialogues = Array[String](["The audacity to come here without a cup of coffee! You better run out that door and find a cup.", "GET ME MY CUP OF BEAN WATER!"])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
+
+[resource]
+script = ExtResource("5_td3jc")
+npc_id = "Lv4Manager"
+texture = ExtResource("6_q0tqm")
+dialogues = Array[ExtResource("1_ygpfe")]([SubResource("Resource_64wai")])
+metadata/_custom_type_script = "uid://caib8pj52pvm"
