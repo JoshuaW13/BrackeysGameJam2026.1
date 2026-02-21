@@ -12,7 +12,7 @@ size = Vector2(16, 16)
 length = 8.40625
 
 [node name="Box" type="RigidBody2D" unique_id=2021290329 groups=["box"]]
-collision_layer = 19
+collision_layer = 2
 collision_mask = 19
 input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_dvghe")
