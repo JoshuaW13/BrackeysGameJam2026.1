@@ -8,6 +8,8 @@ class_name Player
 @onready var gravity_component: GravityComponent = %GravityComponent
 @onready var inventory: Inventory = %Inventory
 @onready var audioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var walkSoundPlayer: AudioStreamPlayer2D = $WalkSoundPlayer
+@onready var walkSoundTimer: Timer = $WalkSoundTimer
 
 const PICKUP_SOUND = preload("res://audio/pickup.wav")
 const DROP_SOUND = preload("res://audio/drop.wav")
