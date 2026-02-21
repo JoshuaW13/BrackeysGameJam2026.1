@@ -9,7 +9,7 @@ size = Vector2(7, 8)
 [node name="Coffee" type="RigidBody2D" unique_id=345192037]
 collision_layer = 4
 input_pickable = true
-mass = 0.1
+continuous_cd = 2
 script = ExtResource("1_q6x18")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=78928876]

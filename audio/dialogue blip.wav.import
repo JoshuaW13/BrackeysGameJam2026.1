@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ck33dk4a56ih4"
+path="res://.godot/imported/dialogue blip.wav-c55e7b74ff5522a69019c651930d42bd.sample"
+
+[deps]
+
+source_file="res://audio/dialogue blip.wav"
+dest_files=["res://.godot/imported/dialogue blip.wav-c55e7b74ff5522a69019c651930d42bd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

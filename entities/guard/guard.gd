@@ -6,6 +6,8 @@ class_name Guard
 @onready var move_character: MoveCharacter = $MoveCharacter
 @onready var detection_area: Area2D = $Area2D
 
+var happy = false
+
 var action_texture : Texture2D = load("res://entities/guard/assets/guard_stop.png")
 
 var captive: Player = null
@@ -32,8 +34,12 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 			MoveCharacter.DIRECTION.RIGHT:
 				sprite.flip_h = true
 		if !captive.state_machine.current_state is Stunned:
+			if captive.inventory.holding_item_of_type(Item.ItemType.COFFEE, Coffee.Topping.CARAMEL):
+				print("Making guard happy")
+				make_happy()
 			force_interact()
-			if !detection_area.monitoring:
+			if !happy:
+				print("Stun guard")
 				captive.stun()
 				move_character.move(captive, direction)
 
@@ -44,4 +50,5 @@ func _on_move_character_character_moved() -> void:
 		captive = null
 
 func make_happy()->void:
+	happy = true
 	detection_area.monitoring = false

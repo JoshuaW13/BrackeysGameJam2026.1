@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clayenhbjyel1"]
 
 [ext_resource type="Texture2D" uid="uid://b5vxoi2pdf317" path="res://userInterface/components/skipButton/assets/skip.png" id="1_dd74j"]
+[ext_resource type="Script" uid="uid://bxuvaotb1n4c5" path="res://userInterface/components/skipButton/skip_button.gd" id="2_gp7fo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dd74j"]
 
@@ -11,3 +12,4 @@ scale = Vector2(0.4, 0.4)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dd74j")
 icon = ExtResource("1_dd74j")
 icon_alignment = 1
+script = ExtResource("2_gp7fo")

@@ -104,6 +104,7 @@ pause={
 2d_physics/layer_2="entities"
 2d_physics/layer_3="nonMovableObject"
 2d_physics/layer_4="Topping"
+2d_physics/layer_5="button"
 2d_physics/layer_6="guardDetection"
 
 [physics]
