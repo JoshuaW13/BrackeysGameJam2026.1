@@ -42,9 +42,10 @@ func _physics_process(delta):
 				collider.apply_central_impulse(push_dir * push_strength)
 
 func item_picked_up(item: PlaceableItem)->void:
-	inventory.add_item(item.inventory_item)
-	item.call_deferred("queue_free")
-	GlobalAudio.play_inventory_fx(PICKUP_SOUND)
+	if is_on_floor():
+		inventory.add_item(item.inventory_item)
+		item.call_deferred("queue_free")
+		GlobalAudio.play_inventory_fx(PICKUP_SOUND)
 
 func topping_picked_up(topping: Topping)->void:
 	inventory.add_topping(topping)

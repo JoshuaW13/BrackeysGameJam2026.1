@@ -18,6 +18,12 @@ func check_los():
 		print("Item too far")
 		return false
 
-	# Could not get line of sight working, tried it for fun. But did limit distance.
-		
+	#var space_state = get_world_2d().direct_space_state
+
+	#var raycast = PhysicsRayQueryParameters2D.create(self.global_position, player.global_position)
+	#var raycast_result = space_state.intersect_ray(raycast)
+	#if !raycast_result.is_empty():
+		#print("blocked")
+		#return false
+
 	return true
