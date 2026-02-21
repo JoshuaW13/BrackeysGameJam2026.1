@@ -84,6 +84,16 @@ func has_item_of_type(type: Item.ItemType)->bool:
 		if inventory[i].type == type:
 			return true
 	return false
+	
+func holding_item_of_type(type: Item.ItemType)->bool:
+	if inventory.is_empty():
+		return false
+	if current_item.item_resource.type == type:
+		inventory.pop_front()
+		current_item.queue_free()
+		current_item = null
+		return true
+	return false
 
 func add_topping(topping: Topping)->void:
 	for i in range(inventory.size()):

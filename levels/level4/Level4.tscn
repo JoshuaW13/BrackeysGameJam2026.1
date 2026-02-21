@@ -7,7 +7,9 @@
 [ext_resource type="Resource" uid="uid://w0kfewsa7xd5" path="res://levels/level4/map/elevator.tres" id="5_oeiwh"]
 [ext_resource type="PackedScene" uid="uid://d4nahe1lhtwqr" path="res://entities/door/door.tscn" id="6_cnuli"]
 [ext_resource type="Resource" uid="uid://cp15m3bm5clud" path="res://levels/level4/map/door.tres" id="7_vvnv4"]
+[ext_resource type="PackedScene" uid="uid://cu22wa1tphfuh" path="res://entities/button/button.tscn" id="8_ltlqp"]
 [ext_resource type="PackedScene" uid="uid://dd2ks5rqjvptf" path="res://entities/moving_platform/moving_platform.tscn" id="9_76mb0"]
+[ext_resource type="Resource" uid="uid://despxsyll5ds7" path="res://levels/level4/map/button.tres" id="9_uhekg"]
 [ext_resource type="Resource" uid="uid://c8eu6uq1vc20j" path="res://levels/level4/map/moving_platform.tres" id="10_uwfqk"]
 [ext_resource type="PackedScene" uid="uid://u6dbdktu23jv" path="res://entities/player/player.tscn" id="11_7kd8e"]
 [ext_resource type="PackedScene" uid="uid://d0uwmj7hj3afu" path="res://entities/dialogue/DialoguePanel.tscn" id="12_kvxrf"]
@@ -26,11 +28,11 @@ _data = {
 
 [sub_resource type="Curve2D" id="Curve2D_jlrek"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -227, 56, 0, 0, 0, 0, -187, 56, 0, 0, 0, 0, -99, 88, 0, 0, 0, 0, -99, 144)
+"points": PackedVector2Array(0, 0, 0, 0, -227, 56, 0, 0, 0, 0, -187, 56, 0, 0, 0, 0, -99, 72, 0, 0, 0, 0, -99, 144)
 }
 point_count = 4
 
-[node name="Level3" type="Node2D" unique_id=1543521338]
+[node name="Level4" type="Node2D" unique_id=1543521338]
 script = ExtResource("1_ifd44")
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=1910592354]
@@ -39,17 +41,17 @@ tile_set = ExtResource("2_4j7d8")
 
 [node name="BackgroundObjects" type="TileMapLayer" parent="." unique_id=352136323]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAGAAgABgAAAAAAAAAVAAIABwABAAEAAAAIAAgABgAMAAAAAAAJAAgABgALAAAAAAAUAAQABgAJAAAAAAAVAAQABgALAAAAAAA=")
+tile_map_data = PackedByteArray("AAAGAAgABgAAAAAAAAAIAAgABgAMAAAAAAAJAAgABgALAAAAAAAUAAMABgAJAAAAAAAVAAMABgALAAAAAAASAAIABwABAAEAAAA=")
 tile_set = ExtResource("2_4j7d8")
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=2138636679]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAAAAkAAQAAAAAAAAABAAkAAQABAAAAAAACAAkAAQABAAAAAAADAAkAAQABAAAAAAAEAAkAAQABAAAAAAAFAAkAAQABAAAAAAAGAAkAAQABAAAAAAAHAAkAAQABAAAAAAAPAAkAAQABAAAAAAAQAAkAAQABAAAAAAARAAkAAQABAAAAAAASAAkAAQABAAAAAAATAAkAAQABAAAAAAAUAAkAAQABAAAAAAAVAAkAAQABAAAAAAAWAAkAAQABAAAAAAAXAAkAAQACAAAAAAAOAAkAAQABAAAAAAAIAAkAAQABAAAAAAAJAAkAAQABAAAAAAAKAAkAAQABAAAAAAALAAkAAQABAAAAAAAMAAkAAQABAAAAAAANAAkAAQABAAAAAAAPAAUAAQAAAAAAAAAQAAUAAQABAAAAAAARAAUAAQABAAAAAAASAAUAAQABAAAAAAATAAUAAQABAAAAAAAUAAUAAQABAAAAAAAVAAUAAQABAAAAAAAWAAUAAQABAAAAAAAXAAUAAQACAAAAAAAEAAMAAQACAAAAAAADAAMAAQABAAAAAAACAAMAAQABAAAAAAABAAMAAQABAAAAAAAAAAMAAQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAkAAQAAAAAAAAABAAkAAQABAAAAAAACAAkAAQABAAAAAAADAAkAAQABAAAAAAAEAAkAAQABAAAAAAAFAAkAAQABAAAAAAAGAAkAAQABAAAAAAAHAAkAAQABAAAAAAAPAAkAAQABAAAAAAAQAAkAAQABAAAAAAARAAkAAQABAAAAAAASAAkAAQABAAAAAAATAAkAAQABAAAAAAAUAAkAAQABAAAAAAAVAAkAAQABAAAAAAAWAAkAAQABAAAAAAAXAAkAAQACAAAAAAAOAAkAAQABAAAAAAAIAAkAAQABAAAAAAAJAAkAAQABAAAAAAAKAAkAAQABAAAAAAALAAkAAQABAAAAAAAMAAkAAQABAAAAAAANAAkAAQABAAAAAAAEAAMAAQACAAAAAAADAAMAAQABAAAAAAACAAMAAQABAAAAAAABAAMAAQABAAAAAAAAAAMAAQAAAAAAAAAXAAQAAQACAAAAAAAWAAQAAQABAAAAAAAVAAQAAQABAAAAAAAUAAQAAQABAAAAAAATAAQAAQABAAAAAAASAAQAAQABAAAAAAARAAQAAQABAAAAAAAQAAQAAQABAAAAAAAPAAQAAQAAAAAAAAA=")
 tile_set = ExtResource("2_4j7d8")
 
 [node name="FloorObjects" type="TileMapLayer" parent="." unique_id=622267143]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAPAAcABQAAAAIAAAAPAAYABQAAAAAAAAASAAgABQAAAAIAAAASAAcABQAAAAAAAAAVAAcABQAAAAIAAAAVAAYABQAAAAAAAAAQAAMABQAAAAIAAAAQAAIABQAAAAEAAAAQAAEABQAAAAEAAAAQAAAABQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAPAAcABQAAAAIAAAAPAAYABQAAAAEAAAASAAgABQAAAAIAAAASAAcABQAAAAEAAAAVAAcABQAAAAIAAAAVAAYABQAAAAEAAAAQAAIABQAAAAIAAAAQAAEABQAAAAEAAAAQAAAABQAAAAAAAAAPAAUABQAAAAAAAAASAAYABQAAAAAAAAAVAAUABQAAAAAAAAA=")
 tile_set = ExtResource("2_4j7d8")
 
 [node name="WorldBoundaryArea2D" parent="." unique_id=1273123177 instance=ExtResource("3_yjg5w")]
@@ -66,11 +68,15 @@ position = Vector2(38, 128)
 elevator = ExtResource("5_oeiwh")
 
 [node name="Door" parent="." unique_id=1554516772 instance=ExtResource("6_cnuli")]
-position = Vector2(264, 72)
+position = Vector2(264, 56)
 door = ExtResource("7_vvnv4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=277830785]
 libraries/ = SubResource("AnimationLibrary_hg36g")
+
+[node name="Button" parent="." unique_id=949530896 groups=["npc"] instance=ExtResource("8_ltlqp")]
+position = Vector2(16, 40)
+button = ExtResource("9_uhekg")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=403382344]
 position = Vector2(323, -8)
@@ -106,7 +112,7 @@ position = Vector2(151, 128)
 npc = ExtResource("14_17ofc")
 
 [node name="Manager" parent="." unique_id=404841392 instance=ExtResource("13_fpstc")]
-position = Vector2(363, 64)
+position = Vector2(364, 48)
 npc = ExtResource("16_rkjo7")
 
 [node name="Coffee" parent="." unique_id=345192037 instance=ExtResource("15_72fm6")]

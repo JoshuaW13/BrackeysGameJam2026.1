@@ -2,9 +2,7 @@ extends Resource
 class_name NPCGive
 
 func execute(runtime_args, args):
-	print(runtime_args)
 	var player = runtime_args[1]
-	print(player is Player)
 	if player is Player:
 		print(args)
 		var ITEM_RES = load(args[0])

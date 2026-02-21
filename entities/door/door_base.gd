@@ -12,6 +12,9 @@ func _ready():
 	for npc in npcs:
 		if npc is NPC:
 			npc.unlock.connect(_on_unlock_door)
+		if npc is Button2D:
+			npc.unlock.connect(_on_unlock_door)
+			npc.lock.connect(_on_lock_door)
 
 func _input(event):
 	if event.is_action_pressed("interact") and is_in_area != "":
@@ -44,8 +47,13 @@ func _on_right_body_entered(body):
 func _on_right_body_exited(body):
 	if body.is_in_group("player"):
 		is_in_area = ""
-		
+
 func _on_unlock_door(door_id):
 	print("Recieved unlock_door signal: ", door_id)
 	if door.door_id == door_id:
 		door.is_locked = false
+
+func _on_lock_door(door_id):
+	print("Recieved lock_door signal: ", door_id)
+	if door.door_id == door_id:
+		door.is_locked = true

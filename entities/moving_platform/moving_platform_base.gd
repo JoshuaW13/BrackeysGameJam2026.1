@@ -18,7 +18,7 @@ func _ready():
 	
 	var npcs = get_tree().get_nodes_in_group("npc")
 	for npc in npcs:
-		if npc is NPC:
+		if npc is NPC or npc is ButtonResource:
 			npc.unlock.connect(_on_unlock_platform)
 
 func _physics_process(delta):
@@ -85,3 +85,7 @@ func update_width():
 func _on_unlock_platform(platform_id):
 	if moving_platform.platform_id == platform_id:
 		moving_platform.is_locked = false
+
+func _on_lock_platform(platform_id):
+	if moving_platform.platform_id == platform_id:
+		moving_platform.is_locked = true
