@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var player : Player = $Player
-@onready var dialogue_panel : DialoguePanel = $Player/DialoguePanel
 var BOX_RES = load("res://entities/box/box.tres")
 var COFFEE_RES = load("res://entities/coffee/coffee.tres")
 var remaining_npcs := {}

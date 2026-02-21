@@ -32,7 +32,7 @@ func interact():
 	if npc.dialogues.is_empty():
 		return
 	var event = npc.dialogues[npc.dialogue_index]
-	if !event.condition or event.condition.is_met([player[0]], []):
+	if !event.condition or event.condition.is_met([ player[0],self], []):
 		if event.pass_functions:
 			perform_events(event.pass_functions)
 		if event.pass_dialogues:
@@ -45,8 +45,10 @@ func interact():
 
 func perform_events(actions : Array[Array]):
 	for action in actions:
-		action[0].execute([self, player[0]], action[1])
-	
+		if action.size()>1:
+			action[0].execute([self, player[0]], action[1])
+		action[0].execute([self, player[0]])
+
 func perform_dialogue(lines : Array[String]):
 	in_dialogue = true
 	emit_signal("npc_dialogue", npc.npc_id, npc.npc_name, lines)
