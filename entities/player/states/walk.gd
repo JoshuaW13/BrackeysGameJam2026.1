@@ -14,8 +14,6 @@ func enter()->void:
 	player.velocity_component.speed = WALK_SPEED
 
 func determine_direction() -> Vector2:
-	if player.stunned:
-		return Vector2.ZERO
 	var left  = Input.is_action_pressed("left")
 	var right = Input.is_action_pressed("right")
 	
@@ -53,7 +51,5 @@ func physics_update(_delta: float) -> void:
 	player.velocity_component.set_horizontal(direction.x)
 
 func process_input(_event: InputEvent)-> void:
-	if player.stunned:
-		return
 	if _event.is_action_pressed("up"):
 		transition.emit(self, "Jump")

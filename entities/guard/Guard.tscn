@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://cuth5e4ytbvyj" path="res://entities/guard/resources/guard.tres" id="2_8kwwx"]
 [ext_resource type="PackedScene" uid="uid://b64tre6swvbpv" path="res://common/components/gravity/GravityComponent.tscn" id="3_jq6px"]
 [ext_resource type="PackedScene" uid="uid://1pp8jw5odpso" path="res://common/components/velocity/velocityComponent.tscn" id="4_dofst"]
+[ext_resource type="PackedScene" uid="uid://cqrvukbmc64i2" path="res://common/components/moveCharacter/moveCharacter.tscn" id="5_dofst"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k3d3e"]
 a = Vector2(0, -33)
@@ -40,6 +41,9 @@ velocity_component = NodePath("../VelocityComponent")
 position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_jq6px")
 
+[node name="MoveCharacter" parent="." unique_id=976887618 instance=ExtResource("5_dofst")]
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="character_moved" from="MoveCharacter" to="." method="_on_move_character_character_moved"]
