@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="IsGuardHappy" format=3 uid="uid://dn0axmdw5cnrf"]
+
+[ext_resource type="Script" uid="uid://cwnjk7trybjp3" path="res://entities/guard/resources/is_guard_happy.gd" id="1_sbtpd"]
+
+[resource]
+script = ExtResource("1_sbtpd")
+metadata/_custom_type_script = "uid://28yidg5aot01"

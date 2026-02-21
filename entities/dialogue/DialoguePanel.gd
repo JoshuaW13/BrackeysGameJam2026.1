@@ -43,6 +43,8 @@ func _on_npc_dialogue(npc_id, name, lines):
 		#set_movement(false)
 		
 		dialogue.text = dialogue_lines[current_line]
+		_play_sfx(dialogue.text.length())
+
 		visible = true
 	
 func _input(event):
@@ -58,8 +60,13 @@ func _input(event):
 		
 		if current_line < dialogue_lines.size():
 			dialogue.text = dialogue_lines[current_line]
+			_play_sfx(dialogue.text.length())
 		else:
 			end_dialogue()
+			
+func _play_sfx(text_length: int):
+	if npc != "message":
+		GlobalAudio.play_dialogue_fx(text_length / 4)
 
 func end_dialogue() -> void:
 	visible = false
