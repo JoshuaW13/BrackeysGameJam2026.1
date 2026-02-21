@@ -8,7 +8,7 @@ enum DIRECTION{
 	RIGHT
 }
 @export var move_distance: float = 50
-@export var duration: float = 0.75
+@export var duration: float = 1.25
 
 func move(character: CharacterBody2D, direction: DIRECTION) -> void:
 	var dir_vector := Vector2.LEFT if direction == DIRECTION.LEFT else Vector2.RIGHT
