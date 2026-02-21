@@ -7,99 +7,88 @@
 [ext_resource type="Texture2D" uid="uid://dqb3b6g0q6xg2" path="res://entities/player/assets/nod.png" id="4_n5sd1"]
 [ext_resource type="Texture2D" uid="uid://bdem0ajwtid4v" path="res://entities/dialogue/heyChad.png" id="5_chvk1"]
 [ext_resource type="Texture2D" uid="uid://ddw7aqg01vmo7" path="res://entities/dialogue/goodLuck.png" id="6_8vlvi"]
+[ext_resource type="Texture2D" uid="uid://6j41hbp4kgti" path="res://levels/office/assets/black.png" id="10_byiri"]
 [ext_resource type="Texture2D" uid="uid://dqy1y43mnuvul" path="res://entities/npc/assets/janitor.png" id="15_xlaoa"]
 [ext_resource type="Texture2D" uid="uid://c3fxoarvpyok3" path="res://entities/npc/assets/janitor_mop.png" id="16_uemab"]
 
 [sub_resource type="Animation" id="Animation_8vlvi"]
-length = 0.001
+length = 0.13333334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Characters/Player:position")
+tracks/0/path = NodePath("Characters/Janitor/Dialogue/goodLuck:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.0009999999),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(23, 112)]
+"update": 1,
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Characters/Player:animation")
+tracks/1/path = NodePath("Characters/Janitor/Dialogue/heyChad:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.0009999999),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"idle"]
+"values": [false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Characters/Janitor:animation")
+tracks/2/path = NodePath("Characters/Player:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.0009999999),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"mop"]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Characters/Dialogue/heyChad:visible")
+tracks/3/path = NodePath("TileMapLayer:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Characters/Dialogue/goodLuck:visible")
+tracks/4/path = NodePath("Characters/Player:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Vector2(23, 112)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Elevator:animation")
+tracks/5/path = NodePath("Characters/Janitor:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"closed"]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Characters/Player:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Vector2(100, 110.99999)]
 }
 
 [sub_resource type="Animation" id="Animation_6ypf1"]
 resource_name = "cutscene"
-length = 22.0
+length = 20.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -107,7 +96,7 @@ tracks/0/path = NodePath("Characters/Player:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3, 16.133333, 18.233334),
+"times": PackedFloat32Array(0, 1.5, 3, 16.133333, 17.633333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(23, 112), Vector2(23, 112), Vector2(78, 111), Vector2(78, 111), Vector2(127, 111)]
@@ -119,7 +108,7 @@ tracks/1/path = NodePath("Characters/Player:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 3.1666667, 8.200699, 8.453812, 16.1, 18.266666),
+"times": PackedFloat32Array(0, 1.5, 3.1666667, 8.200699, 8.453812, 16.1, 17.633333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [&"idle", &"walk", &"idle", &"nod", &"idle", &"walk", &"idle"]
@@ -131,7 +120,7 @@ tracks/2/path = NodePath("Characters/Janitor:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.5666666, 17.676544),
+"times": PackedFloat32Array(0, 3.5666666, 17.033333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [&"mop", &"idle", &"mop"]
@@ -139,11 +128,11 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Characters/Dialogue/heyChad:visible")
+tracks/3/path = NodePath("Characters/Janitor/Dialogue/heyChad:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 4.0333333, 7.8),
+"times": PackedFloat32Array(0, 4.2, 7.266667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -151,11 +140,11 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Characters/Dialogue/goodLuck:visible")
+tracks/4/path = NodePath("Characters/Janitor/Dialogue/goodLuck:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 9.6, 15.7),
+"times": PackedFloat32Array(0, 9.666667, 14.7),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -167,7 +156,7 @@ tracks/5/path = NodePath("Elevator:animation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 14.739036, 15.066667, 18.305494, 19.266666),
+"times": PackedFloat32Array(0, 13.7, 14.233334, 17.4, 17.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [&"closed", &"opening", &"opened", &"closing", &"closed"]
@@ -179,10 +168,87 @@ tracks/6/path = NodePath("Characters/Player:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 18.347641, 19.266666),
+"times": PackedFloat32Array(0, 17.666666, 18),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Characters/Player")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 19.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Characters/Janitor")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Elevator")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.03333333, 20),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(20),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_animation_finished"
+}]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TileMapLayer:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 19.466667, 20.033333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n5sd1"]
@@ -441,6 +507,16 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxk5i"]
+texture = ExtResource("10_byiri")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wpn7y"]
+sources/0 = SubResource("TileSetAtlasSource_nxk5i")
+
 [node name="Intro" type="Node2D" unique_id=2026370204]
 script = ExtResource("1_ck25q")
 
@@ -459,10 +535,6 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAAEAAgAFQABABIAAAAFAAgAFQABABIAAAAGAAgAFQABABIAAAAHAAgAFQABABIAAAAIAAgAFQABABIAAAAJAAgAFQACABIAAAABAAgAFQABABIAAAACAAgAFQABABIAAAAAAAgAFQAAABIAAAADAAgAFQABABIAAAA=")
 tile_set = ExtResource("1_chvk1")
 
-[node name="FloorObjects" type="TileMapLayer" parent="." unique_id=1847118963]
-texture_filter = 1
-tile_set = ExtResource("1_chvk1")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=102354422]
 position = Vector2(80, 105)
 zoom = Vector2(6, 6)
@@ -476,17 +548,12 @@ position = Vector2(128, 112)
 sprite_frames = SubResource("SpriteFrames_b3t6l")
 animation = &"closed"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1869104904]
-position = Vector2(28, 119)
-
 [node name="Characters" type="Node2D" parent="." unique_id=653697610]
 
 [node name="Player" type="AnimatedSprite2D" parent="Characters" unique_id=1147269966]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(23, 112)
 sprite_frames = SubResource("SpriteFrames_xlaoa")
 animation = &"idle"
-frame_progress = 0.65943974
 
 [node name="Janitor" type="AnimatedSprite2D" parent="Characters" unique_id=613149563]
 position = Vector2(100, 110.99999)
@@ -495,14 +562,24 @@ scale = Vector2(1.0078757, -0.99577737)
 sprite_frames = SubResource("SpriteFrames_al7a4")
 animation = &"mop"
 
-[node name="Dialogue" type="Node2D" parent="Characters" unique_id=1050736462]
+[node name="Dialogue" type="Node2D" parent="Characters/Janitor" unique_id=1050736462]
+position = Vector2(99.2186, -111.47068)
+rotation = -3.1415925
+scale = Vector2(0.9921859, -1.0042405)
 
-[node name="heyChad" type="Sprite2D" parent="Characters/Dialogue" unique_id=685176263]
+[node name="heyChad" type="Sprite2D" parent="Characters/Janitor/Dialogue" unique_id=685176263]
+visible = false
 position = Vector2(59.218742, 91.60937)
 scale = Vector2(0.08044237, 0.078030676)
 texture = ExtResource("5_chvk1")
 
-[node name="goodLuck" type="Sprite2D" parent="Characters/Dialogue" unique_id=1787394002]
+[node name="goodLuck" type="Sprite2D" parent="Characters/Janitor/Dialogue" unique_id=1787394002]
+visible = false
 position = Vector2(58.500004, 91.5)
 scale = Vector2(0.08020231, 0.0783939)
 texture = ExtResource("6_8vlvi")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=954273498]
+modulate = Color(1, 1, 1, 0)
+tile_map_data = PackedByteArray("AAD//wQAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAUAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAD//wUAAAAAAAAAAAD//wYAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAADAAcAAAAAAAAAAAACAAcAAAAAAAAAAAABAAcAAAAAAAAAAAAAAAcAAAAAAAAAAAD//wcAAAAAAAAAAAD//wgAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAgAAAAAAAAAAAACAAgAAAAAAAAAAAADAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_wpn7y")
