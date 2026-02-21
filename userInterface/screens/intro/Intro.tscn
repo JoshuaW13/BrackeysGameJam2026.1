@@ -88,7 +88,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_6ypf1"]
 resource_name = "cutscene"
-length = 20.4
+length = 20.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -180,7 +180,7 @@ tracks/7/path = NodePath("Characters/Player")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 19.5),
+"times": PackedFloat32Array(0, 20),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [&"", 1.0, false],
@@ -507,7 +507,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxk5i"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_byiri"]
 texture = ExtResource("10_byiri")
 0:0/0 = 0
 1:0/0 = 0
@@ -515,7 +515,7 @@ texture = ExtResource("10_byiri")
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wpn7y"]
-sources/0 = SubResource("TileSetAtlasSource_nxk5i")
+sources/0 = SubResource("TileSetAtlasSource_byiri")
 
 [node name="Intro" type="Node2D" unique_id=2026370204]
 script = ExtResource("1_ck25q")
