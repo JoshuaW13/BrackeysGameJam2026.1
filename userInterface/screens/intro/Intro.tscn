@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://3gw5yhor47m5"]
 
 [ext_resource type="TileSet" uid="uid://dj1j1gwgqlvmw" path="res://levels/office/assets/OfficeTileSet.tres" id="1_chvk1"]
+[ext_resource type="Script" uid="uid://5tv1bct4ai4i" path="res://userInterface/screens/intro/intro.gd" id="1_ck25q"]
 [ext_resource type="Texture2D" uid="uid://buigpjci3g2rl" path="res://levels/office/assets/elevator.png" id="2_6ypf1"]
 [ext_resource type="Texture2D" uid="uid://4tu0mgi5hs44" path="res://entities/player/assets/walk.png" id="2_51ka6"]
 [ext_resource type="Texture2D" uid="uid://dqb3b6g0q6xg2" path="res://entities/player/assets/nod.png" id="4_n5sd1"]
@@ -441,6 +442,7 @@ animations = [{
 }]
 
 [node name="Intro" type="Node2D" unique_id=2026370204]
+script = ExtResource("1_ck25q")
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=98047936]
 texture_filter = 1
@@ -484,7 +486,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(23, 112)
 sprite_frames = SubResource("SpriteFrames_xlaoa")
 animation = &"idle"
-frame_progress = 0.6600707
+frame_progress = 0.65943974
 
 [node name="Janitor" type="AnimatedSprite2D" parent="Characters" unique_id=613149563]
 position = Vector2(100, 110.99999)
@@ -492,7 +494,6 @@ rotation = 3.1415927
 scale = Vector2(1.0078757, -0.99577737)
 sprite_frames = SubResource("SpriteFrames_al7a4")
 animation = &"mop"
-frame_progress = 0.66007054
 
 [node name="Dialogue" type="Node2D" parent="Characters" unique_id=1050736462]
 
