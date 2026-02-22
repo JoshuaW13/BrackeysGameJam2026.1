@@ -19,7 +19,7 @@ func _ready():
 	
 	var npcs = get_tree().get_nodes_in_group("npc")
 	for npc in npcs:
-		if npc is NPC or npc is ButtonResource:
+		if npc is NPC or npc is Button2D:
 			npc.unlock.connect(_on_unlock_platform)
 			
 	if moving_platform.is_locked:
@@ -97,6 +97,7 @@ func update_width():
 	global_position = path_follow.global_position
 		
 func _on_unlock_platform(platform_id):
+	print("Testing: ", platform_id, moving_platform.platform_id)
 	if moving_platform.platform_id == platform_id:
 		moving_platform.is_locked = false
 		lock.visible = false

@@ -10,7 +10,7 @@
 script = ExtResource("1_c4ghp")
 platform_id = "Lv5Platform3"
 width = 2
-speed = 75.0
+speed = 65.0
 pause = 1.0
 left_texture = ExtResource("1_aowht")
 middle_texture = ExtResource("2_78k4q")
