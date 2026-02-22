@@ -48,6 +48,7 @@ func item_picked_up(item: PlaceableItem)->void:
 	GlobalAudio.play_inventory_fx(PICKUP_SOUND)
 
 func topping_picked_up(topping: Topping)->void:
+	print(topping.type)
 	inventory.add_topping(topping)
 	topping.call_deferred("queue_free")
 	GlobalAudio.play_inventory_fx(PICKUP_SOUND)
