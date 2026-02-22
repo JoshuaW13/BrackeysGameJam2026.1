@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bcky08nt16sw7"]
+
+[ext_resource type="Texture2D" uid="uid://b8hmftuwgoyf" path="res://entities/weirdDoor/assets/weirdDoor.png" id="1_d08uj"]
+[ext_resource type="Script" uid="uid://dn45kdh0kb1pc" path="res://entities/weirdDoor/weird_door.gd" id="1_liq1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d08uj"]
+size = Vector2(213, 232)
+
+[node name="WeirdDoor" type="Node2D" unique_id=581044074]
+script = ExtResource("1_liq1a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=318836866]
+position = Vector2(0, 21)
+texture = ExtResource("1_d08uj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=583938083]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1222378927]
+position = Vector2(-0.5, 20)
+shape = SubResource("RectangleShape2D_d08uj")

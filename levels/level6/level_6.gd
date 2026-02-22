@@ -27,7 +27,7 @@ func _ready():
 	player.dialogue_panel.dialogue_finished.connect(_on_finished_dialogue)
 
 func _on_npc_completed(npc_id: String)->void:
-	print("Level complete!")
+	GameData.mark_completed(get_tree().current_scene.name)
 
 func _on_finished_dialogue(npc):
 	if level_complete:
