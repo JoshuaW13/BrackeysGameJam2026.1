@@ -8,7 +8,6 @@ var extra_toppings: Array[Coffee.Topping] = []
 var current_item: InventoryItem
 var COFFEE_RES = load("res://entities/coffee/coffee.tres")
 var BOX_RES = load("res://entities/box/box.tres")
-var next_item_id : int= 0
 
 func _ready() -> void:
 	pass
@@ -97,11 +96,7 @@ func add_topping(topping: Topping)->void:
 	for i in range(inventory.size()):
 		var inventory_item = inventory[i]
 		if inventory_item.type==Item.ItemType.COFFEE and inventory_item.topping == Coffee.Topping.NONE:
-			print("topping.type raw: ", topping.type)
-			print("inventory_item.topping raw: ", inventory_item.topping)
-			print("Setting topping type to "+str(topping.type))
 			inventory_item.topping = topping.type
-			print("topping type is  "+str(inventory_item.topping))
 			spawn_front()
 			return
 	extra_toppings.append(topping.type)

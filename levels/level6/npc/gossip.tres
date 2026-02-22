@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://y5jaeubccjrk"]
+
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_meucg"]
+[ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="2_g4ap6"]
+[ext_resource type="Resource" uid="uid://cbusdp43u3b6b" path="res://levels/level6/npc/gossipDailogue.tres" id="2_o6r4g"]
+[ext_resource type="Texture2D" uid="uid://cehc2ha0milic" path="res://entities/npc/assets/human_coworker6.png" id="3_g4ap6"]
+
+[resource]
+script = ExtResource("2_g4ap6")
+npc_id = "Investigator"
+npc_name = "Jane"
+texture = ExtResource("3_g4ap6")
+dialogues = Array[ExtResource("1_meucg")]([ExtResource("2_o6r4g")])
+metadata/_custom_type_script = "uid://caib8pj52pvm"

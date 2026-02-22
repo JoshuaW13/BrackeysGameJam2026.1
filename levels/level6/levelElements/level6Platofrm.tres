@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MovingPlatformResource" format=3 uid="uid://c5ek7u1c7x6x8"]
+
+[ext_resource type="Texture2D" uid="uid://cxsh21wp4yt5o" path="res://levels/office/assets/floating_floor_left.png" id="1_4e1bp"]
+[ext_resource type="Script" uid="uid://b3nivh0g28r3h" path="res://entities/moving_platform/moving_platform_resource.gd" id="1_pgpvn"]
+[ext_resource type="Texture2D" uid="uid://eneeipooibhf" path="res://levels/office/assets/floating_floor_middle.png" id="2_0nvdv"]
+[ext_resource type="Texture2D" uid="uid://crcq12tvds6ly" path="res://levels/office/assets/floating_floor_right.png" id="3_7x56l"]
+
+[resource]
+script = ExtResource("1_pgpvn")
+width = 2
+pause = 1.0
+left_texture = ExtResource("1_4e1bp")
+middle_texture = ExtResource("2_0nvdv")
+right_texture = ExtResource("3_7x56l")
+metadata/_custom_type_script = "uid://b3nivh0g28r3h"

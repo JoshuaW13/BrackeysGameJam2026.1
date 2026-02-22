@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NPCDialogue" format=3 uid="uid://cbusdp43u3b6b"]
+
+[ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_qb4i5"]
+
+[resource]
+script = ExtResource("1_qb4i5")
+pass_dialogues = Array[String](["I have always wondered what's in that sealed door down there...", "A giant room of stone bricks might not raise questions for others.....", "but it does for me!", "Don't speak of this to anyone coffee grinder or else..."])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"

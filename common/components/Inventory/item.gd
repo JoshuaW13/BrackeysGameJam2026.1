@@ -5,7 +5,7 @@ enum ItemType{
 	COFFEE,
 	BOX
 }
-var type: ItemType
+@export var type: ItemType
 @export var scene: PackedScene
 @export var texture: Texture2D
 @export var id: int = 1

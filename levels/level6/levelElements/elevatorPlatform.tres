@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MovingPlatformResource" format=3 uid="uid://c1d0gpaayfl2g"]
+
+[ext_resource type="Script" uid="uid://b3nivh0g28r3h" path="res://entities/moving_platform/moving_platform_resource.gd" id="1_ybaba"]
+[ext_resource type="Texture2D" uid="uid://cc5eejm1lck0c" path="res://levels/office/assets/floating_floor_single.png" id="4_vbnps"]
+
+[resource]
+script = ExtResource("1_ybaba")
+width = 1
+single_texture = ExtResource("4_vbnps")
+metadata/_custom_type_script = "uid://b3nivh0g28r3h"

@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("2_vjm71")
+type = 1
 scene = ExtResource("1_ka03m")
 texture = ExtResource("3_vjm71")
 metadata/_custom_type_script = "uid://budj2x6ha6l6k"
