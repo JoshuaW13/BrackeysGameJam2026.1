@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bf0fvlvl44bnj" path="res://userInterface/screens/levelSelect/assets/elevator.png" id="1_8mq18"]
 [ext_resource type="Script" uid="uid://b8ml8xw0lawlu" path="res://userInterface/screens/levelSelect/level_select.gd" id="1_j70xv"]
-[ext_resource type="PackedScene" uid="uid://oehl4hjqc3lw" path="res://levels/level1/Level1.tscn" id="2_cjkd3"]
 [ext_resource type="PackedScene" uid="uid://fx71krggk53" path="res://levels/level3/Level3.tscn" id="3_cjkd3"]
+[ext_resource type="PackedScene" uid="uid://cnjn4h7sv8v57" path="res://levels/level5/Level5.tscn" id="5_3dv8l"]
 [ext_resource type="PackedScene" uid="uid://d3tg02mdcuvum" path="res://levels/level4/Level4.tscn" id="5_ix788"]
 [ext_resource type="PackedScene" uid="uid://de5umneeihl5x" path="res://levels/level6/Level6.tscn" id="6_3dv8l"]
 
@@ -15,8 +15,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_8mq18")
 script = ExtResource("1_j70xv")
-levels = Array[PackedScene]([ExtResource("2_cjkd3"), ExtResource("3_cjkd3"), ExtResource("5_ix788"), ExtResource("6_3dv8l"), ExtResource("6_3dv8l")])
-level_names = Array[String](["Level1", "Level2", "Level3", "Level4", "Level6"])
+levels = Array[PackedScene]([ExtResource("3_cjkd3"), ExtResource("5_ix788"), ExtResource("5_3dv8l"), ExtResource("6_3dv8l")])
+level_names = Array[String](["Level3", "Level4", "Level5", "Level6"])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=958110154]
 layout_mode = 1
