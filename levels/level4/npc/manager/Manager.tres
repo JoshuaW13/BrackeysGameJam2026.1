@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_cclrv"]
 [ext_resource type="Resource" uid="uid://dhlaf78huuqsx" path="res://entities/npc/has_coffee.tres" id="2_0icl6"]
 [ext_resource type="Resource" uid="uid://btgm6qohh31no" path="res://entities/npc/npc_unlock.tres" id="3_ggcsa"]
+[ext_resource type="Resource" uid="uid://safdi0mduqwc" path="res://entities/npc/npc_next.tres" id="4_0icl6"]
 [ext_resource type="Resource" uid="uid://bwotuywaxi8re" path="res://entities/npc/npc_completed.tres" id="4_17lg5"]
 [ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="5_a16n6"]
 [ext_resource type="Texture2D" uid="uid://cvpdaw1jf75p2" path="res://entities/npc/assets/human_coworker3.png" id="6_h21cs"]
@@ -11,8 +12,13 @@
 script = ExtResource("1_cclrv")
 condition = ExtResource("2_0icl6")
 pass_dialogues = Array[String](["Hi", "<3"])
-pass_functions = Array[Array]([[ExtResource("4_17lg5"), []], [ExtResource("3_ggcsa"), ["Lv3Door"]]])
+pass_functions = Array[Array]([[ExtResource("4_17lg5"), [ExtResource("4_0icl6")]], [ExtResource("3_ggcsa"), ["Lv3Door"]]])
 fail_dialogues = Array[String](["The audacity to come here without a cup of coffee! You better run out that door and find a cup.", "GET ME MY CUP OF BEAN WATER!"])
+metadata/_custom_type_script = "uid://c4aghsvqoovpv"
+
+[sub_resource type="Resource" id="Resource_ggcsa"]
+script = ExtResource("1_cclrv")
+pass_dialogues = Array[String](["Thank you for the bean water. You can head back now. ", "I'll call you again when I need coffee."])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]
@@ -20,5 +26,5 @@ script = ExtResource("5_a16n6")
 npc_id = "Lv4Manager"
 npc_name = "Jasmine"
 texture = ExtResource("6_h21cs")
-dialogues = Array[ExtResource("1_cclrv")]([SubResource("Resource_64wai")])
+dialogues = Array[ExtResource("1_cclrv")]([SubResource("Resource_64wai"), SubResource("Resource_ggcsa")])
 metadata/_custom_type_script = "uid://caib8pj52pvm"

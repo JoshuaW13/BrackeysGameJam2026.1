@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_2kd75"]
 [ext_resource type="Resource" uid="uid://safdi0mduqwc" path="res://entities/npc/npc_next.tres" id="2_iimd6"]
 [ext_resource type="Resource" uid="uid://dhlaf78huuqsx" path="res://entities/npc/has_coffee.tres" id="3_es4kw"]
-[ext_resource type="Resource" path="res://entities/npc/npc_give_topping.tres" id="4_tnvbr"]
+[ext_resource type="Resource" uid="uid://c6aaprws2fj1j" path="res://entities/npc/npc_give_topping.tres" id="4_tnvbr"]
 [ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="5_xwjjl"]
 [ext_resource type="Texture2D" uid="uid://dhirliyn5smxg" path="res://entities/npc/assets/alien_coworker2.png" id="6_tnvbr"]
 

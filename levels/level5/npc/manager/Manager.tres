@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://birpyatv6clgc"]
 
 [ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_ygpfe"]
-[ext_resource type="Resource" path="res://entities/npc/has_chocolate_coffee.tres" id="2_ygpfe"]
+[ext_resource type="Resource" uid="uid://igtdv3vwaffv" path="res://entities/npc/has_chocolate_coffee.tres" id="2_ygpfe"]
 [ext_resource type="Resource" uid="uid://bwotuywaxi8re" path="res://entities/npc/npc_completed.tres" id="3_ldbtc"]
 [ext_resource type="Resource" uid="uid://safdi0mduqwc" path="res://entities/npc/npc_next.tres" id="4_oqhad"]
 [ext_resource type="Texture2D" uid="uid://blhogxxv81dbt" path="res://entities/npc/assets/alien1.png" id="5_llq6m"]
