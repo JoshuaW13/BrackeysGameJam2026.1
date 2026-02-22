@@ -7,6 +7,7 @@ class_name DialoguePanel
 @onready var name_label : Label = %NameLabel
 @onready var dialogue_style: StyleBoxTexture = StyleBoxTexture.new()
 @onready var message_style: StyleBoxTexture = StyleBoxTexture.new()
+@onready var animated_arrow_thing : AnimatedSprite2D = $AnimatedSprite2D
 signal dialogue_finished(npc_id)
 
 var dialogue_lines: Array = []
@@ -15,6 +16,7 @@ var ignore_next_input := false
 var npc : String
 
 func _ready() -> void:
+	animated_arrow_thing.play("default")
 	dialogue_style.texture = load("res://entities/dialogue/DialoguePanel.png")
 	dialogue_style.draw_center = true 
 	

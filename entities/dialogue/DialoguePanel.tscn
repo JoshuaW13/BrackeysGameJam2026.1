@@ -77,7 +77,7 @@ vertical_alignment = 1
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1927643758]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 2
+theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
@@ -89,7 +89,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -3
 theme_override_fonts/font = ExtResource("3_x2xht")
 theme_override_font_sizes/font_size = 15
-text = "Hey Chad, I like your beans!"
+text = "Hey Chad, I like your beans! aljsd;lkajsdkljas;jd;lsajkd;lsak;ldks;lakdl;ska;dlk;ksadl;ksa;kd;laksdl;kas;kdl;aks;dlksa;kd;lksadl;kas;ldka;lskdl;ksdl;aksdl;kas;dlks;lkdl;askdl;ksa;dk;l"
 autowrap_mode = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1557467251]
