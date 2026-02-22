@@ -5,6 +5,7 @@ var BOX_RES = load("res://entities/box/box.tres")
 var COFFEE_RES = load("res://entities/coffee/coffee.tres")
 var level_complete : bool = false
 var next_item_id : int= 0
+var LEVEL_4_THEME = load("res://audio/music/levels_4.ogg")
 
 func add_starting_items()->void:
 	for i in range(5):
@@ -18,6 +19,7 @@ func add_starting_items()->void:
 		player.inventory.add_item(new_item)
 
 func _ready():
+	GlobalAudio.play_music(LEVEL_4_THEME)
 	add_starting_items()
 	for npc in get_tree().get_nodes_in_group("npc"):
 		if npc is NPC:

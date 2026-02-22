@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://bsa3agyyh503b" path="res://levels/level6/npc/Guard.tres" id="4_min74"]
 [ext_resource type="PackedScene" uid="uid://c0gh0jpolf21c" path="res://entities/toppings/caramel/Caramel.tscn" id="7_klmgf"]
 [ext_resource type="PackedScene" uid="uid://b3ilxt3m8c04n" path="res://entities/npc/npc.tscn" id="7_xycf2"]
-[ext_resource type="Resource" uid="uid://y5jaeubccjrk" path="res://levels/level6/npc/gossip.tres" id="8_ahkpa"]
+[ext_resource type="Resource" path="res://levels/level6/npc/gossip.tres" id="8_ahkpa"]
 [ext_resource type="PackedScene" uid="uid://dd2ks5rqjvptf" path="res://entities/moving_platform/moving_platform.tscn" id="9_j1yl0"]
 [ext_resource type="Script" uid="uid://cio2vuvhc0lat" path="res://entities/moving_platform/moving_platform_base.gd" id="9_rfwte"]
 [ext_resource type="Texture2D" uid="uid://bo1rdbgst5fug" path="res://entities/lock/lock.png" id="11_8o7ql"]

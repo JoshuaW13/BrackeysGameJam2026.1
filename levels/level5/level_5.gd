@@ -8,8 +8,10 @@ var BOX_RES = load("res://entities/box/box.tres")
 var COFFEE_RES = load("res://entities/coffee/coffee.tres")
 var remaining_npcs := {}
 var level_complete : bool = false
+var LEVEL_3_THEME = load("res://audio/music/levels_3.ogg")
 
 func _ready():
+	GlobalAudio.play_music(LEVEL_3_THEME)
 	for npc in get_tree().get_nodes_in_group("npc"):
 		if npc is NPC:
 			if !npc.npc.completed:
