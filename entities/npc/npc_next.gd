@@ -1,4 +1,4 @@
-extends Resource
+extends DialogueFunction
 class_name NPCNext
 
 func execute(runtime_args, _args = []):

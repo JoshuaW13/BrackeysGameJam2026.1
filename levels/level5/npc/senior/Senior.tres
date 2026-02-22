@@ -17,7 +17,7 @@ metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 script = ExtResource("1_2kd75")
 condition = ExtResource("3_es4kw")
 pass_dialogues = Array[String](["This is the prized jewel liquid. These days rivaling the price of gold.", "Here. With a mocha coffee, maybe the big boss will finally be able to put his ambitions to rest."])
-pass_functions = Array[Array]([[ExtResource("2_iimd6")], [[ExtResource("4_tnvbr"), ["chocolate", 1]]]])
+pass_functions = Array[Array]([[ExtResource("2_iimd6")], [ExtResource("4_tnvbr"), ["chocolate", 1]]])
 fail_dialogues = Array[String](["Where is my precious."])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 

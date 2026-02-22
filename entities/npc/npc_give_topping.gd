@@ -1,4 +1,4 @@
-extends Resource
+extends DialogueFunction
 class_name NPCGiveTopping
 
 func execute(runtime_args, _args = []):
