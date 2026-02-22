@@ -2,6 +2,7 @@ extends Node
 
 const SAVE_PATH = "user://save.res"
 var completed_levels: Dictionary = {}
+var final_cutscene_seen: bool = false
 
 func _ready():
 	load_game()
@@ -24,14 +25,17 @@ func save_game() -> void:
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if file:
 		file.store_var(completed_levels)
+		file.store_var(final_cutscene_seen)
 		file.close()
 
 func load_game() -> void:
 	if not FileAccess.file_exists(SAVE_PATH):
 		completed_levels = {}
+		final_cutscene_seen = false
 		return
 
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
 	if file:
 		completed_levels = file.get_var()
+		final_cutscene_seen = file.get_var()
 		file.close()

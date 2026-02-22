@@ -8,6 +8,7 @@ var CLOSE_SOUND = load("res://audio/elevator close.wav")
 var FINAL_LEVEL_THEME = load("res://audio/music/final_theme.ogg")
 
 func _ready() -> void:
+	GameData.final_cutscene_seen = true
 	skip_button.pressed.connect(_load_credits)
 	GlobalAudio.play_music(FINAL_LEVEL_THEME)
 	animation_player.play("cutscene")

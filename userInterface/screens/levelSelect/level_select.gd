@@ -32,6 +32,6 @@ func _ready() -> void:
 				get_tree().change_scene_to_packed(levels[i-1])
 			)
 	
-	if GameData.game_complete():
+	if GameData.game_complete() and !GameData.final_cutscene_seen:
 		get_tree().change_scene_to_file("res://userInterface/screens/finalCutscene/FinalCutscene.tscn")
 			
