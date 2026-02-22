@@ -6,10 +6,13 @@ var completed_levels: Dictionary = {}
 func _ready():
 	load_game()
 
+func game_complete()->bool:
+	return completed_levels.values().all(func(element): return element == true)
+
 func mark_completed(level_name: String):
 	print(level_name)
 	completed_levels[level_name] = true
-	save_game()
+	save_game()	
 
 func is_completed(level_name: String) -> bool:
 	if not completed_levels.has(level_name):

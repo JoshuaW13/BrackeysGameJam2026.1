@@ -31,4 +31,7 @@ func _ready() -> void:
 				GlobalAudio.play_menu_fx(BUTTON_SOUND)
 				get_tree().change_scene_to_packed(levels[i-1])
 			)
+	
+	if GameData.game_complete():
+		get_tree().change_scene_to_file("res://userInterface/screens/finalCutscene/FinalCutscene.tscn")
 			
