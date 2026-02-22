@@ -7,7 +7,7 @@ class_name Button2D
 
 signal unlock(item_id : String)
 signal lock(item_id : String)
-var pressed : bool = false
+var pressed : int = 0
 
 func _ready():
 	interact_area.body_entered.connect(_on_body_entered)
@@ -16,16 +16,17 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.is_in_group("box") or body.is_in_group("player"):
-		pressed = true
+		pressed += 1
 		update_sprite()
 		emit_signal("unlock", button.item_id)
 
 func _on_body_exited(body):
 	if body.is_in_group("box") or body.is_in_group("player"):
-		pressed = false
-		update_sprite()
-		if button.toggle:
-			emit_signal("lock", button.item_id)
+		pressed -= 1
+		if pressed == 0:
+			update_sprite()
+			if button.toggle:
+				emit_signal("lock", button.item_id)
 
 func update_sprite():
 	if pressed:
