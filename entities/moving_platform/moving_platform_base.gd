@@ -63,21 +63,28 @@ func update_width():
 		
 	var total_width = moving_platform.width * 16
 	
-	var left_sprite = Sprite2D.new()
-	left_sprite.texture = moving_platform.left_texture
-	left_sprite.position.x = 8
-	sprite.add_child(left_sprite)
+	if moving_platform.width > 1:
+		var left_sprite = Sprite2D.new()
+		left_sprite.texture = moving_platform.left_texture
+		left_sprite.position.x = 8
+		sprite.add_child(left_sprite)
 
-	for i in range(1, moving_platform.width - 1):
-		var middle_sprite = Sprite2D.new()
-		middle_sprite.texture = moving_platform.middle_texture
-		middle_sprite.position.x = i * 16 + 8
-		sprite.add_child(middle_sprite)
+		for i in range(1, moving_platform.width - 1):
+			var middle_sprite = Sprite2D.new()
+			middle_sprite.texture = moving_platform.middle_texture
+			middle_sprite.position.x = i * 16 + 8
+			sprite.add_child(middle_sprite)
+			
+		var right_sprite = Sprite2D.new()
+		right_sprite.texture = moving_platform.right_texture
+		right_sprite.position.x = total_width - 16 + 8
+		sprite.add_child(right_sprite)
 		
-	var right_sprite = Sprite2D.new()
-	right_sprite.texture = moving_platform.right_texture
-	right_sprite.position.x = total_width - 16 + 8
-	sprite.add_child(right_sprite)
+	elif moving_platform.width == 1:
+		var single_sprite = Sprite2D.new()
+		single_sprite.texture = moving_platform.single_texture
+		single_sprite.position.x = 8
+		sprite.add_child(single_sprite)
 
 	sprite.position.x = -total_width / 2
 

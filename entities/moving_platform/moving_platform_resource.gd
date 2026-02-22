@@ -10,3 +10,4 @@ class_name MovingPlatformResource
 @export var left_texture : Texture2D
 @export var middle_texture : Texture2D
 @export var right_texture : Texture2D
+@export var single_texture : Texture2D

@@ -4,15 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://eneeipooibhf" path="res://levels/office/assets/floating_floor_middle.png" id="2_ohmoh"]
 [ext_resource type="Texture2D" uid="uid://crcq12tvds6ly" path="res://levels/office/assets/floating_floor_right.png" id="3_pnklb"]
 [ext_resource type="Script" uid="uid://b3nivh0g28r3h" path="res://entities/moving_platform/moving_platform_resource.gd" id="4_avnnr"]
+[ext_resource type="Texture2D" uid="uid://cc5eejm1lck0c" path="res://levels/office/assets/floating_floor_single.png" id="5_ohmoh"]
 
 [resource]
 script = ExtResource("4_avnnr")
 platform_id = "Lv5Platform"
-width = 2
+width = 1
 speed = 40.0
 pause = 2.0
 is_locked = true
 left_texture = ExtResource("1_ovtlc")
 middle_texture = ExtResource("2_ohmoh")
 right_texture = ExtResource("3_pnklb")
+single_texture = ExtResource("5_ohmoh")
 metadata/_custom_type_script = "uid://b3nivh0g28r3h"
