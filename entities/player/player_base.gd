@@ -43,6 +43,7 @@ func _physics_process(delta):
 
 func item_picked_up(item: PlaceableItem)->void:
 	#if is_on_floor():
+	print(item)
 	inventory.add_item(item.inventory_item)
 	item.call_deferred("queue_free")
 	GlobalAudio.play_inventory_fx(PICKUP_SOUND)

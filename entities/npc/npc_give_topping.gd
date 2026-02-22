@@ -4,7 +4,7 @@ class_name NPCGiveTopping
 func execute(runtime_args, _args = []):
 	var player = runtime_args[1]
 	if player is Player:
-		var topping = load(_args[0])
+		var topping = _args[0]
 		var topping_item
 		match topping:
 			"caramel":
@@ -14,4 +14,5 @@ func execute(runtime_args, _args = []):
 			"milk":
 				topping_item = Milk.new()
 		for i in range(_args[1]):
+			print("Emit chocolate")
 			SignalBus.topping_picked_up.emit(topping_item)

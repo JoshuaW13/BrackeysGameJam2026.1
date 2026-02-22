@@ -141,7 +141,7 @@ moving_platform = ExtResource("11_c6r47")
 
 [node name="Player" parent="." unique_id=914755556 instance=ExtResource("12_5k51j")]
 z_index = 5
-position = Vector2(19, 142)
+position = Vector2(32, 144)
 
 [node name="Coworker" parent="." unique_id=800059897 instance=ExtResource("14_ppvdb")]
 position = Vector2(88, 128)
