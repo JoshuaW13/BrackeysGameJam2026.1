@@ -11,4 +11,5 @@ npc_id = "Investigator"
 npc_name = "Jane"
 texture = ExtResource("3_g4ap6")
 dialogues = Array[ExtResource("1_meucg")]([ExtResource("2_o6r4g")])
+completed = true
 metadata/_custom_type_script = "uid://caib8pj52pvm"
