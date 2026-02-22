@@ -70,7 +70,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_x2xht")
 theme_override_font_sizes/font_size = 16
-text = "Janitor"
+text = "CEO"
 vertical_alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1927643758]
