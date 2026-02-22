@@ -3445,7 +3445,6 @@ texture = ExtResource("3_r41sj")
 1:0/size_in_atlas = Vector2i(3, 2)
 1:0/0 = 0
 1:0/0/texture_origin = Vector2i(0, 8)
-1:0/0/z_index = 1
 4:0/size_in_atlas = Vector2i(1, 2)
 4:0/0 = 0
 4:0/0/texture_origin = Vector2i(0, 8)

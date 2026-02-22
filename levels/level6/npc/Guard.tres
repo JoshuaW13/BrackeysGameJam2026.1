@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_62kbq"]
 [ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="2_867s3"]
-[ext_resource type="Resource" path="res://entities/guard/resources/is_guard_happy.tres" id="2_o3x0y"]
+[ext_resource type="Resource" uid="uid://dn0axmdw5cnrf" path="res://entities/guard/resources/is_guard_happy.tres" id="2_o3x0y"]
 [ext_resource type="Texture2D" uid="uid://b2gxul8p6ko7a" path="res://entities/guard/assets/guard.png" id="3_867s3"]
 [ext_resource type="Resource" uid="uid://bwotuywaxi8re" path="res://entities/npc/npc_completed.tres" id="3_o3x0y"]
 
