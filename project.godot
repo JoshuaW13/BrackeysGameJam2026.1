@@ -38,6 +38,10 @@ SignalBus="*uid://n8mfwst06qot"
 GameData="*uid://b2gwk0gg02xuk"
 GlobalAudio="*uid://df6m5ud8f6811"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [global_group]
 
 player=""

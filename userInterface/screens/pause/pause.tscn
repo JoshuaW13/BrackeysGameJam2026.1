@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cn0usblebx0ws"]
 
-[ext_resource type="FontFile" uid="uid://nv6qj6gjad1q" path="res://m3x6.ttf" id="1_6os6o"]
 [ext_resource type="Script" uid="uid://cytsubvnc45nw" path="res://userInterface/screens/pause/pause.gd" id="1_k741f"]
 [ext_resource type="Texture2D" uid="uid://b2veu0j38hij4" path="res://userInterface/screens/pause/assets/pause.png" id="3_h3y1d"]
 [ext_resource type="Texture2D" uid="uid://dec3566smkjnf" path="res://userInterface/screens/pause/assets/music.png" id="3_p301d"]
+[ext_resource type="FontFile" uid="uid://dj2q782d1ybvn" path="res://Micro5-Regular.ttf" id="3_xwjxm"]
 [ext_resource type="Texture2D" uid="uid://dnfag6ar6hh2j" path="res://userInterface/screens/pause/assets/sound.png" id="4_h3y1d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h3y1d"]
@@ -70,7 +70,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/line_spacing = -5
-theme_override_fonts/font = ExtResource("1_6os6o")
+theme_override_fonts/font = ExtResource("3_xwjxm")
 theme_override_font_sizes/font_size = 24
 text = "Continue"
 
@@ -79,7 +79,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("1_6os6o")
+theme_override_fonts/font = ExtResource("3_xwjxm")
 theme_override_font_sizes/font_size = 24
 text = "Restart"
 icon_alignment = 1
@@ -89,7 +89,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-theme_override_fonts/font = ExtResource("1_6os6o")
+theme_override_fonts/font = ExtResource("3_xwjxm")
 theme_override_font_sizes/font_size = 24
 text = "Main Menu"
 icon_alignment = 1

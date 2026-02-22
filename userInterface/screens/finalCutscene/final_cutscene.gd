@@ -23,6 +23,7 @@ func _play_elevator_sound(open: bool) -> void:
 		GlobalAudio.play_world_fx(CLOSE_SOUND)
 
 func _animation_finished() -> void:
+	GameData.save_game()
 	_load_credits()
 
 func _load_credits() -> void:
