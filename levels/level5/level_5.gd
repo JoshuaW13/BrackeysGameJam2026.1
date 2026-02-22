@@ -26,7 +26,7 @@ func _ready():
 		new_item.id = next_item_id
 		next_item_id += 1
 		player.inventory.add_item(new_item)
-	for i in range(1):
+	for i in range(0):
 		var new_item : Item = COFFEE_RES.duplicate(true)
 		new_item.type = 0
 		new_item.id = next_item_id

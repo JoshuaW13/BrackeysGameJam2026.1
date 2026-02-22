@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("1_tbmk1")
 platform_id = "Lv5Platform1"
-width = 2
-speed = 50.0
+width = 3
+speed = 75.0
 pause = 3.0
 left_texture = ExtResource("1_sd6fm")
 middle_texture = ExtResource("2_tikk4")
