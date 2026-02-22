@@ -84,9 +84,6 @@ tile_set = ExtResource("1_qcew6")
 position = Vector2(368, 171)
 scale = Vector2(0.15, 0.15)
 
-[node name="Player" parent="." unique_id=1865279112 instance=ExtResource("2_min74")]
-position = Vector2(23, 189)
-
 [node name="Guard" parent="." unique_id=175337513 groups=["npc"] instance=ExtResource("3_s62ab")]
 position = Vector2(225, 188)
 npc = ExtResource("4_min74")
@@ -141,3 +138,6 @@ rotation = 3.1415927
 rotation = -3.1415927
 up_direction = Vector2(0, 1)
 moving_platform = SubResource("Resource_gicot")
+
+[node name="Player" parent="." unique_id=1865279112 instance=ExtResource("2_min74")]
+position = Vector2(23, 189)
