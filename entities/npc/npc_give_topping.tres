@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="NPCGiveTopping" format=3 uid="uid://c6aaprws2fj1j"]
+
+[ext_resource type="Script" uid="uid://dq3ddvry5w831" path="res://entities/npc/npc_give_topping.gd" id="1_4vuhh"]
+
+[resource]
+script = ExtResource("1_4vuhh")
+metadata/_custom_type_script = "uid://dq3ddvry5w831"

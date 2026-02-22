@@ -148,12 +148,15 @@ position = Vector2(88, 128)
 npc = ExtResource("15_7toq1")
 
 [node name="Senior" parent="." unique_id=1187843567 instance=ExtResource("14_ppvdb")]
-position = Vector2(56, -176)
+position = Vector2(216, -96)
 npc = ExtResource("16_yywr6")
 
-[node name="Manager" parent="." unique_id=404841392 instance=ExtResource("14_ppvdb")]
+[node name="Boss" parent="." unique_id=404841392 instance=ExtResource("14_ppvdb")]
 position = Vector2(200, -240)
 npc = ExtResource("16_yneqc")
 
 [node name="Coffee" parent="." unique_id=345192037 instance=ExtResource("17_mtu8g")]
 position = Vector2(104, 16)
+
+[node name="Coffee2" parent="." unique_id=633419456 instance=ExtResource("17_mtu8g")]
+position = Vector2(72, -112)

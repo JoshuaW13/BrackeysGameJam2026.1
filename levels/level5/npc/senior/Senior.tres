@@ -3,27 +3,27 @@
 [ext_resource type="Script" uid="uid://c4aghsvqoovpv" path="res://entities/npc/npc_dialogue.gd" id="1_2kd75"]
 [ext_resource type="Resource" uid="uid://safdi0mduqwc" path="res://entities/npc/npc_next.tres" id="2_iimd6"]
 [ext_resource type="Resource" uid="uid://dhlaf78huuqsx" path="res://entities/npc/has_coffee.tres" id="3_es4kw"]
-[ext_resource type="Resource" uid="uid://btgm6qohh31no" path="res://entities/npc/npc_unlock.tres" id="4_mhun5"]
+[ext_resource type="Resource" uid="uid://c6aaprws2fj1j" path="res://entities/npc/npc_give_topping.tres" id="4_tnvbr"]
 [ext_resource type="Script" uid="uid://caib8pj52pvm" path="res://entities/npc/npc_resource.gd" id="5_xwjjl"]
 [ext_resource type="Texture2D" uid="uid://dhirliyn5smxg" path="res://entities/npc/assets/alien_coworker2.png" id="6_tnvbr"]
 
 [sub_resource type="Resource" id="Resource_6lb6q"]
 script = ExtResource("1_2kd75")
-pass_dialogues = Array[String](["You need to get a coffee to the guy upstairs right. ", "How about this. If you get me a coffee, I'll help get you up there."])
-pass_functions = Array[Array]([[ExtResource("2_iimd6"), []]])
+pass_dialogues = Array[String](["The big boss likes his mocha coffee and I just so happen to have this chocolate.", "If you get me your perfectly brewed coffee, I'll help get you up there."])
+pass_functions = Array[Array]([[ExtResource("2_iimd6")]])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [sub_resource type="Resource" id="Resource_x0cxi"]
 script = ExtResource("1_2kd75")
 condition = ExtResource("3_es4kw")
-pass_dialogues = Array[String](["Ah perfect, that will get me through the rest of the day. ", "You can get up to the second floor now."])
-pass_functions = Array[Array]([[ExtResource("4_mhun5"), ["Lv4Platform"]], [ExtResource("2_iimd6"), []]])
-fail_dialogues = Array[String](["Get me some coffee first. Don't you need my help."])
+pass_dialogues = Array[String](["This is the prized jewel liquid. These days rivaling the price of gold.", "Here. With a mocha coffee, maybe the big boss will finally be able to put his ambitions to rest."])
+pass_functions = Array[Array]([[ExtResource("2_iimd6")], [[ExtResource("4_tnvbr"), ["chocolate", 1]]]])
+fail_dialogues = Array[String](["Where is my precious."])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [sub_resource type="Resource" id="Resource_58puk"]
 script = ExtResource("1_2kd75")
-pass_dialogues = Array[String](["Oh, I should also let you know that his door is locked, you'll need to find a way to unlock it. ", "Now leave me to my coffee."])
+pass_dialogues = Array[String](["Good luck with the rest of your venture. I hope you unlocked the path ahead."])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]

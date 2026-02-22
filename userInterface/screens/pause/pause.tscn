@@ -38,6 +38,7 @@ icon_alignment = 1
 [node name="Panel" type="Panel" parent="." unique_id=285609628]
 process_mode = 2
 visible = false
+z_index = 10
 custom_minimum_size = Vector2(288, 162)
 layout_mode = 0
 offset_right = 288.0
@@ -48,7 +49,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_xwjxm")
 layout_mode = 0
 offset_right = 288.0
 offset_bottom = 162.0
-color = Color(0, 0, 0, 0.32941177)
+color = Color(0, 0, 0, 0.61960787)
 
 [node name="BoxContainer" type="BoxContainer" parent="Panel" unique_id=1125881208]
 layout_mode = 0

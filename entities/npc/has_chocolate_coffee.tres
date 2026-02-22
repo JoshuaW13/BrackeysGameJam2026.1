@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="HasChocolateCoffee" format=3 uid="uid://igtdv3vwaffv"]
+
+[ext_resource type="Script" uid="uid://ldsxecb3o13h" path="res://entities/npc/has_chocolate_coffee.gd" id="1_ku5y0"]
+
+[resource]
+script = ExtResource("1_ku5y0")
+metadata/_custom_type_script = "uid://ldsxecb3o13h"
