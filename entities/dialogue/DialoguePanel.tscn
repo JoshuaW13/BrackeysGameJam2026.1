@@ -5,6 +5,9 @@
 [ext_resource type="FontFile" uid="uid://nv6qj6gjad1q" path="res://m3x6.ttf" id="3_x2xht"]
 [ext_resource type="Texture2D" uid="uid://ceoj8ffyfh717" path="res://entities/dialogue/DialogueIndicator.png" id="4_vsw0j"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x2xht"]
+texture = ExtResource("2_kmpnn")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_yf5fp"]
 atlas = ExtResource("4_vsw0j")
 region = Rect2(0, 0, 16, 16)
@@ -44,17 +47,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_x2xht")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1242693340]
-position = Vector2(64, 24)
-texture = ExtResource("2_kmpnn")
-
-[node name="NameLabel" type="Label" parent="." unique_id=1781718139]
-texture_filter = 1
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1062365697]
+custom_minimum_size = Vector2(175, 50)
 layout_mode = 0
-offset_left = 12.0
-offset_top = -2.0
-offset_right = 57.0
-offset_bottom = 11.0
+offset_right = 175.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_x2xht")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1149884493]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=665828267]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="NameLabel" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1781718139]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_x2xht")
@@ -62,23 +73,26 @@ theme_override_font_sizes/font_size = 16
 text = "Janitor"
 vertical_alignment = 1
 
-[node name="TextLabel" type="Label" parent="." unique_id=1192386076]
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1927643758]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextLabel" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer2" unique_id=1192386076]
+unique_name_in_owner = true
 texture_filter = 1
-layout_mode = 0
-offset_left = 5.0
-offset_top = 9.0
-offset_right = 124.0
-offset_bottom = 46.0
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -3
 theme_override_fonts/font = ExtResource("3_x2xht")
 theme_override_font_sizes/font_size = 15
-text = "Hey, you’re Chad, right?
-"
+text = "Hey Chad, I like your beans!"
 autowrap_mode = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1557467251]
-position = Vector2(119.00001, 41)
+position = Vector2(159, 40)
 scale = Vector2(0.6250005, 0.62499994)
 sprite_frames = SubResource("SpriteFrames_6ryxm")
 frame_progress = 0.44481838
