@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_pgpvn")
 width = 2
+speed = 100.0
 pause = 1.0
 left_texture = ExtResource("1_4e1bp")
 middle_texture = ExtResource("2_0nvdv")

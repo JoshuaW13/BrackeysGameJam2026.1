@@ -11,7 +11,9 @@ script = ExtResource("1_62kbq")
 condition = ExtResource("2_o3x0y")
 pass_dialogues = Array[String](["Yo thanks for the cofee boss!"])
 pass_functions = Array[Array]([[ExtResource("3_o3x0y")]])
-fail_dialogues = Array[String](["HEY BEAN BOY! YOU AREN'T ALLOWED IN THERE!", "(Now if only I had some cofee)"])
+fail_dialogues = Array[String](["Woah there, coffee boy. I can’t let you pass. This is a restricted area.", "I’m serious, kid. Get lost. 
+Did you say… A caramel mocha frappuccino with extra whip? That does sound kind of good right now…
+", "Mmm, caramel…", "What are you still doing here?", "Don’t you have somewhere else to be?", "Maybe I’ll reconsider if you were to.. You know.. Offer compensation.. I am quite thirsty", "Just go make me one. I didn’t say anything."])
 metadata/_custom_type_script = "uid://c4aghsvqoovpv"
 
 [resource]
