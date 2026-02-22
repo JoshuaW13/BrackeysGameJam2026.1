@@ -25,4 +25,4 @@ func _animation_finished() -> void:
 	_load_credits()
 
 func _load_credits() -> void:
-	get_tree().change_scene_to_file("res://userInterface/screens/levelSelect/LevelSelect.tscn")
+	get_tree().change_scene_to_file("res://userInterface/screens/credits/credits.tscn")
