@@ -26,7 +26,9 @@ func _on_animation_finished(animation_name):
 		get_tree().change_scene_to_file(elevator.scene_path)
 
 func _on_body_entered(body):
-	is_in_area = true
+	if body is Player:
+		is_in_area = true
 
 func _on_body_exited(body):
-	is_in_area = false
+	if body is Player:
+		is_in_area = false
