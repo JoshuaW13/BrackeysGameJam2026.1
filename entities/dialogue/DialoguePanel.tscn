@@ -51,15 +51,15 @@ texture = ExtResource("2_kmpnn")
 [node name="NameLabel" type="Label" parent="." unique_id=1781718139]
 texture_filter = 1
 layout_mode = 0
-offset_left = 12.0
+offset_left = 13.0
 offset_top = -2.0
-offset_right = 57.0
+offset_right = 58.0
 offset_bottom = 11.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_x2xht")
 theme_override_font_sizes/font_size = 16
-text = "Janitor"
+text = "CEO"
 vertical_alignment = 1
 
 [node name="TextLabel" type="Label" parent="." unique_id=1192386076]
@@ -73,7 +73,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -3
 theme_override_fonts/font = ExtResource("3_x2xht")
 theme_override_font_sizes/font_size = 15
-text = "Hey, you’re Chad, right?
+text = "The lower floors pretend everything is in order. As you go up, things change.
 "
 autowrap_mode = 3
 
