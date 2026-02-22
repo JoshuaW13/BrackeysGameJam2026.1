@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4tu0mgi5hs44" path="res://entities/player/assets/walk.png" id="3_617tu"]
 [ext_resource type="Texture2D" uid="uid://dqb3b6g0q6xg2" path="res://entities/player/assets/nod.png" id="4_7o6mb"]
 [ext_resource type="Texture2D" uid="uid://h72kiqf47uw3" path="res://entities/player/assets/chadHoldingCoffee.png" id="4_617tu"]
+[ext_resource type="PackedScene" uid="uid://clayenhbjyel1" path="res://userInterface/components/skipButton/SkipButton.tscn" id="4_kgbo1"]
 [ext_resource type="Texture2D" uid="uid://dkttuhwh1w6s3" path="res://entities/npc/assets/ceo.png" id="5_nq3ju"]
 [ext_resource type="Texture2D" uid="uid://dcxqw4c00vk4t" path="res://entities/npc/assets/ceo_walk.png" id="6_p1c3a"]
 [ext_resource type="Texture2D" uid="uid://dn25m5peygl88" path="res://entities/npc/assets/ceoHoldingCoffee.png" id="7_7o6mb"]
@@ -930,6 +931,12 @@ animation = &"closed"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1099324438]
 position = Vector2(80, 105)
 zoom = Vector2(6, 6)
+
+[node name="SkipButton" parent="Camera2D" unique_id=136063212 instance=ExtResource("4_kgbo1")]
+offset_left = 80.0
+offset_top = 39.0
+offset_right = 112.00002
+offset_bottom = 71.00003
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=119645960]
 libraries/ = SubResource("AnimationLibrary_617tu")

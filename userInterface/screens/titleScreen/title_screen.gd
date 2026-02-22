@@ -8,6 +8,5 @@ func _ready() -> void:
 
 func _on_play_button_down() -> void:
 	GlobalAudio.play_menu_fx(BUTTON_SOUND)
-	#get_tree().change_scene_to_file("res://userInterface/screens/intro/Intro.tscn")
-	get_tree().change_scene_to_file("res://userInterface/screens/finalCutscene/FinalCutscene.tscn")
+	get_tree().change_scene_to_file("res://userInterface/screens/intro/Intro.tscn")
 	
