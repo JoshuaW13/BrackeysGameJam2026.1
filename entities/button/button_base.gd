@@ -5,6 +5,9 @@ class_name Button2D
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var interact_area : Area2D = $InteractArea2D
 
+var DOWN_SOUND = load("res://audio/button down.wav")
+var UP_SOUND = load("res://audio/button up.wav")
+
 signal unlock(item_id : String)
 signal lock(item_id : String)
 var pressed : bool = false
@@ -19,6 +22,7 @@ func _on_body_entered(body):
 		pressed = true
 		update_sprite()
 		emit_signal("unlock", button.item_id)
+		GlobalAudio.play_world_fx(DOWN_SOUND)
 
 func _on_body_exited(body):
 	if body.is_in_group("box") or body.is_in_group("player"):
@@ -26,6 +30,7 @@ func _on_body_exited(body):
 		update_sprite()
 		if button.toggle:
 			emit_signal("lock", button.item_id)
+			GlobalAudio.play_world_fx(UP_SOUND)
 
 func update_sprite():
 	if pressed:
