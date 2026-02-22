@@ -3,16 +3,12 @@
 [ext_resource type="Script" uid="uid://cio2vuvhc0lat" path="res://entities/moving_platform/moving_platform_base.gd" id="1_w1ksl"]
 [ext_resource type="Texture2D" uid="uid://bo1rdbgst5fug" path="res://entities/lock/lock.png" id="2_wwx62"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1ksl"]
-size = Vector2(2, 2)
-
 [node name="MovingPlatform" type="CharacterBody2D" unique_id=1845098678]
 script = ExtResource("1_w1ksl")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1351659895]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1695267091]
-shape = SubResource("RectangleShape2D_w1ksl")
 
 [node name="PauseTimer" type="Timer" parent="." unique_id=859684414]
 one_shot = true

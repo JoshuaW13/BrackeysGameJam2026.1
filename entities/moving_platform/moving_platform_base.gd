@@ -60,7 +60,7 @@ func _on_pause_finished():
 func update_width():
 	for child in sprite.get_children():
 		child.queue_free()
-		
+	
 	var total_width = moving_platform.width * 16
 	
 	if moving_platform.width > 1:
@@ -88,10 +88,11 @@ func update_width():
 
 	sprite.position.x = -total_width / 2
 
-	if collision.shape is RectangleShape2D:
-		collision.shape.size.x = total_width
-		collision.shape.size.y = 8
-		collision.position.y = 4
+	collision.shape = RectangleShape2D.new()
+	print(moving_platform.platform_id, moving_platform.width, " Width: ", total_width)
+	collision.shape.size.x = total_width
+	collision.shape.size.y = 8
+	collision.position.y = 4
 	
 	global_position = path_follow.global_position
 		

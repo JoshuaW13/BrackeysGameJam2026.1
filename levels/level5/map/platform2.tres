@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MovingPlatformResource" format=3 uid="uid://dqfe3krx2vx6"]
+
+[ext_resource type="Script" uid="uid://b3nivh0g28r3h" path="res://entities/moving_platform/moving_platform_resource.gd" id="1_sg2l3"]
+[ext_resource type="Texture2D" uid="uid://cxsh21wp4yt5o" path="res://levels/office/assets/floating_floor_left.png" id="1_uog2f"]
+[ext_resource type="Texture2D" uid="uid://eneeipooibhf" path="res://levels/office/assets/floating_floor_middle.png" id="2_hwhbp"]
+[ext_resource type="Texture2D" uid="uid://crcq12tvds6ly" path="res://levels/office/assets/floating_floor_right.png" id="3_memg7"]
+[ext_resource type="Texture2D" uid="uid://cc5eejm1lck0c" path="res://levels/office/assets/floating_floor_single.png" id="5_k4co3"]
+
+[resource]
+script = ExtResource("1_sg2l3")
+platform_id = "Lv5Platform2"
+width = 5
+speed = 100.0
+pause = 2.0
+left_texture = ExtResource("1_uog2f")
+middle_texture = ExtResource("2_hwhbp")
+right_texture = ExtResource("3_memg7")
+single_texture = ExtResource("5_k4co3")
+metadata/_custom_type_script = "uid://b3nivh0g28r3h"

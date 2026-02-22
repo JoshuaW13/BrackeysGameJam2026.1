@@ -15,13 +15,13 @@ func _ready():
 	update_sprite()
 
 func _on_body_entered(body):
-	if body.is_in_group("box"):
+	if body.is_in_group("box") or body.is_in_group("player"):
 		pressed = true
 		update_sprite()
 		emit_signal("unlock", button.item_id)
 
 func _on_body_exited(body):
-	if body.is_in_group("box"):
+	if body.is_in_group("box") or body.is_in_group("player"):
 		pressed = false
 		update_sprite()
 		if button.toggle:
